@@ -2588,15 +2588,12 @@
 
 /* Image */
 
-/* Image */
-
 .image {
-    border-radius: 0.35em;
-    border: 0;
+    border: none;
     display: inline-block;
     position: relative;
+	transition: .65s;
 }
-
 .image:before {
     -moz-transition: opacity 20.2s ease-in-out;
     -webkit-transition: opacity 20.2s ease-in-out;
@@ -2607,7 +2604,7 @@
     height: 100%;
     left: 0;
     opacity: 0.5;
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
 }
@@ -2617,37 +2614,29 @@
 }
 
 .image.thumb:after {
-    -moz-transition: opacity 20.2s ease-in-out;
-    -webkit-transition: opacity 20.2s ease-in-out;
-    -ms-transition: opacity 20.2s ease-in-out;
-    transition: opacity 20.2s ease-in-out;
+    -moz-transition: opacity 200.2s ease-in-out;
+    -webkit-transition: opacity 200.2s ease-in-out;
+    -ms-transition: opacity 200.2s ease-in-out;
+    transition: opacity 200.2s ease-in-out;
     border: solid 1px #5052b5;
 	display: block;
 	height: 100%;
 	left: 0;
 	opacity: 1.0;
 	color: white;
-	position: absolute;
+	position: relative;
 	top: 0;
 	width: 100%;
 }
 
-.image.thumb:hover:after {
-
-	zoom: 1;
-	filter: alpha(opacity=150);
-	opacity: 0.3;
-
-}
-
-.image.thumb:hover:before {
-	zoom: 1;
+.image.thumb:hover {
+	zoom: 0.1;
 	filter: alpha(opacity=150);
 	opacity: 0.3;
 }
 
 .image img {
-    border-radius: 0.35em;
+	border-radius: 50%;
     display: block;
 }
 
@@ -2680,7 +2669,6 @@
 .image.fit img {
     width: 100%;
 }
-
 /* List */
 
 	ol {
