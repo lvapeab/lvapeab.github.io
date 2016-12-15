@@ -3281,11 +3281,11 @@
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #404394;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #404394;
 		}
 
 		.wrapper.style2 {
@@ -3293,15 +3293,15 @@
 		}
 
 		.wrapper.style2-alt {
-			background-color: #3e4094;
+			background-color: #23194B;
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #90287F;
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: #72204E;
 		}
 
 		.wrapper.fullscreen {
@@ -3562,7 +3562,7 @@
 
 	#sidebar {
 		padding: 2.5em 2.5em 0.5em 2.5em ;
-		background: #312450;
+		background: url("images/space.jpeg") ;
 		cursor: default;
 		height: 100vh;
 		left: 0;
@@ -3775,7 +3775,7 @@
 			-ms-transition: color 0.2s ease;
 			transition: color 0.2s ease;
 			border: 0;
-			color: rgba(255, 255, 255, 0.35);
+			color: rgba(255, 255, 255, 0.75);
 			display: block;
 			font-size: 0.6em;
 			font-weight: bold;
