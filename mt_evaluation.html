@@ -315,7 +315,7 @@
 
     // Loads a new direct assessment pair
     function loadNewDApair(sentence_idx) {
-        document.getElementById('da-translation').innerHTML = reference_sentences[sentence_idx - 1];
+        document.getElementById('da-translation').innerHTML = hypotheses_sentences[sentence_idx - 1];
         document.getElementById('da-reference').innerHTML = reference_sentences[sentence_idx - 1];
         document.getElementById('currentSent').innerHTML = sentence_idx;
 
