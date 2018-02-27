@@ -1,0 +1,428 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<!--Header-->
+<head>
+    <meta charset="UTF-8">
+    <title>Machine translation human assessment</title>
+    <link rel="shortcut icon" href="images/logoPRHLT.png">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+
+    <!-- core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-slider.css">
+
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/ie/html5shiv.js"></script>
+    <script src="assets/js/StreamSaver.js"></script> <!-- load before streams polyfill to detect support -->
+    <script src="https://cdn.rawgit.com/creatorrr/web-streams-polyfill/master/dist/polyfill.min.js"></script>
+    <script type="module">
+        // it also support commonJs and amd
+        import {createWriteStream, supported, version} from 'StreamSaver'
+        const {createWriteStream, supported, version} = require('StreamSaver');
+        const {createWriteStream, supported, version} = window.streamSaver;
+        alert(supported)
+    </script>
+
+</head>
+<body>
+
+<!-- Sidebar -->
+<section id="sidebar">
+
+    <div class="inner">
+        <nav>
+            <ul>
+                <li><a href="#intro">Welcome</a></li>
+                <!--<li><a href="#mt-assessment">Translation assessment</a></li>-->
+                <li><a href="#direct-assessment">Direct assessment</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <section id="intro" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+            <h1>Machine translation human assessment</h1>
+            <p> Website for performing human evaluation of machine translation (MT) outputs. </p>
+
+            <p class="alert alert-danger"
+               id="filesloaded" style="display:none;">Please, load two block files.</p>
+
+
+            <p> Select a block with MT translations:
+                <input type="file" id="transFile"></p>
+            <p> Select a block with references:
+                <input type="file" id="refsFile"></p>
+
+
+            <div style='padding:15px'>
+                <ul class="actions">
+                    <!--<li><a href="#mt-assessment" class="button scrolly">Translation assessment</a></li>-->
+                    <!--<li><a href="#direct-assessment" class="button scrolly">Direct assessment</a></li>-->
+                    <li><a href="#contact" class="button scrolly">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--<section id="mt-assessment" class="wrapper style1 fullscreen fade-up">-->
+    <!--<div class="inner">-->
+    <!--<h1>Machine translation assessment</h1>-->
+    <!--<div style='padding:15px'></div>-->
+    <!--<div class="inner">-->
+    <!--<p> Given the following sentence in English: </p>-->
+    <!--<textarea name="source_sentence" id="mt-source" readonly> Sample sentence in English... </textarea>&nbsp;-->
+    <!--<p> Please, evaluate how adequate is the following translation:</p>-->
+    <!--<textarea name="translation_sentence" id="mt-translation"-->
+    <!--readonly> Frase de ejemplo en castellano </textarea>&nbsp;-->
+    <!--<div style='padding:5px'></div>-->
+    <!--<form id='validate-mt-assessment' onsubmit='validate_mt_assessment(); return false;'>-->
+    <!--<input id="mt-assessment-slider"-->
+    <!--type="text"-->
+    <!--/>-->
+
+    <!--<div style='padding:15px'></div>-->
+    <!--<button type="submit" class="button scrolly">Submit</button>-->
+    <!--</form>-->
+
+    <!--<div style='padding:15px'>-->
+    <!--<ul class="actions">-->
+    <!--<li><a href="#direct-assessment" class="button scrolly">Reset</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</section>-->
+
+
+    <section id="direct-assessment" class="wrapper style1 fullscreen fade-up">
+        <div class="inner">
+            <h1>Direct assessment</h1>
+            <div style='padding:15px'></div>
+            <div class="inner">
+                <p> Please, evaluate how adequately the second sentence expresses the meaning of the first one.</p>
+                <textarea name="da_reference" id="da-reference" readonly> Sample sentence in English... </textarea>&nbsp;
+                <textarea name="da_translation" id="da-translation"
+                          readonly> Frase de ejemplo en ingles (del sistema) </textarea>&nbsp;
+                <div style='padding:5px'></div>
+                <form id='validate-da-assessment' onsubmit='validate_da_assessment(); return false;'>
+                    <input id="da-assessment-slider" type="text"/>
+                    <p> How accurately does the above candidate text convey the original semantics of the reference
+                        text? <br>
+                        Slider ranges from Not at all (left) to Perfectly (right).</p>
+
+
+                    <div class="container">
+
+
+                    </div>
+
+                    <table style="width:80%">
+                        <tr>
+                            <th>
+                                <div style="float: left;">
+                                    <button class="button scrolly" onclick="reset_da()">Reset</button>
+                                    <button class="button scrolly" onclick="previous_da()">Previous</button>
+
+                                </div>
+                            </th>
+                            <div class="panel-heading">
+                                <a id="currentSent"/>0</a> <span id="valPos">/</span><span id="totalSent">-</span>
+                            </div>
+                            </th>
+                            <th>
+                                <div style="float: right;">
+                                    <button id="submit-button" type="submit" class="button scrolly">Submit</button>
+                                </div>
+                            </th>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- contact -->
+    <section id="contact" class="wrapper style1 fade-up">
+        <div class="inner">
+            <h1>Contact</h1>
+            <div class="container">
+                <p>Álvaro Peris.</p>
+            </div>
+
+            <ul class="icons">
+                <li><a href="mailto:lvapeab@gmail.com" class="fa-envelope-o fa-3x"><span class="label">Gmail</span></a>
+                </li>
+                <li><a href="https://www.prhlt.upv.es/u/lvapeab" class="fa-globe fa-3x"><span class="label">PRHLT</span></a>
+                </li>
+                <li><a href="https://github.com/lvapeab/nmt-keras" class="fa-github fa-3x"><span
+                        class="label">GitHub</span></a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Álvaro Peris. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+
+<script type='text/javascript' src="assets/js/bootstrap-slider.min.js"></script>
+<script type='text/javascript' src="assets/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script type='text/javascript'>
+
+    var trans_reader, refs_reader, source_reader; // File reader
+    var loaded_trans_block, loaded_ref_block = 0; // Flags for having loaded a file
+
+    var reference_block_ids = []; // Array with DA evaluations
+    var reference_system_ids = []; // Array with DA evaluations
+    var reference_domain_ids = []; // Array with DA evaluations
+    var reference_sentence_id = [];
+    var reference_sentences = []; // Array with DA evaluations
+
+    var hypotheses_block_ids = [];
+    var hypotheses_system_ids = [];
+    var hypotheses_domain_ids = [];
+    var hypotheses_sentence_id = [];
+    var hypotheses_sentences = [];
+
+    var evaluations_da = []; // Array with DA evaluations
+
+
+    $(document).ready(function () {
+        $("#mt-assessment-slider").slider({
+            ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            ticks_labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            tooltip: 'always'
+        });
+
+        // Configuration of the slider from the direct assessment section
+        $("#da-assessment-slider").slider({
+            ticks: [0, 25, 50, 75, 100],
+            ticks_labels: ['', '|', '|', '|', ''],
+            tooltip: 'hide'
+        });
+    });
+
+
+    window.onload = function () {
+        // Load files: One with reference sentences and another one with MT hypotheses.
+        var reffileInput = document.getElementById('refsFile');
+        var transfileInput = document.getElementById('transFile');
+
+        // Reference file reader
+        reffileInput.addEventListener('change', function (e) {
+            var file = reffileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                // Read file and split by line
+                refs_reader = reader.result.split("\n");
+                // Count sentences
+                evaluations_da.length = refs_reader.length;
+                reference_block_ids.length = refs_reader.length;
+                reference_system_ids.length = refs_reader.length;
+                reference_domain_ids.length = refs_reader.length;
+                reference_sentences.length = refs_reader.length;
+
+                for (var i = 0; i < refs_reader.length; i++) {
+                    ref_line = refs_reader[i].split("\t");
+                    reference_block_ids[i] = ref_line[0];
+                    reference_system_ids[i] = ref_line[1];
+                    reference_domain_ids[i] = ref_line[2];
+                    reference_sentence_id[i] = ref_line[3];
+                    reference_sentences[i] = ref_line[4];
+                }
+
+                $('#totalSent').text(evaluations_da.length - 1);
+                loaded_ref_block = 1;
+
+                if (loaded_trans_block == 1) { // If all files are loaded, go to the evaluation section
+                    window.location = '#direct-assessment';
+                    loadNewDApair(1);
+
+                }
+            };
+            reader.readAsText(file);
+        });
+
+        // Hypotheses file reader
+        transfileInput.addEventListener('change', function (e) {
+            var file = transfileInput.files[0];
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                // Read file and split by line
+                trans_reader = reader.result.split("\n");
+                // Count sentences
+                evaluations_da.length = trans_reader.length;
+                hypotheses_block_ids.length = trans_reader.length;
+                hypotheses_system_ids.length = trans_reader.length;
+                hypotheses_domain_ids.length = trans_reader.length;
+                hypotheses_sentences.length = trans_reader.length;
+
+                for (var i = 0; i < trans_reader.length; i++) {
+                    trans_line = trans_reader[i].split("\t");
+                    hypotheses_block_ids[i] = trans_line[0];
+                    hypotheses_system_ids[i] = trans_line[1];
+                    hypotheses_domain_ids[i] = trans_line[2];
+                    hypotheses_sentence_id[i] = trans_line[3];
+                    hypotheses_sentences[i] = trans_line[4];
+                }
+                $('#totalSent').text(evaluations_da.length - 1);
+                loaded_trans_block = 1;
+                if (loaded_ref_block == 1) { // If all files are loaded, go to the evaluation section
+                    window.location = '#direct-assessment';
+                    loadNewDApair(1);
+
+                }
+
+            };
+
+            reader.readAsText(file);
+        });
+
+    };
+
+    // Loads a new direct assessment pair
+    function loadNewDApair(sentence_idx) {
+        document.getElementById('da-translation').innerHTML = reference_sentences[sentence_idx - 1];
+        document.getElementById('da-reference').innerHTML = reference_sentences[sentence_idx - 1];
+        document.getElementById('currentSent').innerHTML = sentence_idx;
+
+    }
+
+    // Validates an evaluation in DA mode
+    // Loads the next DA pair (or finishes the process)
+    function validate_da_assessment() {
+
+        // If we haven't loaded all files, raise error and go to the file loading section.
+        if (loaded_trans_block == 0 || loaded_ref_block == 0) {
+            window.location = '#intro';
+            var filesloaded = $('#filesloaded');
+            filesloaded.show();
+            filesloaded.fadeOut(10000);
+            return null;
+        }
+
+        // Get the id of the current sentence and its assessment
+        var assessment = document.getElementById('da-assessment-slider').value;
+        var id_assessment = document.getElementById('currentSent').text;
+
+        // Store the assessment in the evaluations array
+        evaluations_da[id_assessment - 1] = assessment;
+
+        // Next sentence
+        var next_id = parseInt(id_assessment, 10) + 1;
+
+        if (next_id + 1 == evaluations_da.length) { // Are we in the last sample? -> 'Finish' button
+            document.getElementById('submit-button').innerHTML = 'Finish';
+        }
+        else { // We still have samples to evaluate? -> 'Submit' button
+            document.getElementById('submit-button').innerHTML = 'Submit';
+        }
+        // If all samples are evaluated, finish the experiment
+        if (next_id >= evaluations_da.length) {
+            finish_experiment();
+        }
+        else { // Retrieve the next sample
+            loadNewDApair(next_id);
+        }
+        return next_id;
+
+    }
+    function reset_da() { // Reset the DA process
+
+        document.getElementById('currentSent').innerHTML = '0';
+        evaluations_da = [];
+        evaluations_da.length = trans_reader.length;
+        loadNewDApair(0);
+    }
+
+    function previous_da() { // Reset the DA process
+        // Get the id of the current sentence and its assessment
+        var id = parseInt(document.getElementById('currentSent').text, 10) - 1;
+        console.log(id);
+        if (id > 0) {
+            loadNewDApair(id - 1);
+        }
+        else {
+            loadNewDApair(0);
+        }
+    }
+
+    function finish_experiment() { // Final protocol. We should store the user's evaluations.
+
+
+        var evaluations_string = "";
+        for (var i = 0; i < trans_reader.length - 1; i++) {
+            evaluations_string +=
+                    hypotheses_block_ids[i] + "\t" +
+                    hypotheses_system_ids[i] + "\t" +
+                    hypotheses_domain_ids[i] + "\t" +
+                    hypotheses_sentence_id[i] + "\t" +
+                    hypotheses_sentences[i] + "\t" +
+                    evaluations_da[i] + "\n";
+        }
+
+        var fullPath = document.getElementById('transFile').value;
+        if (fullPath) {
+            var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+            var transFile_name = fullPath.substring(startIndex);
+            if (transFile_name.indexOf('\\') === 0 || transFile_name.indexOf('/') === 0) {
+                transFile_name = transFile_name.substring(1);
+            }
+        }
+        FileSave (evaluations_string, transFile_name + '_evaluation.sav');
+        alert("Thank you!");
+    }
+
+    function FileSave(sourceText, fileIdentity) {
+        var workElement = document.createElement("a");
+        if ('download' in workElement) {
+            workElement.href = "data:" + 'text/plain' + "charset=utf-8," + escape(sourceText);
+            workElement.setAttribute("download", fileIdentity);
+            document.body.appendChild(workElement);
+            var eventMouse = document.createEvent("MouseEvents");
+            eventMouse.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+            workElement.dispatchEvent(eventMouse);
+            document.body.removeChild(workElement);
+        } else throw 'File saving not supported for this browser';
+    }
+</script>
+
+</body>
+
+<!--[if lte IE 8]>
+<script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="assets/js/main.js"></script>
+</html>
