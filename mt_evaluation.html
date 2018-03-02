@@ -31,7 +31,8 @@
     <script src="mt-evaluation-web/assets/js/skel.min.js"></script>
     <script src="mt-evaluation-web/assets/js/util.js"></script>
     <script src="mt-evaluation-web/assets/js/ie/html5shiv.js"></script>
-    <script src="mt-evaluation-web/assets/js/StreamSaver.js"></script> <!-- load before streams polyfill to detect support -->
+    <script src="mt-evaluation-web/assets/js/StreamSaver.js"></script>
+    <!-- load before streams polyfill to detect support -->
     <script src="https://cdn.rawgit.com/creatorrr/web-streams-polyfill/master/dist/polyfill.min.js"></script>
     <script type="module">
         // it also support commonJs and amd
@@ -218,7 +219,8 @@
     var hypotheses_sentences = [];
 
     var evaluations_da = []; // Array with DA evaluations
-
+    var times_evaluations_da = []; // Array with DA evaluation times
+    var start;
 
     $(document).ready(function () {
         $("#mt-assessment-slider").slider({
@@ -230,8 +232,9 @@
         // Configuration of the slider from the direct assessment section
         $("#da-assessment-slider").slider({
             ticks: [0, 25, 50, 75, 100],
-            ticks_labels: ['', '|', '|', '|', ''],
-            tooltip: 'hide'
+            ticks_labels: ['|', '|', '|', '|', '|'],
+            tooltip: 'hide',
+            value: 50
         });
     });
 
@@ -250,6 +253,7 @@
                 refs_reader = reader.result.split("\n");
                 // Count sentences
                 evaluations_da.length = refs_reader.length;
+                times_evaluations_da.length = refs_reader.length;
                 reference_block_ids.length = refs_reader.length;
                 reference_system_ids.length = refs_reader.length;
                 reference_domain_ids.length = refs_reader.length;
@@ -276,7 +280,8 @@
             reader.readAsText(file);
         });
 
-        // Hypotheses file reader
+        // Hypotheses file reader.
+        // Format: block_id \t system_id \t domain_id \t sentence_id \t sentence
         transfileInput.addEventListener('change', function (e) {
             var file = transfileInput.files[0];
             var reader = new FileReader();
@@ -285,6 +290,7 @@
                 trans_reader = reader.result.split("\n");
                 // Count sentences
                 evaluations_da.length = trans_reader.length;
+                times_evaluations_da.length = trans_reader.length;
                 hypotheses_block_ids.length = trans_reader.length;
                 hypotheses_system_ids.length = trans_reader.length;
                 hypotheses_domain_ids.length = trans_reader.length;
@@ -318,7 +324,7 @@
         document.getElementById('da-translation').innerHTML = hypotheses_sentences[sentence_idx - 1];
         document.getElementById('da-reference').innerHTML = reference_sentences[sentence_idx - 1];
         document.getElementById('currentSent').innerHTML = sentence_idx;
-
+        start = Date.now();
     }
 
     // Validates an evaluation in DA mode
@@ -341,6 +347,8 @@
         // Store the assessment in the evaluations array
         evaluations_da[id_assessment - 1] = assessment;
 
+        times_evaluations_da[id_assessment - 1] = Date.now() - start;
+        start = Date.now();
         // Next sentence
         var next_id = parseInt(id_assessment, 10) + 1;
 
@@ -365,6 +373,9 @@
         document.getElementById('currentSent').innerHTML = '0';
         evaluations_da = [];
         evaluations_da.length = trans_reader.length;
+
+        times_evaluations_da = [];
+        times_evaluations_da.length = trans_reader.length;
         loadNewDApair(0);
     }
 
@@ -381,8 +392,6 @@
     }
 
     function finish_experiment() { // Final protocol. We should store the user's evaluations.
-
-
         var evaluations_string = "";
         for (var i = 0; i < trans_reader.length - 1; i++) {
             evaluations_string +=
@@ -391,7 +400,10 @@
                     hypotheses_domain_ids[i] + "\t" +
                     hypotheses_sentence_id[i] + "\t" +
                     hypotheses_sentences[i] + "\t" +
-                    evaluations_da[i] + "\n";
+                    "Evaluation\t" +
+                    evaluations_da[i] + "\t" +
+                    "Time\t" +
+                    times_evaluations_da[i] + "\n";
         }
 
         var fullPath = document.getElementById('transFile').value;
@@ -402,22 +414,29 @@
                 transFile_name = transFile_name.substring(1);
             }
         }
-        FileSave (evaluations_string, transFile_name + '_evaluation.sav');
+        FileSave(evaluations_string, transFile_name + '_evaluation.sav');
         alert("Thank you!");
+    }
+    function destroyClickedElement(event) {
+        document.body.removeChild(event.target);
     }
 
     function FileSave(sourceText, fileIdentity) {
-        var workElement = document.createElement("a");
-        if ('download' in workElement) {
-            workElement.href = "data:" + 'text/plain' + "charset=utf-8," + escape(sourceText);
-            workElement.setAttribute("download", fileIdentity);
-            document.body.appendChild(workElement);
-            var eventMouse = document.createEvent("MouseEvents");
-            eventMouse.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
-            workElement.dispatchEvent(eventMouse);
-            document.body.removeChild(workElement);
-        } else throw 'File saving not supported for this browser';
+        var textToSaveAsBlob = new Blob([sourceText], {type: "text/plain"});
+        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+        var fileNameToSaveAs = fileIdentity;
+
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        downloadLink.href = textToSaveAsURL;
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
     }
+
 </script>
 
 </body>
