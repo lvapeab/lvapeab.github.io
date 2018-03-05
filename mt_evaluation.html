@@ -133,11 +133,7 @@
                     <p> How accurately does the above candidate text convey the original semantics of the reference
                         text? <br>
                         Slider ranges from Not at all (left) to Perfectly (right).</p>
-
-
                     <div class="container">
-
-
                     </div>
 
                     <table style="width:80%">
@@ -149,13 +145,10 @@
 
                                 </div>
                             </th>
-                            <div class="panel-heading">
-                                <a id="currentSent"/>0</a> <span id="valPos">/</span><span id="totalSent">-</span>
-                            </div>
                             </th>
                             <th>
                                 <div style="float: right;">
-                                    <button id="submit-button" type="submit" class="button scrolly">Submit</button>
+                                    <button id="submit-button" type="submit" class="button scrolly"> - </button>
                                 </div>
                             </th>
                         </tr>
@@ -221,6 +214,8 @@
     var evaluations_da = []; // Array with DA evaluations
     var times_evaluations_da = []; // Array with DA evaluation times
     var start;
+    var currentSent;
+    var totalSents;
 
     $(document).ready(function () {
         $("#mt-assessment-slider").slider({
@@ -233,7 +228,7 @@
         $("#da-assessment-slider").slider({
             ticks: [0, 25, 50, 75, 100],
             ticks_labels: ['|', '|', '|', '|', '|'],
-            tooltip: 'hide',
+//            tooltip: 'hide',
             value: 50
         });
     });
@@ -258,7 +253,7 @@
                 reference_system_ids.length = refs_reader.length;
                 reference_domain_ids.length = refs_reader.length;
                 reference_sentences.length = refs_reader.length;
-
+                totalSents = reference_sentences.length - 1;
                 for (var i = 0; i < refs_reader.length; i++) {
                     ref_line = refs_reader[i].split("\t");
                     reference_block_ids[i] = ref_line[0];
@@ -295,7 +290,7 @@
                 hypotheses_system_ids.length = trans_reader.length;
                 hypotheses_domain_ids.length = trans_reader.length;
                 hypotheses_sentences.length = trans_reader.length;
-
+                totalSents = hypotheses_sentences.length - 1;
                 for (var i = 0; i < trans_reader.length; i++) {
                     trans_line = trans_reader[i].split("\t");
                     hypotheses_block_ids[i] = trans_line[0];
@@ -323,8 +318,10 @@
     function loadNewDApair(sentence_idx) {
         document.getElementById('da-translation').innerHTML = hypotheses_sentences[sentence_idx - 1];
         document.getElementById('da-reference').innerHTML = reference_sentences[sentence_idx - 1];
-        document.getElementById('currentSent').innerHTML = sentence_idx;
+        currentSent = sentence_idx;
         start = Date.now();
+        document.getElementById('submit-button').innerHTML = 'Submit (' + currentSent + '/' + totalSents + ')';
+
     }
 
     // Validates an evaluation in DA mode
@@ -342,7 +339,7 @@
 
         // Get the id of the current sentence and its assessment
         var assessment = document.getElementById('da-assessment-slider').value;
-        var id_assessment = document.getElementById('currentSent').text;
+        var id_assessment = currentSent; //document.getElementById('currentSent').text;
 
         // Store the assessment in the evaluations array
         evaluations_da[id_assessment - 1] = assessment;
@@ -352,11 +349,11 @@
         // Next sentence
         var next_id = parseInt(id_assessment, 10) + 1;
 
-        if (next_id + 1 == evaluations_da.length) { // Are we in the last sample? -> 'Finish' button
+        if (next_id + 1 == totalSents) { // Are we in the last sample? -> 'Finish' button
             document.getElementById('submit-button').innerHTML = 'Finish';
         }
         else { // We still have samples to evaluate? -> 'Submit' button
-            document.getElementById('submit-button').innerHTML = 'Submit';
+            document.getElementById('submit-button').innerHTML = 'Submit (' + currentSent + '/' + totalSents + ')';
         }
         // If all samples are evaluated, finish the experiment
         if (next_id >= evaluations_da.length) {
@@ -370,7 +367,8 @@
     }
     function reset_da() { // Reset the DA process
 
-        document.getElementById('currentSent').innerHTML = '0';
+        //document.getElementById('currentSent').innerHTML = '0';
+        currentSent = 0;
         evaluations_da = [];
         evaluations_da.length = trans_reader.length;
 
@@ -381,8 +379,7 @@
 
     function previous_da() { // Reset the DA process
         // Get the id of the current sentence and its assessment
-        var id = parseInt(document.getElementById('currentSent').text, 10) - 1;
-        console.log(id);
+        var id = currentSent - 1; //parseInt(document.getElementById('currentSent').text, 10) - 1;
         if (id > 0) {
             loadNewDApair(id - 1);
         }
