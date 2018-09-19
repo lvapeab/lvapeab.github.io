@@ -2745,13 +2745,13 @@ input[type="radio"] + label:before {
 }
 
 .image.fit {
-    display: block;
-    margin: 2em 1em 2em 1em;
-    width: 40%;
+    /*display: block;*/
+    /*margin: 2em 1em 2em 1em;*/
+    /*width: 40%;*/
 }
 
 .image.fit img {
-    width: 40%;
+    width: 100%;
 }
 
 /* List */
@@ -3941,7 +3941,6 @@ body.is-loading #sidebar nav ul li {
 @media screen and (max-width: 1280px) {
 
     #sidebar {
-
         background: url(../../images/logoPRHLT-whitefill.svg) center left no-repeat,url(../../images/logoUPV-val-vertical.svg) center right no-repeat,#2B84C6 ;
         background-size: 5%, 5% ;
         height: 3.5em;
