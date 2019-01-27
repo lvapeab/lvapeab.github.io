@@ -1,6 +1,6 @@
 # Machine translation human evaluation
 
-This website provides tools for performing the [Direct Assessment (DA) protocol]() for evaluating translation hypotheses.
+This website provides tools for performing the [Direct Assessment (DA) protocol](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.724.1219) for evaluating translation hypotheses.
 
 
 
