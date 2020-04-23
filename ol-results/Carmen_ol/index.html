@@ -1,0 +1,1111 @@
+<html>
+<head>
+<link rel="stylesheet" href="compare_mt.css">
+</head>
+<script>
+
+function showhide(elem) {
+  var x = document.getElementById(elem);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+<body>
+<h1>compare-mt Analysis Report</h1>
+ <h2>Aggregate Scores</h2>
+<table border="1">
+<caption> BLEU </caption><tr> <th>  </th>
+  <th> Adaptive </th>
+  <th> Static </th>
+  <th> Win? </th> </tr><tr> <th> BLEU </th>
+  <td> 42.3754 </td>
+  <td> 31.8728 </td>
+  <td> s1>s2 </td> </tr><tr> <th>  </th>
+  <td> [37.5432,48.0199] </td>
+  <td> [28.1738,35.9521] </td>
+  <td> p=0.0000 </td> </tr>
+</table>
+ <br/><button onclick="showhide('001_latex')">Show/Hide LaTeX</button> <br/><pre id="001_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+ & Adaptive & Static & Win? \\ \hline \hline
+BLEU & 42.3754 & 31.8728 & s1\textgreaters2 \\
+ & {[}37.5432,48.0199{]} & {[}28.1738,35.9521{]} & p=0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table001}
+\end{table}</pre><img src="001-score-bleu.png" alt="Score Comparison"> <br/><button onclick="showhide('001-score-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="001-score-bleu_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{001-score-bleu.pdf}
+  \caption{Score Comparison}
+  \label{fig:001-score-bleu}
+\end{figure}</pre>
+<h2>Word Accuracies</h2>
+<table border="1">
+<caption> word fmeas by frequency bucket </caption><tr> <th> frequency </th>
+  <th> Adaptive </th>
+  <th> Static </th>
+  <th> Examples </th> </tr><tr> <th> <1 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket0">Examples</a> </td> </tr><tr> <th> 1 </th>
+  <td> 0.5738 </td>
+  <td> 0.5609 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket1">Examples</a> </td> </tr><tr> <th> 2 </th>
+  <td> 0.6310 </td>
+  <td> 0.5977 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket2">Examples</a> </td> </tr><tr> <th> 3 </th>
+  <td> 0.6757 </td>
+  <td> 0.6286 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket3">Examples</a> </td> </tr><tr> <th> 4 </th>
+  <td> 0.8000 </td>
+  <td> 0.7288 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket4">Examples</a> </td> </tr><tr> <th> [5,10) </th>
+  <td> 0.7239 </td>
+  <td> 0.6397 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket5">Examples</a> </td> </tr><tr> <th> [10,100) </th>
+  <td> 0.8108 </td>
+  <td> 0.7492 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket6">Examples</a> </td> </tr><tr> <th> [100,1000) </th>
+  <td> 0.8418 </td>
+  <td> 0.7888 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket7">Examples</a> </td> </tr><tr> <th> >=1000 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket8">Examples</a> </td> </tr>
+</table>
+ <br/><button onclick="showhide('107_latex')">Show/Hide LaTeX</button> <br/><pre id="107_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+frequency & Adaptive & Static \\ \hline \hline
+\textless1 & 0.0000 & 0.0000 \\
+1 & 0.5738 & 0.5609 \\
+2 & 0.6310 & 0.5977 \\
+3 & 0.6757 & 0.6286 \\
+4 & 0.8000 & 0.7288 \\
+{[}5,10) & 0.7239 & 0.6397 \\
+{[}10,100) & 0.8108 & 0.7492 \\
+{[}100,1000) & 0.8418 & 0.7888 \\
+\textgreater=1000 & 0.0000 & 0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table107}
+\end{table}</pre><img src="002-wordacc-frequency-fmeas.png" alt="Word Accuracy Analysis"> <br/><button onclick="showhide('002-wordacc-frequency-fmeas_latex')">Show/Hide LaTeX</button> <br/><pre id="002-wordacc-frequency-fmeas_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{002-wordacc-frequency-fmeas.pdf}
+  \caption{Word Accuracy Analysis}
+  \label{fig:002-wordacc-frequency-fmeas}
+\end{figure}</pre>
+<h2>Sentence Buckets</h2>
+<table border="1">
+<caption> bucket type: length, statistic type: BLEU </caption><tr> <th> length </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <10 </th>
+  <td> 34.1060 </td>
+  <td> 28.4951 </td> </tr><tr> <th> [10,20) </th>
+  <td> 43.0781 </td>
+  <td> 31.2461 </td> </tr><tr> <th> [20,30) </th>
+  <td> 44.3049 </td>
+  <td> 34.1688 </td> </tr><tr> <th> [30,40) </th>
+  <td> 42.8288 </td>
+  <td> 30.9746 </td> </tr><tr> <th> [40,50) </th>
+  <td> 45.0042 </td>
+  <td> 33.2508 </td> </tr><tr> <th> [50,60) </th>
+  <td> 23.2277 </td>
+  <td> 23.8703 </td> </tr><tr> <th> >=60 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td> </tr>
+</table>
+ <br/><button onclick="showhide('108_latex')">Show/Hide LaTeX</button> <br/><pre id="108_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+length & Adaptive & Static \\ \hline \hline
+\textless10 & 34.1060 & 28.4951 \\
+{[}10,20) & 43.0781 & 31.2461 \\
+{[}20,30) & 44.3049 & 34.1688 \\
+{[}30,40) & 42.8288 & 30.9746 \\
+{[}40,50) & 45.0042 & 33.2508 \\
+{[}50,60) & 23.2277 & 23.8703 \\
+\textgreater=60 & 0.0000 & 0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table108}
+\end{table}</pre><img src="003-sent-length-bleu.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('003-sent-length-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="003-sent-length-bleu_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{003-sent-length-bleu.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:003-sent-length-bleu}
+\end{figure}</pre>
+<table border="1">
+<caption> bucket type: len(output)-len(reference), statistic type: count </caption><tr> <th> lengthdiff </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <-20 </th>
+  <td> 0 </td>
+  <td> 0 </td> </tr><tr> <th> [-20,-10) </th>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> [-10,-5) </th>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> -5 </th>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> -4 </th>
+  <td> 3 </td>
+  <td> 7 </td> </tr><tr> <th> -3 </th>
+  <td> 7 </td>
+  <td> 1 </td> </tr><tr> <th> -2 </th>
+  <td> 6 </td>
+  <td> 6 </td> </tr><tr> <th> -1 </th>
+  <td> 18 </td>
+  <td> 11 </td> </tr><tr> <th> 0 </th>
+  <td> 20 </td>
+  <td> 29 </td> </tr><tr> <th> 1 </th>
+  <td> 36 </td>
+  <td> 32 </td> </tr><tr> <th> 2 </th>
+  <td> 23 </td>
+  <td> 22 </td> </tr><tr> <th> 3 </th>
+  <td> 13 </td>
+  <td> 14 </td> </tr><tr> <th> 4 </th>
+  <td> 8 </td>
+  <td> 11 </td> </tr><tr> <th> 5 </th>
+  <td> 6 </td>
+  <td> 6 </td> </tr><tr> <th> [6,11) </th>
+  <td> 5 </td>
+  <td> 8 </td> </tr><tr> <th> [11,21) </th>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> >=21 </th>
+  <td> 0 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('109_latex')">Show/Hide LaTeX</button> <br/><pre id="109_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+lengthdiff & Adaptive & Static \\ \hline \hline
+\textless-20 & 0 & 0 \\
+{[}-20,-10) & 1 & 1 \\
+{[}-10,-5) & 1 & 2 \\
+-5 & 2 & 0 \\
+-4 & 3 & 7 \\
+-3 & 7 & 1 \\
+-2 & 6 & 6 \\
+-1 & 18 & 11 \\
+0 & 20 & 29 \\
+1 & 36 & 32 \\
+2 & 23 & 22 \\
+3 & 13 & 14 \\
+4 & 8 & 11 \\
+5 & 6 & 6 \\
+{[}6,11) & 5 & 8 \\
+{[}11,21) & 1 & 0 \\
+\textgreater=21 & 0 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table109}
+\end{table}</pre><img src="004-sent-lengthdiff-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('004-sent-lengthdiff-count_latex')">Show/Hide LaTeX</button> <br/><pre id="004-sent-lengthdiff-count_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{004-sent-lengthdiff-count.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:004-sent-lengthdiff-count}
+\end{figure}</pre>
+<table border="1">
+<caption> bucket type: sentence-level BLEU, statistic type: count </caption><tr> <th> sentbleu </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <10.0 </th>
+  <td> 3 </td>
+  <td> 2 </td> </tr><tr> <th> [10.0,20.0) </th>
+  <td> 8 </td>
+  <td> 27 </td> </tr><tr> <th> [20.0,30.0) </th>
+  <td> 25 </td>
+  <td> 36 </td> </tr><tr> <th> [30.0,40.0) </th>
+  <td> 33 </td>
+  <td> 29 </td> </tr><tr> <th> [40.0,50.0) </th>
+  <td> 28 </td>
+  <td> 27 </td> </tr><tr> <th> [50.0,60.0) </th>
+  <td> 25 </td>
+  <td> 17 </td> </tr><tr> <th> [60.0,70.0) </th>
+  <td> 11 </td>
+  <td> 8 </td> </tr><tr> <th> [70.0,80.0) </th>
+  <td> 11 </td>
+  <td> 3 </td> </tr><tr> <th> [80.0,90.0) </th>
+  <td> 5 </td>
+  <td> 1 </td> </tr><tr> <th> >=90.0 </th>
+  <td> 1 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('110_latex')">Show/Hide LaTeX</button> <br/><pre id="110_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+sentbleu & Adaptive & Static \\ \hline \hline
+\textless10.0 & 3 & 2 \\
+{[}10.0,20.0) & 8 & 27 \\
+{[}20.0,30.0) & 25 & 36 \\
+{[}30.0,40.0) & 33 & 29 \\
+{[}40.0,50.0) & 28 & 27 \\
+{[}50.0,60.0) & 25 & 17 \\
+{[}60.0,70.0) & 11 & 8 \\
+{[}70.0,80.0) & 11 & 3 \\
+{[}80.0,90.0) & 5 & 1 \\
+\textgreater=90.0 & 1 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table110}
+\end{table}</pre><img src="005-sent-sentbleu-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('005-sent-sentbleu-count_latex')">Show/Hide LaTeX</button> <br/><pre id="005-sent-sentbleu-count_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{005-sent-sentbleu-count.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:005-sent-sentbleu-count}
+\end{figure}</pre>
+<h2>Characteristic N-grams</h2>
+<p> min_ngram_length=1, max_ngram_length=4 </p><p> report_length=50, alpha=1.0, compare_type=match </p><table border="1">
+<caption> 50 n-grams where Adaptive>Static in match </caption><tr> <th> n-gram </th>
+  <th> match </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> Pulse </th>
+  <td> 0.9091 </td>
+  <td> 9 </td>
+  <td> 0 </td> </tr><tr> <th> programable </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> tecla programable </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> la tecla programable </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> de v&#237;as </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> bot&#243;n DISCHARGE </th>
+  <td> 0.8889 </td>
+  <td> 7 </td>
+  <td> 0 </td> </tr><tr> <th> de v&#237;as respiratorias </th>
+  <td> 0.8750 </td>
+  <td> 6 </td>
+  <td> 0 </td> </tr><tr> <th> de resumen </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> el bot&#243;n DISCHARGE </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> resumen </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> adaptador de v&#237;as </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> Pulse el </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> mantenga pulsado el bot&#243;n </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> el R </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> adaptador de v&#237;as respiratorias </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> mantenga pulsado el </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> Pulse el bot&#243;n </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> el adaptador de </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> pulsado el bot&#243;n </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> informe de </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> pulsado el </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> pulsado </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> el adaptador de v&#237;as </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> informe de resumen </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> mantenga pulsado </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> de v&#237;as respiratorias y </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> electrodos de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> de RCP OneStep </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> electrodos de RCP </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> aseg&#250;rese de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> aseg&#250;rese </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> pulse la tecla programable </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> RCP OneStep </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> aseg&#250;rese de que </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> electrodos de RCP OneStep </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> adaptador de </th>
+  <td> 0.7778 </td>
+  <td> 6 </td>
+  <td> 1 </td> </tr><tr> <th> llave </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> Cambie el selector </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> y aseg&#250;rese de </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> de tiras </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> espiratorio </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> los electrodos de </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> de preparaci&#243;n del </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> tiras </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> preparaci&#243;n del </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> El informe de </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> Cambie el selector de </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> la mama </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> una marca de comprobaci&#243;n </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> asas </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('111_latex')">Show/Hide LaTeX</button> <br/><pre id="111_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+n-gram & match & Adaptive & Static \\ \hline \hline
+Pulse & 0.9091 & 9 & 0 \\
+programable & 0.9000 & 8 & 0 \\
+tecla programable & 0.9000 & 8 & 0 \\
+la tecla programable & 0.9000 & 8 & 0 \\
+de v&#237;as & 0.9000 & 8 & 0 \\
+bot&#243;n DISCHARGE & 0.8889 & 7 & 0 \\
+de v&#237;as respiratorias & 0.8750 & 6 & 0 \\
+de resumen & 0.8571 & 5 & 0 \\
+el bot&#243;n DISCHARGE & 0.8571 & 5 & 0 \\
+resumen & 0.8571 & 5 & 0 \\
+adaptador de v&#237;as & 0.8571 & 5 & 0 \\
+Pulse el & 0.8333 & 4 & 0 \\
+mantenga pulsado el bot&#243;n & 0.8333 & 4 & 0 \\
+el R & 0.8333 & 4 & 0 \\
+adaptador de v&#237;as respiratorias & 0.8333 & 4 & 0 \\
+mantenga pulsado el & 0.8333 & 4 & 0 \\
+Pulse el bot&#243;n & 0.8333 & 4 & 0 \\
+el adaptador de & 0.8333 & 4 & 0 \\
+pulsado el bot&#243;n & 0.8333 & 4 & 0 \\
+informe de & 0.8333 & 4 & 0 \\
+pulsado el & 0.8333 & 4 & 0 \\
+pulsado & 0.8333 & 4 & 0 \\
+el adaptador de v&#237;as & 0.8333 & 4 & 0 \\
+informe de resumen & 0.8333 & 4 & 0 \\
+mantenga pulsado & 0.8333 & 4 & 0 \\
+de v&#237;as respiratorias y & 0.8000 & 3 & 0 \\
+electrodos de & 0.8000 & 3 & 0 \\
+de RCP OneStep & 0.8000 & 3 & 0 \\
+electrodos de RCP & 0.8000 & 3 & 0 \\
+aseg&#250;rese de & 0.8000 & 3 & 0 \\
+aseg&#250;rese & 0.8000 & 3 & 0 \\
+pulse la tecla programable & 0.8000 & 3 & 0 \\
+RCP OneStep & 0.8000 & 3 & 0 \\
+aseg&#250;rese de que & 0.8000 & 3 & 0 \\
+electrodos de RCP OneStep & 0.8000 & 3 & 0 \\
+adaptador de & 0.7778 & 6 & 1 \\
+llave & 0.7500 & 2 & 0 \\
+Cambie el selector & 0.7500 & 2 & 0 \\
+y aseg&#250;rese de & 0.7500 & 2 & 0 \\
+de tiras & 0.7500 & 2 & 0 \\
+espiratorio & 0.7500 & 2 & 0 \\
+los electrodos de & 0.7500 & 2 & 0 \\
+de preparaci&#243;n del & 0.7500 & 2 & 0 \\
+tiras & 0.7500 & 2 & 0 \\
+preparaci&#243;n del & 0.7500 & 2 & 0 \\
+El informe de & 0.7500 & 2 & 0 \\
+Cambie el selector de & 0.7500 & 2 & 0 \\
+la mama & 0.7500 & 2 & 0 \\
+una marca de comprobaci&#243;n & 0.7500 & 2 & 0 \\
+asas & 0.7500 & 2 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table111}
+\end{table}</pre><table border="1">
+<caption> 50 n-grams where Static>Adaptive in match </caption><tr> <th> n-gram </th>
+  <th> match </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> registro de impresi&#243;n </th>
+  <td> 0.2500 </td>
+  <td> 0 </td>
+  <td> 2 </td> </tr><tr> <th> espere </th>
+  <td> 0.2500 </td>
+  <td> 0 </td>
+  <td> 2 </td> </tr><tr> <th> y espere </th>
+  <td> 0.2500 </td>
+  <td> 0 </td>
+  <td> 2 </td> </tr><tr> <th> de prueba de 30 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> un kit de adaptador </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> el aire </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> producirse aproximadamente cada cent&#237;metro </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de la hemoglobina arteriolar </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> no invasiva del CO2 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Seleccione un kit </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> espalda del paciente </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> principal o </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Report to Card </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> y seleccione el modo </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> el tri&#225;ngulo azul entre </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> una prueba autom&#225;tica </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> avanzada </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ofrecer </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> se describe en las </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Presione el </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> espalda </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> avanzada de la </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> colocaci&#243;n del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ofrecer una prueba </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> autoprueba conectado al envase </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> lentamente el control de </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> se describe </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> la parte inferior </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> para la monitorizaci&#243;n avanzada </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> un kit </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Se produce una alarma </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Anterior-Anterior </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> con el tri&#225;ngulo </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> detiene </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> al ofrecer una </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de escape </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> hasta que el </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> el control de salida </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> continua no invasiva del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> que el desfibrilador no </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> no invasiva del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> WARM UP </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> y el CO2 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> durante 90 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> situado en una de </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> electrodo delantero </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> to </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> monitorizaci&#243;n avanzada de </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> registrador se activa </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> El registrador se activa </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr>
+</table>
+ <br/><button onclick="showhide('112_latex')">Show/Hide LaTeX</button> <br/><pre id="112_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+n-gram & match & Adaptive & Static \\ \hline \hline
+registro de impresi&#243;n & 0.2500 & 0 & 2 \\
+espere & 0.2500 & 0 & 2 \\
+y espere & 0.2500 & 0 & 2 \\
+de prueba de 30 & 0.3333 & 0 & 1 \\
+un kit de adaptador & 0.3333 & 0 & 1 \\
+el aire & 0.3333 & 0 & 1 \\
+producirse aproximadamente cada cent&#237;metro & 0.3333 & 0 & 1 \\
+de la hemoglobina arteriolar & 0.3333 & 0 & 1 \\
+no invasiva del CO2 & 0.3333 & 0 & 1 \\
+Seleccione un kit & 0.3333 & 0 & 1 \\
+espalda del paciente & 0.3333 & 0 & 1 \\
+principal o & 0.3333 & 0 & 1 \\
+Report to Card & 0.3333 & 0 & 1 \\
+y seleccione el modo & 0.3333 & 0 & 1 \\
+el tri&#225;ngulo azul entre & 0.3333 & 0 & 1 \\
+una prueba autom&#225;tica & 0.3333 & 0 & 1 \\
+avanzada & 0.3333 & 0 & 1 \\
+ofrecer & 0.3333 & 0 & 1 \\
+se describe en las & 0.3333 & 0 & 1 \\
+Presione el & 0.3333 & 0 & 1 \\
+espalda & 0.3333 & 0 & 1 \\
+avanzada de la & 0.3333 & 0 & 1 \\
+colocaci&#243;n del & 0.3333 & 0 & 1 \\
+ofrecer una prueba & 0.3333 & 0 & 1 \\
+autoprueba conectado al envase & 0.3333 & 0 & 1 \\
+lentamente el control de & 0.3333 & 0 & 1 \\
+se describe & 0.3333 & 0 & 1 \\
+la parte inferior & 0.3333 & 0 & 1 \\
+para la monitorizaci&#243;n avanzada & 0.3333 & 0 & 1 \\
+un kit & 0.3333 & 0 & 1 \\
+Se produce una alarma & 0.3333 & 0 & 1 \\
+Anterior-Anterior & 0.3333 & 0 & 1 \\
+con el tri&#225;ngulo & 0.3333 & 0 & 1 \\
+detiene & 0.3333 & 0 & 1 \\
+al ofrecer una & 0.3333 & 0 & 1 \\
+de escape & 0.3333 & 0 & 1 \\
+hasta que el & 0.3333 & 0 & 1 \\
+el control de salida & 0.3333 & 0 & 1 \\
+continua no invasiva del & 0.3333 & 0 & 1 \\
+que el desfibrilador no & 0.3333 & 0 & 1 \\
+no invasiva del & 0.3333 & 0 & 1 \\
+WARM UP & 0.3333 & 0 & 1 \\
+y el CO2 & 0.3333 & 0 & 1 \\
+durante 90 & 0.3333 & 0 & 1 \\
+situado en una de & 0.3333 & 0 & 1 \\
+electrodo delantero & 0.3333 & 0 & 1 \\
+to & 0.3333 & 0 & 1 \\
+monitorizaci&#243;n avanzada de & 0.3333 & 0 & 1 \\
+registrador se activa & 0.3333 & 0 & 1 \\
+El registrador se activa & 0.3333 & 0 & 1 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table112}
+\end{table}</pre>
+<h2>Sentence Examples</h2>
+<h4> 10 sentences where Adaptive>Static at sentence-level BLEU </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Conecte el adaptador de v&#237;as respiratorias al circuito de v&#237;as respiratorias. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Coloque el adaptador de v&#237;as respiratorias al circuito de v&#237;as respiratorias . </td>
+  <td> 73.6170 </td> </tr><tr> <th> Static </th>
+  <td> Coloque el adaptador para las v&#237;as respiratorias para el circuito de v&#237;a a&#233;rea . </td>
+  <td> 17.0983 </td> </tr>
+</table>
+ <br/><button onclick="showhide('113_latex')">Show/Hide LaTeX</button> <br/><pre id="113_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Conecte el adaptador de v&#237;as respiratorias al circuito de v&#237;as respiratorias. &  \\
+Adaptive & Coloque el adaptador de v&#237;as respiratorias al circuito de v&#237;as respiratorias . & 73.6170 \\
+Static & Coloque el adaptador para las v&#237;as respiratorias para el circuito de v&#237;a a&#233;rea . & 17.0983 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table113}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El registrador gr&#225;fico de tiras est&#225; situado en la parte superior del desfibrilador. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El registrador gr&#225;fico de tiras est&#225; situado en la cima del desfibrilador . </td>
+  <td> 69.3098 </td> </tr><tr> <th> Static </th>
+  <td> El gr&#225;fico de gr&#225;fico de la tira se encuentra en la cima del desfibrilador . </td>
+  <td> 14.8076 </td> </tr>
+</table>
+ <br/><button onclick="showhide('114_latex')">Show/Hide LaTeX</button> <br/><pre id="114_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El registrador gr&#225;fico de tiras est&#225; situado en la parte superior del desfibrilador. &  \\
+Adaptive & El registrador gr&#225;fico de tiras est&#225; situado en la cima del desfibrilador . & 69.3098 \\
+Static & El gr&#225;fico de gr&#225;fico de la tira se encuentra en la cima del desfibrilador . & 14.8076 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table114}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Luego pulse Print All (Imprimir todo). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Luego pulse Print All . </td>
+  <td> 62.2101 </td> </tr><tr> <th> Static </th>
+  <td> Luego , presione &#171; Print &#187; . </td>
+  <td> 20.5567 </td> </tr>
+</table>
+ <br/><button onclick="showhide('115_latex')">Show/Hide LaTeX</button> <br/><pre id="115_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Luego pulse Print All (Imprimir todo). &  \\
+Adaptive & Luego pulse Print All . & 62.2101 \\
+Static & Luego , presione &#171; Print &#187; . & 20.5567 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table115}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Reconecte el cable OneStep y pulse la tecla programable Clear Pace Alarm (Eliminar alarma de ritmo). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Reconecte el cable OneStep y pulse la tecla programable Clear Pace Alarm . </td>
+  <td> 72.9871 </td> </tr><tr> <th> Static </th>
+  <td> Reconexi&#243;n del cable OneStep , y pulse la tecla &#171; Clear Pace Alarm &#187; . </td>
+  <td> 31.4792 </td> </tr>
+</table>
+ <br/><button onclick="showhide('116_latex')">Show/Hide LaTeX</button> <br/><pre id="116_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Reconecte el cable OneStep y pulse la tecla programable Clear Pace Alarm (Eliminar alarma de ritmo). &  \\
+Adaptive & Reconecte el cable OneStep y pulse la tecla programable Clear Pace Alarm . & 72.9871 \\
+Static & Reconexi&#243;n del cable OneStep , y pulse la tecla &#171; Clear Pace Alarm &#187; . & 31.4792 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table116}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Para desactivar todas las alarmas durante la duraci&#243;n del evento, mantenga pulsado el bot&#243;n de suspensi&#243;n de alarma durante un m&#237;nimo de 3 segundos hasta que todos los iconos de alarma tengan una X. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Para desactivar todas las alarmas durante la duraci&#243;n del evento , mantenga pulsado el bot&#243;n de suspensi&#243;n de alarma durante un m&#237;nimo de 3 segundos hasta que todos los iconos de alarma tengan una X por debajo . </td>
+  <td> 79.8126 </td> </tr><tr> <th> Static </th>
+  <td> Para desactivar todas las alarmas mientras dure el evento , mantenga presionado el bot&#243;n &#171; alarma &#187; durante 3 segundos como m&#237;nimo hasta que todos los iconos de alarma tengan una X por debajo . </td>
+  <td> 39.4251 </td> </tr>
+</table>
+ <br/><button onclick="showhide('117_latex')">Show/Hide LaTeX</button> <br/><pre id="117_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Para desactivar todas las alarmas durante la duraci&#243;n del evento, mantenga pulsado el bot&#243;n de suspensi&#243;n de alarma durante un m&#237;nimo de 3 segundos hasta que todos los iconos de alarma tengan una X. &  \\
+Adaptive & Para desactivar todas las alarmas durante la duraci&#243;n del evento , mantenga pulsado el bot&#243;n de suspensi&#243;n de alarma durante un m&#237;nimo de 3 segundos hasta que todos los iconos de alarma tengan una X por debajo . & 79.8126 \\
+Static & Para desactivar todas las alarmas mientras dure el evento , mantenga presionado el bot&#243;n &#171; alarma &#187; durante 3 segundos como m&#237;nimo hasta que todos los iconos de alarma tengan una X por debajo . & 39.4251 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table117}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> P&#250;lselo de nuevo para detener la impresi&#243;n. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Presione de nuevo para detener la impresi&#243;n . </td>
+  <td> 58.7395 </td> </tr><tr> <th> Static </th>
+  <td> Presione nuevamente para dejar de imprimirse . </td>
+  <td> 20.5567 </td> </tr>
+</table>
+ <br/><button onclick="showhide('118_latex')">Show/Hide LaTeX</button> <br/><pre id="118_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & P&#250;lselo de nuevo para detener la impresi&#243;n. &  \\
+Adaptive & Presione de nuevo para detener la impresi&#243;n . & 58.7395 \\
+Static & Presione nuevamente para dejar de imprimirse . & 20.5567 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table118}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> En el caso de las mujeres, levante la mama si es necesario para colocar el electrodo debajo. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Para las mujeres , levanten la mama si es necesario para colocar el electrodo debajo . </td>
+  <td> 52.4343 </td> </tr><tr> <th> Static </th>
+  <td> En caso de que sea necesario para posicionar el electrodo bajo el electrodo , para las mujeres . </td>
+  <td> 14.4001 </td> </tr>
+</table>
+ <br/><button onclick="showhide('119_latex')">Show/Hide LaTeX</button> <br/><pre id="119_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & En el caso de las mujeres, levante la mama si es necesario para colocar el electrodo debajo. &  \\
+Adaptive & Para las mujeres , levanten la mama si es necesario para colocar el electrodo debajo . & 52.4343 \\
+Static & En caso de que sea necesario para posicionar el electrodo bajo el electrodo , para las mujeres . & 14.4001 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table119}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Pulse el bot&#243;n NIBP en el panel frontal del R Series para iniciar y poner fin a las mediciones. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Pulse el bot&#243;n NIBP en el panel frontal del R Series para iniciar y poner fin a las mediciones . </td>
+  <td> 89.7077 </td> </tr><tr> <th> Static </th>
+  <td> Presione el bot&#243;n &#171; NIBP &#187; en el panel frontal del R Series para iniciar y terminar las mediciones . </td>
+  <td> 53.6272 </td> </tr>
+</table>
+ <br/><button onclick="showhide('120_latex')">Show/Hide LaTeX</button> <br/><pre id="120_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Pulse el bot&#243;n NIBP en el panel frontal del R Series para iniciar y poner fin a las mediciones. &  \\
+Adaptive & Pulse el bot&#243;n NIBP en el panel frontal del R Series para iniciar y poner fin a las mediciones . & 89.7077 \\
+Static & Presione el bot&#243;n &#171; NIBP &#187; en el panel frontal del R Series para iniciar y terminar las mediciones . & 53.6272 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table120}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Pulse la tecla programable Zero (Ajuste a cero). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Pulse la tecla programable Zero . </td>
+  <td> 57.9750 </td> </tr><tr> <th> Static </th>
+  <td> Presione la tecla &#171; Zero &#187; . </td>
+  <td> 22.7721 </td> </tr>
+</table>
+ <br/><button onclick="showhide('121_latex')">Show/Hide LaTeX</button> <br/><pre id="121_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Pulse la tecla programable Zero (Ajuste a cero). &  \\
+Adaptive & Pulse la tecla programable Zero . & 57.9750 \\
+Static & Presione la tecla &#171; Zero &#187; . & 22.7721 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table121}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Se activa la funci&#243;n de an&#225;lisis del ritmo. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Se activa la funci&#243;n de an&#225;lisis del ritmo . </td>
+  <td> 75.9836 </td> </tr><tr> <th> Static </th>
+  <td> La funci&#243;n de an&#225;lisis del ritmo se activa . </td>
+  <td> 41.1134 </td> </tr>
+</table>
+ <br/><button onclick="showhide('122_latex')">Show/Hide LaTeX</button> <br/><pre id="122_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Se activa la funci&#243;n de an&#225;lisis del ritmo. &  \\
+Adaptive & Se activa la funci&#243;n de an&#225;lisis del ritmo . & 75.9836 \\
+Static & La funci&#243;n de an&#225;lisis del ritmo se activa . & 41.1134 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table122}
+\end{table}</pre><h4> 10 sentences where Static>Adaptive at sentence-level BLEU </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> La colocaci&#243;n del electrodo apical var&#237;a ligeramente en la configuraci&#243;n anteroanterior. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Colocaci&#243;n del electrodo Apex var&#237;a ligeramente en la configuraci&#243;n anterior anterior . </td>
+  <td> 42.8032 </td> </tr><tr> <th> Static </th>
+  <td> La colocaci&#243;n del electrodo Apex var&#237;a ligeramente en la configuraci&#243;n anterior anterior . </td>
+  <td> 53.1697 </td> </tr>
+</table>
+ <br/><button onclick="showhide('123_latex')">Show/Hide LaTeX</button> <br/><pre id="123_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & La colocaci&#243;n del electrodo apical var&#237;a ligeramente en la configuraci&#243;n anteroanterior. &  \\
+Adaptive & Colocaci&#243;n del electrodo Apex var&#237;a ligeramente en la configuraci&#243;n anterior anterior . & 42.8032 \\
+Static & La colocaci&#243;n del electrodo Apex var&#237;a ligeramente en la configuraci&#243;n anterior anterior . & 53.1697 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table123}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> La pantalla debe indicar TEST OK (PRUEBA CORRECTA). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> La pantalla debe indicar el OK de ENT ( OK ) . </td>
+  <td> 30.2664 </td> </tr><tr> <th> Static </th>
+  <td> La pantalla debe indicar el OK de ENT . </td>
+  <td> 41.1134 </td> </tr>
+</table>
+ <br/><button onclick="showhide('124_latex')">Show/Hide LaTeX</button> <br/><pre id="124_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & La pantalla debe indicar TEST OK (PRUEBA CORRECTA). &  \\
+Adaptive & La pantalla debe indicar el OK de ENT ( OK ) . & 30.2664 \\
+Static & La pantalla debe indicar el OK de ENT . & 41.1134 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table124}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Retire el papel antiguo e inserte en uno nuevo con la esquina plegada en la parte superior. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Eliminar el antiguo papel , y soltar en un nuevo pad con la esquina plegable en la parte superior . </td>
+  <td> 18.8148 </td> </tr><tr> <th> Static </th>
+  <td> Eliminar el antiguo papel , y colocar en una nueva pesta&#241;a con la esquina plegada en la esquina superior . </td>
+  <td> 30.9617 </td> </tr>
+</table>
+ <br/><button onclick="showhide('125_latex')">Show/Hide LaTeX</button> <br/><pre id="125_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Retire el papel antiguo e inserte en uno nuevo con la esquina plegada en la parte superior. &  \\
+Adaptive & Eliminar el antiguo papel , y soltar en un nuevo pad con la esquina plegable en la parte superior . & 18.8148 \\
+Static & Eliminar el antiguo papel , y colocar en una nueva pesta&#241;a con la esquina plegada en la esquina superior . & 30.9617 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table125}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Pulse Shock (Descarga). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Pulse Shock ( Shock ) . </td>
+  <td> 29.0715 </td> </tr><tr> <th> Static </th>
+  <td> Press Shock . </td>
+  <td> 45.1801 </td> </tr>
+</table>
+ <br/><button onclick="showhide('126_latex')">Show/Hide LaTeX</button> <br/><pre id="126_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Pulse Shock (Descarga). &  \\
+Adaptive & Pulse Shock ( Shock ) . & 29.0715 \\
+Static & Press Shock . & 45.1801 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table126}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Conecte el juego de asas internas con los electrodos internos acoplados al desfibrilador y seleccione el modo Defib (Desfib). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Conecte el conjunto de &#243;rdenes internas del manual interno con los electrodos de Electrodos internos unidos a la desfibriladora y seleccione Defib Mode . </td>
+  <td> 14.1000 </td> </tr><tr> <th> Static </th>
+  <td> Conecte el conjunto interno de conjunto de &#243;rdenes de giro interno con electrodos interno adjunto al desfibrilador y seleccione el modo Defib Mode . </td>
+  <td> 31.8393 </td> </tr>
+</table>
+ <br/><button onclick="showhide('127_latex')">Show/Hide LaTeX</button> <br/><pre id="127_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Conecte el juego de asas internas con los electrodos internos acoplados al desfibrilador y seleccione el modo Defib (Desfib). &  \\
+Adaptive & Conecte el conjunto de &#243;rdenes internas del manual interno con los electrodos de Electrodos internos unidos a la desfibriladora y seleccione Defib Mode . & 14.1000 \\
+Static & Conecte el conjunto interno de conjunto de &#243;rdenes de giro interno con electrodos interno adjunto al desfibrilador y seleccione el modo Defib Mode . & 31.8393 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table127}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El R Series incluye opciones para la monitorizaci&#243;n avanzada de la pulsioximetr&#237;a, la presi&#243;n arterial no invasiva, y el CO2 espiratorio final (leer como ce-o-dos). </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El R Series incluye opciones para la monitorizaci&#243;n del Pulse Oximetry ( Pulso Oximetry ) ( Inno no invasiical ) ( Inno no invasiical ) ( Sangre ) . </td>
+  <td> 26.7347 </td> </tr><tr> <th> Static </th>
+  <td> El R Series incluye opciones para la monitorizaci&#243;n avanzada de la espoleta de los impulsos , la presi&#243;n arterial no invasiva , y el CO2 de las emisiones de CO2 . </td>
+  <td> 46.2590 </td> </tr>
+</table>
+ <br/><button onclick="showhide('128_latex')">Show/Hide LaTeX</button> <br/><pre id="128_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El R Series incluye opciones para la monitorizaci&#243;n avanzada de la pulsioximetr&#237;a, la presi&#243;n arterial no invasiva, y el CO2 espiratorio final (leer como ce-o-dos). &  \\
+Adaptive & El R Series incluye opciones para la monitorizaci&#243;n del Pulse Oximetry ( Pulso Oximetry ) ( Inno no invasiical ) ( Inno no invasiical ) ( Sangre ) . & 26.7347 \\
+Static & El R Series incluye opciones para la monitorizaci&#243;n avanzada de la espoleta de los impulsos , la presi&#243;n arterial no invasiva , y el CO2 de las emisiones de CO2 . & 46.2590 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table128}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El marcapasos tambi&#233;n puede someterse a prueba. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El marcador puede ser ensayado . </td>
+  <td> 20.6932 </td> </tr><tr> <th> Static </th>
+  <td> El marcador tambi&#233;n puede someterse a prueba . </td>
+  <td> 46.7138 </td> </tr>
+</table>
+ <br/><button onclick="showhide('129_latex')">Show/Hide LaTeX</button> <br/><pre id="129_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El marcapasos tambi&#233;n puede someterse a prueba. &  \\
+Adaptive & El marcador puede ser ensayado . & 20.6932 \\
+Static & El marcador tambi&#233;n puede someterse a prueba . & 46.7138 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table129}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Puede sentir el cable del conector de autoprueba conectado al envase del electrodo. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Puede notar el alambre del conector de prueba del que conecte el electrodo . </td>
+  <td> 18.9224 </td> </tr><tr> <th> Static </th>
+  <td> Usted puede notar que el alambre conector de autoprueba conectado al envase del electrodo . </td>
+  <td> 45.6084 </td> </tr>
+</table>
+ <br/><button onclick="showhide('130_latex')">Show/Hide LaTeX</button> <br/><pre id="130_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Puede sentir el cable del conector de autoprueba conectado al envase del electrodo. &  \\
+Adaptive & Puede notar el alambre del conector de prueba del que conecte el electrodo . & 18.9224 \\
+Static & Usted puede notar que el alambre conector de autoprueba conectado al envase del electrodo . & 45.6084 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table130}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Se produce una alarma de frecuencia cardiaca, o </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Una alarma de frecuencia cardiaca se produce , o </td>
+  <td> 29.0715 </td> </tr><tr> <th> Static </th>
+  <td> Se produce una alarma de frecuencia card&#237;aca , o </td>
+  <td> 66.0633 </td> </tr>
+</table>
+ <br/><button onclick="showhide('131_latex')">Show/Hide LaTeX</button> <br/><pre id="131_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Se produce una alarma de frecuencia cardiaca, o &  \\
+Adaptive & Una alarma de frecuencia cardiaca se produce , o & 29.0715 \\
+Static & Se produce una alarma de frecuencia card&#237;aca , o & 66.0633 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table131}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El registrador se activa autom&#225;ticamente cuando: </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El registrador est&#225; activado autom&#225;ticamente cuando : </td>
+  <td> 26.2691 </td> </tr><tr> <th> Static </th>
+  <td> El registrador se activa autom&#225;ticamente cuando : </td>
+  <td> 68.0375 </td> </tr>
+</table>
+ <br/><button onclick="showhide('132_latex')">Show/Hide LaTeX</button> <br/><pre id="132_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El registrador se activa autom&#225;ticamente cuando: &  \\
+Adaptive & El registrador est&#225; activado autom&#225;ticamente cuando : & 26.2691 \\
+Static & El registrador se activa autom&#225;ticamente cuando : & 68.0375 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table132}
+\end{table}</pre> 
+</body>
+</html>

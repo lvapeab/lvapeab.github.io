@@ -1,0 +1,1111 @@
+<html>
+<head>
+<link rel="stylesheet" href="compare_mt.css">
+</head>
+<script>
+
+function showhide(elem) {
+  var x = document.getElementById(elem);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+<body>
+<h1>compare-mt Analysis Report</h1>
+ <h2>Aggregate Scores</h2>
+<table border="1">
+<caption> BLEU </caption><tr> <th>  </th>
+  <th> Adaptive </th>
+  <th> Static </th>
+  <th> Win? </th> </tr><tr> <th> BLEU </th>
+  <td> 47.5629 </td>
+  <td> 32.5445 </td>
+  <td> s1>s2 </td> </tr><tr> <th>  </th>
+  <td> [41.7799,53.1355] </td>
+  <td> [27.6552,36.6679] </td>
+  <td> p=0.0000 </td> </tr>
+</table>
+ <br/><button onclick="showhide('001_latex')">Show/Hide LaTeX</button> <br/><pre id="001_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+ & Adaptive & Static & Win? \\ \hline \hline
+BLEU & 47.5629 & 32.5445 & s1\textgreaters2 \\
+ & {[}41.7799,53.1355{]} & {[}27.6552,36.6679{]} & p=0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table001}
+\end{table}</pre><img src="001-score-bleu.png" alt="Score Comparison"> <br/><button onclick="showhide('001-score-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="001-score-bleu_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{001-score-bleu.pdf}
+  \caption{Score Comparison}
+  \label{fig:001-score-bleu}
+\end{figure}</pre>
+<h2>Word Accuracies</h2>
+<table border="1">
+<caption> word fmeas by frequency bucket </caption><tr> <th> frequency </th>
+  <th> Adaptive </th>
+  <th> Static </th>
+  <th> Examples </th> </tr><tr> <th> <1 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket0">Examples</a> </td> </tr><tr> <th> 1 </th>
+  <td> 0.6255 </td>
+  <td> 0.5838 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket1">Examples</a> </td> </tr><tr> <th> 2 </th>
+  <td> 0.7900 </td>
+  <td> 0.7051 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket2">Examples</a> </td> </tr><tr> <th> 3 </th>
+  <td> 0.7447 </td>
+  <td> 0.6593 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket3">Examples</a> </td> </tr><tr> <th> 4 </th>
+  <td> 0.7857 </td>
+  <td> 0.7771 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket4">Examples</a> </td> </tr><tr> <th> [5,10) </th>
+  <td> 0.8716 </td>
+  <td> 0.7619 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket5">Examples</a> </td> </tr><tr> <th> [10,100) </th>
+  <td> 0.8087 </td>
+  <td> 0.7104 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket6">Examples</a> </td> </tr><tr> <th> [100,1000) </th>
+  <td> 0.8471 </td>
+  <td> 0.7631 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket7">Examples</a> </td> </tr><tr> <th> >=1000 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="002-wordacc-frequency.html#bucket8">Examples</a> </td> </tr>
+</table>
+ <br/><button onclick="showhide('107_latex')">Show/Hide LaTeX</button> <br/><pre id="107_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+frequency & Adaptive & Static \\ \hline \hline
+\textless1 & 0.0000 & 0.0000 \\
+1 & 0.6255 & 0.5838 \\
+2 & 0.7900 & 0.7051 \\
+3 & 0.7447 & 0.6593 \\
+4 & 0.7857 & 0.7771 \\
+{[}5,10) & 0.8716 & 0.7619 \\
+{[}10,100) & 0.8087 & 0.7104 \\
+{[}100,1000) & 0.8471 & 0.7631 \\
+\textgreater=1000 & 0.0000 & 0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table107}
+\end{table}</pre><img src="002-wordacc-frequency-fmeas.png" alt="Word Accuracy Analysis"> <br/><button onclick="showhide('002-wordacc-frequency-fmeas_latex')">Show/Hide LaTeX</button> <br/><pre id="002-wordacc-frequency-fmeas_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{002-wordacc-frequency-fmeas.pdf}
+  \caption{Word Accuracy Analysis}
+  \label{fig:002-wordacc-frequency-fmeas}
+\end{figure}</pre>
+<h2>Sentence Buckets</h2>
+<table border="1">
+<caption> bucket type: length, statistic type: BLEU </caption><tr> <th> length </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <10 </th>
+  <td> 43.9986 </td>
+  <td> 29.5844 </td> </tr><tr> <th> [10,20) </th>
+  <td> 48.5662 </td>
+  <td> 31.7353 </td> </tr><tr> <th> [20,30) </th>
+  <td> 48.2148 </td>
+  <td> 31.8761 </td> </tr><tr> <th> [30,40) </th>
+  <td> 49.0902 </td>
+  <td> 36.7855 </td> </tr><tr> <th> [40,50) </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td> </tr><tr> <th> [50,60) </th>
+  <td> 41.1347 </td>
+  <td> 32.6614 </td> </tr><tr> <th> >=60 </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td> </tr>
+</table>
+ <br/><button onclick="showhide('108_latex')">Show/Hide LaTeX</button> <br/><pre id="108_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+length & Adaptive & Static \\ \hline \hline
+\textless10 & 43.9986 & 29.5844 \\
+{[}10,20) & 48.5662 & 31.7353 \\
+{[}20,30) & 48.2148 & 31.8761 \\
+{[}30,40) & 49.0902 & 36.7855 \\
+{[}40,50) & 0.0000 & 0.0000 \\
+{[}50,60) & 41.1347 & 32.6614 \\
+\textgreater=60 & 0.0000 & 0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table108}
+\end{table}</pre><img src="003-sent-length-bleu.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('003-sent-length-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="003-sent-length-bleu_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{003-sent-length-bleu.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:003-sent-length-bleu}
+\end{figure}</pre>
+<table border="1">
+<caption> bucket type: len(output)-len(reference), statistic type: count </caption><tr> <th> lengthdiff </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <-20 </th>
+  <td> 0 </td>
+  <td> 0 </td> </tr><tr> <th> [-20,-10) </th>
+  <td> 3 </td>
+  <td> 1 </td> </tr><tr> <th> [-10,-5) </th>
+  <td> 2 </td>
+  <td> 3 </td> </tr><tr> <th> -5 </th>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> -4 </th>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> -3 </th>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> -2 </th>
+  <td> 7 </td>
+  <td> 8 </td> </tr><tr> <th> -1 </th>
+  <td> 8 </td>
+  <td> 15 </td> </tr><tr> <th> 0 </th>
+  <td> 65 </td>
+  <td> 56 </td> </tr><tr> <th> 1 </th>
+  <td> 29 </td>
+  <td> 24 </td> </tr><tr> <th> 2 </th>
+  <td> 14 </td>
+  <td> 19 </td> </tr><tr> <th> 3 </th>
+  <td> 5 </td>
+  <td> 7 </td> </tr><tr> <th> 4 </th>
+  <td> 6 </td>
+  <td> 3 </td> </tr><tr> <th> 5 </th>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> [6,11) </th>
+  <td> 5 </td>
+  <td> 7 </td> </tr><tr> <th> [11,21) </th>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> >=21 </th>
+  <td> 0 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('109_latex')">Show/Hide LaTeX</button> <br/><pre id="109_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+lengthdiff & Adaptive & Static \\ \hline \hline
+\textless-20 & 0 & 0 \\
+{[}-20,-10) & 3 & 1 \\
+{[}-10,-5) & 2 & 3 \\
+-5 & 1 & 0 \\
+-4 & 1 & 2 \\
+-3 & 2 & 2 \\
+-2 & 7 & 8 \\
+-1 & 8 & 15 \\
+0 & 65 & 56 \\
+1 & 29 & 24 \\
+2 & 14 & 19 \\
+3 & 5 & 7 \\
+4 & 6 & 3 \\
+5 & 1 & 2 \\
+{[}6,11) & 5 & 7 \\
+{[}11,21) & 1 & 1 \\
+\textgreater=21 & 0 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table109}
+\end{table}</pre><img src="004-sent-lengthdiff-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('004-sent-lengthdiff-count_latex')">Show/Hide LaTeX</button> <br/><pre id="004-sent-lengthdiff-count_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{004-sent-lengthdiff-count.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:004-sent-lengthdiff-count}
+\end{figure}</pre>
+<table border="1">
+<caption> bucket type: sentence-level BLEU, statistic type: count </caption><tr> <th> sentbleu </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> <10.0 </th>
+  <td> 12 </td>
+  <td> 20 </td> </tr><tr> <th> [10.0,20.0) </th>
+  <td> 4 </td>
+  <td> 9 </td> </tr><tr> <th> [20.0,30.0) </th>
+  <td> 8 </td>
+  <td> 23 </td> </tr><tr> <th> [30.0,40.0) </th>
+  <td> 24 </td>
+  <td> 29 </td> </tr><tr> <th> [40.0,50.0) </th>
+  <td> 21 </td>
+  <td> 22 </td> </tr><tr> <th> [50.0,60.0) </th>
+  <td> 35 </td>
+  <td> 27 </td> </tr><tr> <th> [60.0,70.0) </th>
+  <td> 15 </td>
+  <td> 4 </td> </tr><tr> <th> [70.0,80.0) </th>
+  <td> 11 </td>
+  <td> 5 </td> </tr><tr> <th> [80.0,90.0) </th>
+  <td> 12 </td>
+  <td> 7 </td> </tr><tr> <th> >=90.0 </th>
+  <td> 8 </td>
+  <td> 4 </td> </tr>
+</table>
+ <br/><button onclick="showhide('110_latex')">Show/Hide LaTeX</button> <br/><pre id="110_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+sentbleu & Adaptive & Static \\ \hline \hline
+\textless10.0 & 12 & 20 \\
+{[}10.0,20.0) & 4 & 9 \\
+{[}20.0,30.0) & 8 & 23 \\
+{[}30.0,40.0) & 24 & 29 \\
+{[}40.0,50.0) & 21 & 22 \\
+{[}50.0,60.0) & 35 & 27 \\
+{[}60.0,70.0) & 15 & 4 \\
+{[}70.0,80.0) & 11 & 5 \\
+{[}80.0,90.0) & 12 & 7 \\
+\textgreater=90.0 & 8 & 4 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table110}
+\end{table}</pre><img src="005-sent-sentbleu-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('005-sent-sentbleu-count_latex')">Show/Hide LaTeX</button> <br/><pre id="005-sent-sentbleu-count_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{005-sent-sentbleu-count.pdf}
+  \caption{Sentence Bucket Analysis}
+  \label{fig:005-sent-sentbleu-count}
+\end{figure}</pre>
+<h2>Characteristic N-grams</h2>
+<p> min_ngram_length=1, max_ngram_length=4 </p><p> report_length=50, alpha=1.0, compare_type=match </p><table border="1">
+<caption> 50 n-grams where Adaptive>Static in match </caption><tr> <th> n-gram </th>
+  <th> match </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> CPR </th>
+  <td> 0.9375 </td>
+  <td> 14 </td>
+  <td> 0 </td> </tr><tr> <th> serie R </th>
+  <td> 0.9167 </td>
+  <td> 10 </td>
+  <td> 0 </td> </tr><tr> <th> de CPR </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> la serie R </th>
+  <td> 0.9000 </td>
+  <td> 8 </td>
+  <td> 0 </td> </tr><tr> <th> t&#243;rax </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> mandos </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> # </th>
+  <td> 0.8571 </td>
+  <td> 17 </td>
+  <td> 2 </td> </tr><tr> <th> desfibrilador de </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> desfibrilador de la </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> mandos de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> panel de mandos de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> el desfibrilador de la </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> panel de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> de la serie </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> desfibrilador de la serie </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> el desfibrilador de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> R. </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> el &#237;ndice </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> de mandos </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> Serie </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> de mandos de </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> ESC </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> panel de mandos </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> de la serie R </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> del t&#243;rax </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> serie </th>
+  <td> 0.7619 </td>
+  <td> 15 </td>
+  <td> 4 </td> </tr><tr> <th> verificaci&#243;n </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> del ESC </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> en el panel de </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> serie R Plus </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> R ALS </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> Serie R </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> R tambi&#233;n </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> del programa </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> la Serie </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> SGC </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> compresiones del t&#243;rax </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> embalaje del </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> compresiones del </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> de CPR y </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> Mode </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> compresiones de CPR </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> de verificaci&#243;n </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> la serie R. </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> La serie </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> el panel de mandos </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> CPR y </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> La serie R </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> &#237;ndice y </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> serie R. </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('111_latex')">Show/Hide LaTeX</button> <br/><pre id="111_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+n-gram & match & Adaptive & Static \\ \hline \hline
+CPR & 0.9375 & 14 & 0 \\
+serie R & 0.9167 & 10 & 0 \\
+de CPR & 0.9000 & 8 & 0 \\
+la serie R & 0.9000 & 8 & 0 \\
+t&#243;rax & 0.8571 & 5 & 0 \\
+mandos & 0.8571 & 5 & 0 \\
+# & 0.8571 & 17 & 2 \\
+desfibrilador de & 0.8333 & 4 & 0 \\
+desfibrilador de la & 0.8333 & 4 & 0 \\
+mandos de & 0.8000 & 3 & 0 \\
+panel de mandos de & 0.8000 & 3 & 0 \\
+el desfibrilador de la & 0.8000 & 3 & 0 \\
+panel de & 0.8000 & 3 & 0 \\
+de la serie & 0.8000 & 3 & 0 \\
+desfibrilador de la serie & 0.8000 & 3 & 0 \\
+el desfibrilador de & 0.8000 & 3 & 0 \\
+R. & 0.8000 & 3 & 0 \\
+el &#237;ndice & 0.8000 & 3 & 0 \\
+de mandos & 0.8000 & 3 & 0 \\
+Serie & 0.8000 & 3 & 0 \\
+de mandos de & 0.8000 & 3 & 0 \\
+ESC & 0.8000 & 3 & 0 \\
+panel de mandos & 0.8000 & 3 & 0 \\
+de la serie R & 0.8000 & 3 & 0 \\
+del t&#243;rax & 0.8000 & 3 & 0 \\
+serie & 0.7619 & 15 & 4 \\
+verificaci&#243;n & 0.7500 & 2 & 0 \\
+del ESC & 0.7500 & 2 & 0 \\
+en el panel de & 0.7500 & 2 & 0 \\
+serie R Plus & 0.7500 & 2 & 0 \\
+R ALS & 0.7500 & 2 & 0 \\
+Serie R & 0.7500 & 2 & 0 \\
+R tambi&#233;n & 0.7500 & 2 & 0 \\
+del programa & 0.7500 & 2 & 0 \\
+la Serie & 0.7500 & 2 & 0 \\
+SGC & 0.7500 & 2 & 0 \\
+compresiones del t&#243;rax & 0.7500 & 2 & 0 \\
+embalaje del & 0.7500 & 2 & 0 \\
+compresiones del & 0.7500 & 2 & 0 \\
+de CPR y & 0.7500 & 2 & 0 \\
+Mode & 0.7500 & 2 & 0 \\
+compresiones de CPR & 0.7500 & 2 & 0 \\
+de verificaci&#243;n & 0.7500 & 2 & 0 \\
+la serie R. & 0.7500 & 2 & 0 \\
+La serie & 0.7500 & 2 & 0 \\
+el panel de mandos & 0.7500 & 2 & 0 \\
+CPR y & 0.7500 & 2 & 0 \\
+La serie R & 0.7500 & 2 & 0 \\
+&#237;ndice y & 0.7500 & 2 & 0 \\
+serie R. & 0.7500 & 2 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table111}
+\end{table}</pre><table border="1">
+<caption> 50 n-grams where Static>Adaptive in match </caption><tr> <th> n-gram </th>
+  <th> match </th>
+  <th> Adaptive </th>
+  <th> Static </th> </tr><tr> <th> a los </th>
+  <td> 0.2500 </td>
+  <td> 0 </td>
+  <td> 2 </td> </tr><tr> <th> capacidades pedi&#225;tricas </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> establecidos del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> le proporciona una </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> documentos y registros </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> requisitos establecidos del sistema </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> grandes se </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Pacer se activar&#225; la </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> conectar los electrodos al </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> desfibrilaci&#243;n con electrodos sin </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Controles de compras </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> los requisitos establecidos del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> electrodos al cable </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> los ritmos subyacentes </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> y registros </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> entre los pezones del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de los clientes </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> autom&#225;ticamente </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> entre los pezones </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> una conexi&#243;n </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> / producto </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> registros </th>
+  <td> 0.3333 </td>
+  <td> 1 </td>
+  <td> 3 </td> </tr><tr> <th> establecidos del sistema de </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> medici&#243;n de la profundidad </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> el final del cable </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de la profundidad de </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> bif&#225;sica </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de color amarillo en </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> medici&#243;n de la </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> e instalaci&#243;n </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> 50-70-85 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> producto a un </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> AED a los par&#225;metros </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> los pezones del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> el tiempo suficiente </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> distribuci&#243;n e </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> pezones del </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> Controles de servicios </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> pueden utilizarse </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> requisitos establecidos </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> entre el estern&#243;n y </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> los pezones </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> 1 </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de la profundidad </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> al cable </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> piezas m&#225;s grandes se </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ver los ritmos subyacentes </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de an&#225;lisis AED a </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> de productos </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> / producto a un </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr>
+</table>
+ <br/><button onclick="showhide('112_latex')">Show/Hide LaTeX</button> <br/><pre id="112_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+n-gram & match & Adaptive & Static \\ \hline \hline
+a los & 0.2500 & 0 & 2 \\
+capacidades pedi&#225;tricas & 0.3333 & 0 & 1 \\
+establecidos del & 0.3333 & 0 & 1 \\
+le proporciona una & 0.3333 & 0 & 1 \\
+documentos y registros & 0.3333 & 0 & 1 \\
+requisitos establecidos del sistema & 0.3333 & 0 & 1 \\
+grandes se & 0.3333 & 0 & 1 \\
+Pacer se activar&#225; la & 0.3333 & 0 & 1 \\
+conectar los electrodos al & 0.3333 & 0 & 1 \\
+desfibrilaci&#243;n con electrodos sin & 0.3333 & 0 & 1 \\
+Controles de compras & 0.3333 & 0 & 1 \\
+los requisitos establecidos del & 0.3333 & 0 & 1 \\
+electrodos al cable & 0.3333 & 0 & 1 \\
+los ritmos subyacentes & 0.3333 & 0 & 1 \\
+y registros & 0.3333 & 0 & 1 \\
+entre los pezones del & 0.3333 & 0 & 1 \\
+de los clientes & 0.3333 & 0 & 1 \\
+autom&#225;ticamente & 0.3333 & 0 & 1 \\
+entre los pezones & 0.3333 & 0 & 1 \\
+una conexi&#243;n & 0.3333 & 0 & 1 \\
+/ producto & 0.3333 & 0 & 1 \\
+registros & 0.3333 & 1 & 3 \\
+establecidos del sistema de & 0.3333 & 0 & 1 \\
+medici&#243;n de la profundidad & 0.3333 & 0 & 1 \\
+el final del cable & 0.3333 & 0 & 1 \\
+de la profundidad de & 0.3333 & 0 & 1 \\
+bif&#225;sica & 0.3333 & 0 & 1 \\
+de color amarillo en & 0.3333 & 0 & 1 \\
+medici&#243;n de la & 0.3333 & 0 & 1 \\
+e instalaci&#243;n & 0.3333 & 0 & 1 \\
+50-70-85 & 0.3333 & 0 & 1 \\
+producto a un & 0.3333 & 0 & 1 \\
+AED a los par&#225;metros & 0.3333 & 0 & 1 \\
+los pezones del & 0.3333 & 0 & 1 \\
+el tiempo suficiente & 0.3333 & 0 & 1 \\
+distribuci&#243;n e & 0.3333 & 0 & 1 \\
+pezones del & 0.3333 & 0 & 1 \\
+Controles de servicios & 0.3333 & 0 & 1 \\
+pueden utilizarse & 0.3333 & 0 & 1 \\
+requisitos establecidos & 0.3333 & 0 & 1 \\
+entre el estern&#243;n y & 0.3333 & 0 & 1 \\
+los pezones & 0.3333 & 0 & 1 \\
+1 & 0.3333 & 0 & 1 \\
+de la profundidad & 0.3333 & 0 & 1 \\
+al cable & 0.3333 & 0 & 1 \\
+piezas m&#225;s grandes se & 0.3333 & 0 & 1 \\
+ver los ritmos subyacentes & 0.3333 & 0 & 1 \\
+de an&#225;lisis AED a & 0.3333 & 0 & 1 \\
+de productos & 0.3333 & 0 & 1 \\
+/ producto a un & 0.3333 & 0 & 1 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table112}
+\end{table}</pre>
+<h2>Sentence Examples</h2>
+<h4> 10 sentences where Adaptive>Static at sentence-level BLEU </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados </td>
+  <td> 100.0000 </td> </tr><tr> <th> Static </th>
+  <td> Validaci&#243;n de software para procesos regulados </td>
+  <td> 18.8226 </td> </tr>
+</table>
+ <br/><button onclick="showhide('113_latex')">Show/Hide LaTeX</button> <br/><pre id="113_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados &  \\
+Adaptive & Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados & 100.0000 \\
+Static & Validaci&#243;n de software para procesos regulados & 18.8226 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table113}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Gire el selector de modo a DEFIB </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Gire el selector de modo a DEFIB </td>
+  <td> 100.0000 </td> </tr><tr> <th> Static </th>
+  <td> Turn el selector del modo para DEFIB </td>
+  <td> 27.7762 </td> </tr>
+</table>
+ <br/><button onclick="showhide('114_latex')">Show/Hide LaTeX</button> <br/><pre id="114_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Gire el selector de modo a DEFIB &  \\
+Adaptive & Gire el selector de modo a DEFIB & 100.0000 \\
+Static & Turn el selector del modo para DEFIB & 27.7762 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table114}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Mostrar la serie R ALS </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Mostrar la serie R ALS </td>
+  <td> 100.0000 </td> </tr><tr> <th> Static </th>
+  <td> Mostrar el R Series ALS </td>
+  <td> 32.4668 </td> </tr>
+</table>
+ <br/><button onclick="showhide('115_latex')">Show/Hide LaTeX</button> <br/><pre id="115_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Mostrar la serie R ALS &  \\
+Adaptive & Mostrar la serie R ALS & 100.0000 \\
+Static & Mostrar el R Series ALS & 32.4668 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table115}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Indicador de &#237;ndice de compresi&#243;n </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Indicador de &#237;ndice de compresi&#243;n </td>
+  <td> 100.0000 </td> </tr><tr> <th> Static </th>
+  <td> &#237;ndice de la tasa de compresi&#243;n </td>
+  <td> 36.5555 </td> </tr>
+</table>
+ <br/><button onclick="showhide('116_latex')">Show/Hide LaTeX</button> <br/><pre id="116_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Indicador de &#237;ndice de compresi&#243;n &  \\
+Adaptive & Indicador de &#237;ndice de compresi&#243;n & 100.0000 \\
+Static & &#237;ndice de la tasa de compresi&#243;n & 36.5555 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table116}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> ESC # 2 </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # 2 </td>
+  <td> 59.4604 </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 1 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('117_latex')">Show/Hide LaTeX</button> <br/><pre id="117_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & ESC # 2 &  \\
+Adaptive & QSE # 2 & 59.4604 \\
+Static & QSE n.&#186; 1 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table117}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> ESC # 4 </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # 4 </td>
+  <td> 59.4604 </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 3 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('118_latex')">Show/Hide LaTeX</button> <br/><pre id="118_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & ESC # 4 &  \\
+Adaptive & QSE # 4 & 59.4604 \\
+Static & QSE n.&#186; 3 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table118}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> ESC # 6 </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # 6 </td>
+  <td> 59.4604 </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 5 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('119_latex')">Show/Hide LaTeX</button> <br/><pre id="119_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & ESC # 6 &  \\
+Adaptive & QSE # 6 & 59.4604 \\
+Static & QSE n.&#186; 5 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table119}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> ESC # 8 </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # 8 </td>
+  <td> 59.4604 </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 7 </td>
+  <td> 0 </td> </tr>
+</table>
+ <br/><button onclick="showhide('120_latex')">Show/Hide LaTeX</button> <br/><pre id="120_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & ESC # 8 &  \\
+Adaptive & QSE # 8 & 59.4604 \\
+Static & QSE n.&#186; 7 & 0 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table120}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Procedimiento del ESC </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Procedimiento del ESC </td>
+  <td> 84.0896 </td> </tr><tr> <th> Static </th>
+  <td> Procedimiento QSE </td>
+  <td> 32.5880 </td> </tr>
+</table>
+ <br/><button onclick="showhide('121_latex')">Show/Hide LaTeX</button> <br/><pre id="121_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Procedimiento del ESC &  \\
+Adaptive & Procedimiento del ESC & 84.0896 \\
+Static & Procedimiento QSE & 32.5880 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table121}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El conector de autoverificaci&#243;n solo funciona cuando el embalaje del electrodo no est&#225; abierto y unido a la Serie R. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El conector de autoverificaci&#243;n funciona s&#243;lo cuando el embalaje del electrodo no est&#225; abierto y unido a la serie R. </td>
+  <td> 72.9838 </td> </tr><tr> <th> Static </th>
+  <td> El conector de autoprueba funciona s&#243;lo cuando el envoltorio del electrodo est&#225; abierto y conecta a la R Series . </td>
+  <td> 21.9921 </td> </tr>
+</table>
+ <br/><button onclick="showhide('122_latex')">Show/Hide LaTeX</button> <br/><pre id="122_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El conector de autoverificaci&#243;n solo funciona cuando el embalaje del electrodo no est&#225; abierto y unido a la Serie R. &  \\
+Adaptive & El conector de autoverificaci&#243;n funciona s&#243;lo cuando el embalaje del electrodo no est&#225; abierto y unido a la serie R. & 72.9838 \\
+Static & El conector de autoprueba funciona s&#243;lo cuando el envoltorio del electrodo est&#225; abierto y conecta a la R Series . & 21.9921 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table122}
+\end{table}</pre><h4> 10 sentences where Static>Adaptive at sentence-level BLEU </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para pacientes pedi&#225;tricos es de 50-70-85 julios. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . </td>
+  <td> 47.5952 </td> </tr><tr> <th> Static </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado para los pacientes pedi&#225;tricos es de 50-70-85 julios . </td>
+  <td> 57.4909 </td> </tr>
+</table>
+ <br/><button onclick="showhide('123_latex')">Show/Hide LaTeX</button> <br/><pre id="123_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para pacientes pedi&#225;tricos es de 50-70-85 julios. &  \\
+Adaptive & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . & 47.5952 \\
+Static & El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado para los pacientes pedi&#225;tricos es de 50-70-85 julios . & 57.4909 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table123}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Para conectar los electrodos al cable OneStep, introduzca el final del cable en el conector del electrodo. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Para conectar los electrodos hacia el cable OneStep , deslice el fin del cable en el conector electrodo . </td>
+  <td> 37.5184 </td> </tr><tr> <th> Static </th>
+  <td> Para conectar los electrodos al cable OneStep , deslice el final del cable al conector electrodo . </td>
+  <td> 47.6310 </td> </tr>
+</table>
+ <br/><button onclick="showhide('124_latex')">Show/Hide LaTeX</button> <br/><pre id="124_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Para conectar los electrodos al cable OneStep, introduzca el final del cable en el conector del electrodo. &  \\
+Adaptive & Para conectar los electrodos hacia el cable OneStep , deslice el fin del cable en el conector electrodo . & 37.5184 \\
+Static & Para conectar los electrodos al cable OneStep , deslice el final del cable al conector electrodo . & 47.6310 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table124}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Tratamiento, almacenamiento, distribuci&#243;n e instalaci&#243;n </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Tratamiento , almacenamiento , distribuci&#243;n y instalaci&#243;n </td>
+  <td> 20.5567 </td> </tr><tr> <th> Static </th>
+  <td> Manejo , almacenamiento , distribuci&#243;n e instalaci&#243;n </td>
+  <td> 34.5721 </td> </tr>
+</table>
+ <br/><button onclick="showhide('125_latex')">Show/Hide LaTeX</button> <br/><pre id="125_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Tratamiento, almacenamiento, distribuci&#243;n e instalaci&#243;n &  \\
+Adaptive & Tratamiento , almacenamiento , distribuci&#243;n y instalaci&#243;n & 20.5567 \\
+Static & Manejo , almacenamiento , distribuci&#243;n e instalaci&#243;n & 34.5721 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table125}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n de cambios </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n del cambio </td>
+  <td> 45.1801 </td> </tr><tr> <th> Static </th>
+  <td> Control de cambios </td>
+  <td> 59.4604 </td> </tr>
+</table>
+ <br/><button onclick="showhide('126_latex')">Show/Hide LaTeX</button> <br/><pre id="126_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Gesti&#243;n de cambios &  \\
+Adaptive & Gesti&#243;n del cambio & 45.1801 \\
+Static & Control de cambios & 59.4604 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table126}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple de 3 pasos. </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td>
+  <td> 61.2018 </td> </tr><tr> <th> Static </th>
+  <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td>
+  <td> 75.8334 </td> </tr>
+</table>
+ <br/><button onclick="showhide('127_latex')">Show/Hide LaTeX</button> <br/><pre id="127_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple de 3 pasos. &  \\
+Adaptive & La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . & 61.2018 \\
+Static & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . & 75.8334 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table127}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Nombre del procedimiento del ESC </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Procedimiento del ESC </td>
+  <td> 30.5280 </td> </tr><tr> <th> Static </th>
+  <td> Nombre del procedimiento de QSE </td>
+  <td> 50.8133 </td> </tr>
+</table>
+ <br/><button onclick="showhide('128_latex')">Show/Hide LaTeX</button> <br/><pre id="128_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Nombre del procedimiento del ESC &  \\
+Adaptive & Procedimiento del ESC & 30.5280 \\
+Static & Nombre del procedimiento de QSE & 50.8133 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table128}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Controles de documentos y registros </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Controles de documentos y registro </td>
+  <td> 75.9836 </td> </tr><tr> <th> Static </th>
+  <td> Controles de documentos y registros </td>
+  <td> 100.0000 </td> </tr>
+</table>
+ <br/><button onclick="showhide('129_latex')">Show/Hide LaTeX</button> <br/><pre id="129_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Controles de documentos y registros &  \\
+Adaptive & Controles de documentos y registro & 75.9836 \\
+Static & Controles de documentos y registros & 100.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table129}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Controles de compras </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Controles de compra </td>
+  <td> 59.4604 </td> </tr><tr> <th> Static </th>
+  <td> Controles de compras </td>
+  <td> 84.0896 </td> </tr>
+</table>
+ <br/><button onclick="showhide('130_latex')">Show/Hide LaTeX</button> <br/><pre id="130_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Controles de compras &  \\
+Adaptive & Controles de compra & 59.4604 \\
+Static & Controles de compras & 84.0896 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table130}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Controles de servicios </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Controles de los servicios </td>
+  <td> 50.8133 </td> </tr><tr> <th> Static </th>
+  <td> Controles de servicios </td>
+  <td> 84.0896 </td> </tr>
+</table>
+ <br/><button onclick="showhide('131_latex')">Show/Hide LaTeX</button> <br/><pre id="131_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Controles de servicios &  \\
+Adaptive & Controles de los servicios & 50.8133 \\
+Static & Controles de servicios & 84.0896 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table131}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th>
+  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <td> Y un temporizador inactividad </td>
+  <td>  </td> </tr><tr> <th> Adaptive </th>
+  <td> Temporizador Idle </td>
+  <td> 0 </td> </tr><tr> <th> Static </th>
+  <td> Y un temporizador de reposo </td>
+  <td> 50.8133 </td> </tr>
+</table>
+ <br/><button onclick="showhide('132_latex')">Show/Hide LaTeX</button> <br/><pre id="132_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||cc}
+ & Output & sentbleu \\ \hline \hline
+Ref & Y un temporizador inactividad &  \\
+Adaptive & Temporizador Idle & 0 \\
+Static & Y un temporizador de reposo & 50.8133 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table132}
+\end{table}</pre> 
+</body>
+</html>

@@ -1,0 +1,1806 @@
+<html>
+<head>
+<link rel="stylesheet" href="compare_mt.css">
+</head>
+<script>
+
+function showhide(elem) {
+  var x = document.getElementById(elem);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+<body>
+<h1>word fmeas by frequency bucket</h1>
+ <a name="bucket0"/><h3> Examples for Bucket <1 </h3><a name="bucket1"/><h3> Examples for Bucket 1 </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Nombre</em> del <em>procedimiento</em> del ESC </td> </tr><tr> <th> Adaptive </th>
+  <td> Procedimiento del ESC </td> </tr><tr> <th> Static </th>
+  <td> <em>Nombre</em> del <em>procedimiento</em> de QSE </td> </tr>
+</table>
+ <br/><button onclick="showhide('002_latex')">Show/Hide LaTeX</button> <br/><pre id="002_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterNombre\textless/em\textgreater del \textlessem\textgreaterprocedimiento\textless/em\textgreater del ESC \\
+Adaptive & Procedimiento del ESC \\
+Static & \textlessem\textgreaterNombre\textless/em\textgreater del \textlessem\textgreaterprocedimiento\textless/em\textgreater de QSE \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table002}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> ESC # <em>1</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> ESC # # </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; <em>1</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('003_latex')">Show/Hide LaTeX</button> <br/><pre id="003_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & ESC # \textlessem\textgreater1\textless/em\textgreater \\
+Adaptive & ESC # # \\
+Static & QSE n.&#186; \textlessem\textgreater1\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table003}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> ESC # <em>4</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # <em>4</em> </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 3 </td> </tr>
+</table>
+ <br/><button onclick="showhide('004_latex')">Show/Hide LaTeX</button> <br/><pre id="004_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & ESC # \textlessem\textgreater4\textless/em\textgreater \\
+Adaptive & QSE # \textlessem\textgreater4\textless/em\textgreater \\
+Static & QSE n.&#186; 3 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table004}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> En el caso de los pacientes adultos, los electrodos del programa OneStep Complete y OneStep CPR incluyen un <em>Sensor</em> CPR. </td> </tr><tr> <th> Adaptive </th>
+  <td> En el caso de los pacientes adultos , los electrodos del programa OneStep y OneStep incluyen a un <em>Sensor</em> . </td> </tr><tr> <th> Static </th>
+  <td> En el caso de los pacientes adultos , los electrodos de recuperaci&#243;n de RCP y OneStep incluyen un sensor . </td> </tr>
+</table>
+ <br/><button onclick="showhide('005_latex')">Show/Hide LaTeX</button> <br/><pre id="005_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & En el caso de los pacientes adultos, los electrodos del programa OneStep Complete y OneStep CPR incluyen un \textlessem\textgreaterSensor\textless/em\textgreater CPR. \\
+Adaptive & En el caso de los pacientes adultos , los electrodos del programa OneStep y OneStep incluyen a un \textlessem\textgreaterSensor\textless/em\textgreater . \\
+Static & En el caso de los pacientes adultos , los electrodos de recuperaci&#243;n de RCP y OneStep incluyen un sensor . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table005}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> ESC # <em>6</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # <em>6</em> </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 5 </td> </tr>
+</table>
+ <br/><button onclick="showhide('006_latex')">Show/Hide LaTeX</button> <br/><pre id="006_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & ESC # \textlessem\textgreater6\textless/em\textgreater \\
+Adaptive & QSE # \textlessem\textgreater6\textless/em\textgreater \\
+Static & QSE n.&#186; 5 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table006}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>T&#233;cnicas</em> <em>estad&#237;sticas</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>T&#233;cnicas</em> <em>estad&#237;sticas</em> </td> </tr><tr> <th> Static </th>
+  <td> <em>T&#233;cnicas</em> <em>estad&#237;sticas</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('007_latex')">Show/Hide LaTeX</button> <br/><pre id="007_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterT&#233;cnicas\textless/em\textgreater \textlessem\textgreaterestad&#237;sticas\textless/em\textgreater \\
+Adaptive & \textlessem\textgreaterT&#233;cnicas\textless/em\textgreater \textlessem\textgreaterestad&#237;sticas\textless/em\textgreater \\
+Static & \textlessem\textgreaterT&#233;cnicas\textless/em\textgreater \textlessem\textgreaterestad&#237;sticas\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table007}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Auditor&#237;a</em> <em>interna</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Auditor&#237;a</em> <em>interna</em> </td> </tr><tr> <th> Static </th>
+  <td> <em>Auditor&#237;a</em> <em>interna</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('008_latex')">Show/Hide LaTeX</button> <br/><pre id="008_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterAuditor&#237;a\textless/em\textgreater \textlessem\textgreaterinterna\textless/em\textgreater \\
+Adaptive & \textlessem\textgreaterAuditor&#237;a\textless/em\textgreater \textlessem\textgreaterinterna\textless/em\textgreater \\
+Static & \textlessem\textgreaterAuditor&#237;a\textless/em\textgreater \textlessem\textgreaterinterna\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table008}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La <em>familia</em> de OneStep Resuscitation Electrodes est&#225; <em>dise&#241;ada</em> para funcionar con la serie R. </td> </tr><tr> <th> Adaptive </th>
+  <td> La <em>familia</em> de OneStep Resuscitation Electrodos est&#225; <em>dise&#241;ada</em> para trabajar con la serie R. </td> </tr><tr> <th> Static </th>
+  <td> La <em>familia</em> de OneStep Resuscitation Electrodos est&#225; <em>dise&#241;ada</em> para trabajar con el R Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('009_latex')">Show/Hide LaTeX</button> <br/><pre id="009_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La \textlessem\textgreaterfamilia\textless/em\textgreater de OneStep Resuscitation Electrodes est&#225; \textlessem\textgreaterdise&#241;ada\textless/em\textgreater para funcionar con la serie R. \\
+Adaptive & La \textlessem\textgreaterfamilia\textless/em\textgreater de OneStep Resuscitation Electrodos est&#225; \textlessem\textgreaterdise&#241;ada\textless/em\textgreater para trabajar con la serie R. \\
+Static & La \textlessem\textgreaterfamilia\textless/em\textgreater de OneStep Resuscitation Electrodos est&#225; \textlessem\textgreaterdise&#241;ada\textless/em\textgreater para trabajar con el R Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table009}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Dise&#241;o</em> y <em>desarrollo</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Dise&#241;o</em> y <em>desarrollo</em> </td> </tr><tr> <th> Static </th>
+  <td> <em>Dise&#241;o</em> y <em>desarrollo</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('010_latex')">Show/Hide LaTeX</button> <br/><pre id="010_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterDise&#241;o\textless/em\textgreater y \textlessem\textgreaterdesarrollo\textless/em\textgreater \\
+Adaptive & \textlessem\textgreaterDise&#241;o\textless/em\textgreater y \textlessem\textgreaterdesarrollo\textless/em\textgreater \\
+Static & \textlessem\textgreaterDise&#241;o\textless/em\textgreater y \textlessem\textgreaterdesarrollo\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table010}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Procedimientos</em> de los <em>elementos</em> del sistema de calidad </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Procedimientos</em> de <em>elementos</em> del sistema de calidad </td> </tr><tr> <th> Static </th>
+  <td> <em>Procedimientos</em> de <em>elementos</em> del sistema de calidad </td> </tr>
+</table>
+ <br/><button onclick="showhide('011_latex')">Show/Hide LaTeX</button> <br/><pre id="011_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterProcedimientos\textless/em\textgreater de los \textlessem\textgreaterelementos\textless/em\textgreater del sistema de calidad \\
+Adaptive & \textlessem\textgreaterProcedimientos\textless/em\textgreater de \textlessem\textgreaterelementos\textless/em\textgreater del sistema de calidad \\
+Static & \textlessem\textgreaterProcedimientos\textless/em\textgreater de \textlessem\textgreaterelementos\textless/em\textgreater del sistema de calidad \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table011}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Se mostrar&#225; un temporizador de CPR una <em>vez</em> que <em>comiencen</em> las compresiones de CPR y <em>realizar&#225;</em> una cuenta <em>atr&#225;s</em> de 2 minutos para garantizar compresiones de alta calidad por parte de <em>otro</em> <em>empleado.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Un temporizador de CPR se mostrar&#225; una compresiones de CPR y contar&#225; de 2 minutos para garantizar compresiones de alta calidad por parte de un funcionario . </td> </tr><tr> <th> Static </th>
+  <td> Un temporizador de RCP se muestra despu&#233;s de las compresiones RCP y se contar&#225; a partir de 2 minutos para ayudar a las compresiones de alta calidad por parte de un funcionario . </td> </tr>
+</table>
+ <br/><button onclick="showhide('012_latex')">Show/Hide LaTeX</button> <br/><pre id="012_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Se mostrar&#225; un temporizador de CPR una \textlessem\textgreatervez\textless/em\textgreater que \textlessem\textgreatercomiencen\textless/em\textgreater las compresiones de CPR y \textlessem\textgreaterrealizar&#225;\textless/em\textgreater una cuenta \textlessem\textgreateratr&#225;s\textless/em\textgreater de 2 minutos para garantizar compresiones de alta calidad por parte de \textlessem\textgreaterotro\textless/em\textgreater \textlessem\textgreaterempleado.\textless/em\textgreater \\
+Adaptive & Un temporizador de CPR se mostrar&#225; una compresiones de CPR y contar&#225; de 2 minutos para garantizar compresiones de alta calidad por parte de un funcionario . \\
+Static & Un temporizador de RCP se muestra despu&#233;s de las compresiones RCP y se contar&#225; a partir de 2 minutos para ayudar a las compresiones de alta calidad por parte de un funcionario . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table012}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Tenga en cuenta que el cable OneStep est&#225; unido a los <em>electrodos;</em> <em>estire</em> del cable <em>desde</em> el embalaje para <em>separarlo.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Notice el cable OneStep . </td> </tr><tr> <th> Static </th>
+  <td> La notificaci&#243;n del cable OneStep se adjunta a los electrodos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('013_latex')">Show/Hide LaTeX</button> <br/><pre id="013_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Tenga en cuenta que el cable OneStep est&#225; unido a los \textlessem\textgreaterelectrodos;\textless/em\textgreater \textlessem\textgreaterestire\textless/em\textgreater del cable \textlessem\textgreaterdesde\textless/em\textgreater el embalaje para \textlessem\textgreatersepararlo.\textless/em\textgreater \\
+Adaptive & Notice el cable OneStep . \\
+Static & La notificaci&#243;n del cable OneStep se adjunta a los electrodos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table013}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Producto</em> no <em>conforme</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Nonato </td> </tr><tr> <th> Static </th>
+  <td> Nonato </td> </tr>
+</table>
+ <br/><button onclick="showhide('014_latex')">Show/Hide LaTeX</button> <br/><pre id="014_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterProducto\textless/em\textgreater no \textlessem\textgreaterconforme\textless/em\textgreater \\
+Adaptive & Nonato \\
+Static & Nonato \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table014}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Serie R ALS <em>v&#237;deo</em> de an&#225;lisis <em>r&#225;pido</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Serie R ALS Quick </td> </tr><tr> <th> Static </th>
+  <td> Revisi&#243;n de las series R </td> </tr>
+</table>
+ <br/><button onclick="showhide('015_latex')">Show/Hide LaTeX</button> <br/><pre id="015_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Serie R ALS \textlessem\textgreaterv&#237;deo\textless/em\textgreater de an&#225;lisis \textlessem\textgreaterr&#225;pido\textless/em\textgreater \\
+Adaptive & Serie R ALS Quick \\
+Static & Revisi&#243;n de las series R \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table015}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n de las <em>instalaciones</em> y equipos </td> </tr><tr> <th> Adaptive </th>
+  <td> Instalaciones y equipos </td> </tr><tr> <th> Static </th>
+  <td> Instalaciones y equipos </td> </tr>
+</table>
+ <br/><button onclick="showhide('016_latex')">Show/Hide LaTeX</button> <br/><pre id="016_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n de las \textlessem\textgreaterinstalaciones\textless/em\textgreater y equipos \\
+Adaptive & Instalaciones y equipos \\
+Static & Instalaciones y equipos \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table016}
+\end{table}</pre><a name="bucket2"/><h3> Examples for Bucket 2 </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Para los pacientes pedi&#225;tricos de menos de ocho a&#241;os de edad y con un peso inferior a 55 libras (o 25kg), los electrodos OneStep Pediatric CPR <em>pueden</em> utilizarse para incrementar las capacidades pedi&#225;tricas de la serie R. </td> </tr><tr> <th> Adaptive </th>
+  <td> Para los pacientes pedi&#225;tricos menos de ocho a&#241;os de edad y menos de 55 libras ( o 25kg ) , los electrodos de CPR . </td> </tr><tr> <th> Static </th>
+  <td> Para los pacientes pedi&#225;tricos menos de ocho a&#241;os de edad y menos de 55 libras ( o 25kg ) , <em>pueden</em> utilizarse los electrodos de RCP por RCP Pedi&#225;trico de RCP para maximizar las capacidades pedi&#225;tricas del R Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('017_latex')">Show/Hide LaTeX</button> <br/><pre id="017_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Para los pacientes pedi&#225;tricos de menos de ocho a&#241;os de edad y con un peso inferior a 55 libras (o 25kg), los electrodos OneStep Pediatric CPR \textlessem\textgreaterpueden\textless/em\textgreater utilizarse para incrementar las capacidades pedi&#225;tricas de la serie R. \\
+Adaptive & Para los pacientes pedi&#225;tricos menos de ocho a&#241;os de edad y menos de 55 libras ( o 25kg ) , los electrodos de CPR . \\
+Static & Para los pacientes pedi&#225;tricos menos de ocho a&#241;os de edad y menos de 55 libras ( o 25kg ) , \textlessem\textgreaterpueden\textless/em\textgreater utilizarse los electrodos de RCP por RCP Pedi&#225;trico de RCP para maximizar las capacidades pedi&#225;tricas del R Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table017}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Este conector se utiliza para verificar la integridad de los electrodos y confirmar su <em>estado</em> cl&#237;nico durante el Ensayo de Preparaci&#243;n del C&#243;digo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Este conector se utiliza para verificar la integridad de los electrodos y confirmar su <em>estado</em> cl&#237;nico durante el ensayo de preparaci&#243;n del c&#243;digo . </td> </tr><tr> <th> Static </th>
+  <td> Este conector se utiliza para verificar la integridad de los electrodos y confirmar su disponibilidad cl&#237;nica durante el examen de la preparaci&#243;n del c&#243;digo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('018_latex')">Show/Hide LaTeX</button> <br/><pre id="018_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Este conector se utiliza para verificar la integridad de los electrodos y confirmar su \textlessem\textgreaterestado\textless/em\textgreater cl&#237;nico durante el Ensayo de Preparaci&#243;n del C&#243;digo. \\
+Adaptive & Este conector se utiliza para verificar la integridad de los electrodos y confirmar su \textlessem\textgreaterestado\textless/em\textgreater cl&#237;nico durante el ensayo de preparaci&#243;n del c&#243;digo . \\
+Static & Este conector se utiliza para verificar la integridad de los electrodos y confirmar su disponibilidad cl&#237;nica durante el examen de la preparaci&#243;n del c&#243;digo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table018}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> STERIS ha establecido un programa para garantizar que el SGC cumple con los requisitos establecidos del sistema de calidad y tambi&#233;n para <em>determinar</em> su eficacia mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones, funciones, fabricantes contratados y proveedores. </td> </tr><tr> <th> Adaptive </th>
+  <td> STERIS ha establecido un programa para garantizar que el sistema de gesti&#243;n de calidad ( SGC ) cumple con los requisitos del sistema de calidad establecidos y para <em>determinar</em> la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr><tr> <th> Static </th>
+  <td> STERIS ha establecido un programa para garantizar que el QMS se ajuste a los requisitos establecidos del sistema de calidad y determine la eficacia del sistema de calidad mediante auditor&#237;as programadas de las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr>
+</table>
+ <br/><button onclick="showhide('019_latex')">Show/Hide LaTeX</button> <br/><pre id="019_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & STERIS ha establecido un programa para garantizar que el SGC cumple con los requisitos establecidos del sistema de calidad y tambi&#233;n para \textlessem\textgreaterdeterminar\textless/em\textgreater su eficacia mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones, funciones, fabricantes contratados y proveedores. \\
+Adaptive & STERIS ha establecido un programa para garantizar que el sistema de gesti&#243;n de calidad ( SGC ) cumple con los requisitos del sistema de calidad establecidos y para \textlessem\textgreaterdeterminar\textless/em\textgreater la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+Static & STERIS ha establecido un programa para garantizar que el QMS se ajuste a los requisitos establecidos del sistema de calidad y determine la eficacia del sistema de calidad mediante auditor&#237;as programadas de las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table019}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> ESC # <em>2</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> QSE # <em>2</em> </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 1 </td> </tr>
+</table>
+ <br/><button onclick="showhide('020_latex')">Show/Hide LaTeX</button> <br/><pre id="020_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & ESC # \textlessem\textgreater2\textless/em\textgreater \\
+Adaptive & QSE # \textlessem\textgreater2\textless/em\textgreater \\
+Static & QSE n.&#186; 1 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table020}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Los electrodos OneStep <em>Complete</em> y OneStep CPR incluyen un sensor de compresi&#243;n de CPR. </td> </tr><tr> <th> Adaptive </th>
+  <td> Los electrodos OneStep <em>Complete</em> y OneStep CPR incluyen un sensor de compresi&#243;n de CPR . </td> </tr><tr> <th> Static </th>
+  <td> Los electrodos Completar OneStep y OneStep incluyen un sensor de compresi&#243;n de RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('021_latex')">Show/Hide LaTeX</button> <br/><pre id="021_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Los electrodos OneStep \textlessem\textgreaterComplete\textless/em\textgreater y OneStep CPR incluyen un sensor de compresi&#243;n de CPR. \\
+Adaptive & Los electrodos OneStep \textlessem\textgreaterComplete\textless/em\textgreater y OneStep CPR incluyen un sensor de compresi&#243;n de CPR . \\
+Static & Los electrodos Completar OneStep y OneStep incluyen un sensor de compresi&#243;n de RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table021}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Esta</em> informaci&#243;n de tiempo real puede <em>ayudarle</em> a garantizar que est&#225; haciendo compresiones del t&#243;rax de <em>alta</em> calidad. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Esta</em> informaci&#243;n de tiempo real puede <em>ayudarle</em> a garantizar que est&#225; haciendo compresiones del t&#243;rax de <em>alta</em> calidad . </td> </tr><tr> <th> Static </th>
+  <td> <em>Esta</em> informaci&#243;n de tiempo real puede <em>ayudarle</em> a garantizar la realizaci&#243;n de compresiones tor&#225;cicas de <em>alta</em> calidad . </td> </tr>
+</table>
+ <br/><button onclick="showhide('022_latex')">Show/Hide LaTeX</button> <br/><pre id="022_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterEsta\textless/em\textgreater informaci&#243;n de tiempo real puede \textlessem\textgreaterayudarle\textless/em\textgreater a garantizar que est&#225; haciendo compresiones del t&#243;rax de \textlessem\textgreateralta\textless/em\textgreater calidad. \\
+Adaptive & \textlessem\textgreaterEsta\textless/em\textgreater informaci&#243;n de tiempo real puede \textlessem\textgreaterayudarle\textless/em\textgreater a garantizar que est&#225; haciendo compresiones del t&#243;rax de \textlessem\textgreateralta\textless/em\textgreater calidad . \\
+Static & \textlessem\textgreaterEsta\textless/em\textgreater informaci&#243;n de tiempo real puede \textlessem\textgreaterayudarle\textless/em\textgreater a garantizar la realizaci&#243;n de compresiones tor&#225;cicas de \textlessem\textgreateralta\textless/em\textgreater calidad . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table022}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Mantener completo el PPI con forma de diamante <em>proporciona</em> una <em>indicaci&#243;n</em> visual de los resultados seg&#250;n las <em>directrices</em> actuales. </td> </tr><tr> <th> Adaptive </th>
+  <td> Mantener el producto PPI en forma de diamantes <em>proporciona</em> una <em>indicaci&#243;n</em> visual de los resultados a las <em>directrices</em> actuales . </td> </tr><tr> <th> Static </th>
+  <td> Mantener el producto PPI en forma de diamantes <em>proporciona</em> una <em>indicaci&#243;n</em> visual de los resultados a las <em>directrices</em> actuales . </td> </tr>
+</table>
+ <br/><button onclick="showhide('023_latex')">Show/Hide LaTeX</button> <br/><pre id="023_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Mantener completo el PPI con forma de diamante \textlessem\textgreaterproporciona\textless/em\textgreater una \textlessem\textgreaterindicaci&#243;n\textless/em\textgreater visual de los resultados seg&#250;n las \textlessem\textgreaterdirectrices\textless/em\textgreater actuales. \\
+Adaptive & Mantener el producto PPI en forma de diamantes \textlessem\textgreaterproporciona\textless/em\textgreater una \textlessem\textgreaterindicaci&#243;n\textless/em\textgreater visual de los resultados a las \textlessem\textgreaterdirectrices\textless/em\textgreater actuales . \\
+Static & Mantener el producto PPI en forma de diamantes \textlessem\textgreaterproporciona\textless/em\textgreater una \textlessem\textgreaterindicaci&#243;n\textless/em\textgreater visual de los resultados a las \textlessem\textgreaterdirectrices\textless/em\textgreater actuales . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table023}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Cuando</em> las compresiones se han interrumpido durante un per&#237;odo de tiempo prolongado, se muestra el tiempo de <em>inactividad</em> en <em>minutos</em> y segundos. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Cuando</em> las compresiones se han interrumpido durante un per&#237;odo de tiempo prolongado , se muestra el tiempo de <em>inactividad</em> en <em>minutos</em> y segundos . </td> </tr><tr> <th> Static </th>
+  <td> <em>Cuando</em> se han interrumpido las compresiones durante un per&#237;odo de tiempo prolongado , se muestra el tiempo de <em>inactividad</em> en <em>minutos</em> y segundos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('024_latex')">Show/Hide LaTeX</button> <br/><pre id="024_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterCuando\textless/em\textgreater las compresiones se han interrumpido durante un per&#237;odo de tiempo prolongado, se muestra el tiempo de \textlessem\textgreaterinactividad\textless/em\textgreater en \textlessem\textgreaterminutos\textless/em\textgreater y segundos. \\
+Adaptive & \textlessem\textgreaterCuando\textless/em\textgreater las compresiones se han interrumpido durante un per&#237;odo de tiempo prolongado , se muestra el tiempo de \textlessem\textgreaterinactividad\textless/em\textgreater en \textlessem\textgreaterminutos\textless/em\textgreater y segundos . \\
+Static & \textlessem\textgreaterCuando\textless/em\textgreater se han interrumpido las compresiones durante un per&#237;odo de tiempo prolongado , se muestra el tiempo de \textlessem\textgreaterinactividad\textless/em\textgreater en \textlessem\textgreaterminutos\textless/em\textgreater y segundos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table024}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La <em>zona</em> <em>verde</em> es para el ritmo. </td> </tr><tr> <th> Adaptive </th>
+  <td> La <em>zona</em> <em>verde</em> es para paciencia . </td> </tr><tr> <th> Static </th>
+  <td> La <em>zona</em> <em>verde</em> es para pacio . </td> </tr>
+</table>
+ <br/><button onclick="showhide('025_latex')">Show/Hide LaTeX</button> <br/><pre id="025_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La \textlessem\textgreaterzona\textless/em\textgreater \textlessem\textgreaterverde\textless/em\textgreater es para el ritmo. \\
+Adaptive & La \textlessem\textgreaterzona\textless/em\textgreater \textlessem\textgreaterverde\textless/em\textgreater es para paciencia . \\
+Static & La \textlessem\textgreaterzona\textless/em\textgreater \textlessem\textgreaterverde\textless/em\textgreater es para pacio . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table025}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El desfibrilador de la serie R le proporcionar&#225; tambi&#233;n un mensaje de audio; &#8220;incremente las compresiones&#8221; y un <em>metr&#243;nomo</em> para <em>ayudarle</em> a llegar a 105 compresiones por minuto. </td> </tr><tr> <th> Adaptive </th>
+  <td> El desfibrilador de la serie R proporcionar&#225; tambi&#233;n un mensaje de audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un <em>metr&#243;nomo</em> de la ayuda para <em>ayudarle</em> a llegar a 105 compresiones por minuto . </td> </tr><tr> <th> Static </th>
+  <td> El desfibrilador R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un <em>metr&#243;nomo</em> , para <em>ayudarle</em> a llegar a 105 compresiones por minuto . </td> </tr>
+</table>
+ <br/><button onclick="showhide('026_latex')">Show/Hide LaTeX</button> <br/><pre id="026_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El desfibrilador de la serie R le proporcionar&#225; tambi&#233;n un mensaje de audio; &#8220;incremente las compresiones&#8221; y un \textlessem\textgreatermetr&#243;nomo\textless/em\textgreater para \textlessem\textgreaterayudarle\textless/em\textgreater a llegar a 105 compresiones por minuto. \\
+Adaptive & El desfibrilador de la serie R proporcionar&#225; tambi&#233;n un mensaje de audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un \textlessem\textgreatermetr&#243;nomo\textless/em\textgreater de la ayuda para \textlessem\textgreaterayudarle\textless/em\textgreater a llegar a 105 compresiones por minuto . \\
+Static & El desfibrilador R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un \textlessem\textgreatermetr&#243;nomo\textless/em\textgreater , para \textlessem\textgreaterayudarle\textless/em\textgreater a llegar a 105 compresiones por minuto . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table026}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> En el caso de los pacientes <em>adultos,</em> los electrodos del programa OneStep <em>Complete</em> y OneStep CPR incluyen un Sensor CPR. </td> </tr><tr> <th> Adaptive </th>
+  <td> En el caso de los pacientes adultos , los electrodos del programa OneStep y OneStep incluyen a un Sensor . </td> </tr><tr> <th> Static </th>
+  <td> En el caso de los pacientes adultos , los electrodos de recuperaci&#243;n de RCP y OneStep incluyen un sensor . </td> </tr>
+</table>
+ <br/><button onclick="showhide('027_latex')">Show/Hide LaTeX</button> <br/><pre id="027_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & En el caso de los pacientes \textlessem\textgreateradultos,\textless/em\textgreater los electrodos del programa OneStep \textlessem\textgreaterComplete\textless/em\textgreater y OneStep CPR incluyen un Sensor CPR. \\
+Adaptive & En el caso de los pacientes adultos , los electrodos del programa OneStep y OneStep incluyen a un Sensor . \\
+Static & En el caso de los pacientes adultos , los electrodos de recuperaci&#243;n de RCP y OneStep incluyen un sensor . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table027}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La funci&#243;n See-Thru CPR de la serie R filtra el <em>artefacto</em> de compresi&#243;n de la onda <em>ECG.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> The See-Thru CPR . </td> </tr><tr> <th> Static </th>
+  <td> The See-Thru RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('028_latex')">Show/Hide LaTeX</button> <br/><pre id="028_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La funci&#243;n See-Thru CPR de la serie R filtra el \textlessem\textgreaterartefacto\textless/em\textgreater de compresi&#243;n de la onda \textlessem\textgreaterECG.\textless/em\textgreater \\
+Adaptive & The See-Thru CPR . \\
+Static & The See-Thru RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table028}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Tenga</em> en cuenta que el cable OneStep est&#225; <em>unido</em> a los electrodos; estire del cable desde el embalaje para separarlo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Notice el cable OneStep . </td> </tr><tr> <th> Static </th>
+  <td> La notificaci&#243;n del cable OneStep se adjunta a los electrodos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('029_latex')">Show/Hide LaTeX</button> <br/><pre id="029_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterTenga\textless/em\textgreater en cuenta que el cable OneStep est&#225; \textlessem\textgreaterunido\textless/em\textgreater a los electrodos; estire del cable desde el embalaje para separarlo. \\
+Adaptive & Notice el cable OneStep . \\
+Static & La notificaci&#243;n del cable OneStep se adjunta a los electrodos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table029}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Puede <em>ver</em> el cable del conector de <em>autoverificaci&#243;n</em> conectado al embalaje del electrodo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Puede notar el alambre del conector de s&#237; mismo conectado al embalaje del electrodo . </td> </tr><tr> <th> Static </th>
+  <td> Usted puede notar el alambre del conector de autoprueba conectado al envase del electrodo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('030_latex')">Show/Hide LaTeX</button> <br/><pre id="030_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Puede \textlessem\textgreaterver\textless/em\textgreater el cable del conector de \textlessem\textgreaterautoverificaci&#243;n\textless/em\textgreater conectado al embalaje del electrodo. \\
+Adaptive & Puede notar el alambre del conector de s&#237; mismo conectado al embalaje del electrodo . \\
+Static & Usted puede notar el alambre del conector de autoprueba conectado al envase del electrodo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table030}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Esta</em> informaci&#243;n puede provenir de diversas fuentes, entre otras, pero sin limitarse a estas, encuestas, visitas in situ y <em>reclamaciones.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> La informaci&#243;n puede provenir de diversas fuentes , entre otras , las encuestas , visitas in situ y reclamaciones . </td> </tr><tr> <th> Static </th>
+  <td> La informaci&#243;n puede provenir de diversas fuentes , entre ellas las de las encuestas , las visitas a lugares y las quejas . </td> </tr>
+</table>
+ <br/><button onclick="showhide('031_latex')">Show/Hide LaTeX</button> <br/><pre id="031_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterEsta\textless/em\textgreater informaci&#243;n puede provenir de diversas fuentes, entre otras, pero sin limitarse a estas, encuestas, visitas in situ y \textlessem\textgreaterreclamaciones.\textless/em\textgreater \\
+Adaptive & La informaci&#243;n puede provenir de diversas fuentes , entre otras , las encuestas , visitas in situ y reclamaciones . \\
+Static & La informaci&#243;n puede provenir de diversas fuentes , entre ellas las de las encuestas , las visitas a lugares y las quejas . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table031}
+\end{table}</pre><a name="bucket3"/><h3> Examples for Bucket 3 </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Revisi&#243;n</em> de la gesti&#243;n </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n de la gesti&#243;n </td> </tr><tr> <th> Static </th>
+  <td> <em>Revisi&#243;n</em> de gesti&#243;n </td> </tr>
+</table>
+ <br/><button onclick="showhide('032_latex')">Show/Hide LaTeX</button> <br/><pre id="032_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterRevisi&#243;n\textless/em\textgreater de la gesti&#243;n \\
+Adaptive & Gesti&#243;n de la gesti&#243;n \\
+Static & \textlessem\textgreaterRevisi&#243;n\textless/em\textgreater de gesti&#243;n \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table032}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Al situar el Mode <em>Selector</em> en Pacer se activar&#225; la apertura de la puerta de paso. </td> </tr><tr> <th> Adaptive </th>
+  <td> Moving the Mode <em>Selector</em> a Pacer se activar&#225; a la puerta del marcador para abrir . </td> </tr><tr> <th> Static </th>
+  <td> Al mover el selector de modo a Pacer se activar&#225; la puerta de pacte a abrir . </td> </tr>
+</table>
+ <br/><button onclick="showhide('033_latex')">Show/Hide LaTeX</button> <br/><pre id="033_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Al situar el Mode \textlessem\textgreaterSelector\textless/em\textgreater en Pacer se activar&#225; la apertura de la puerta de paso. \\
+Adaptive & Moving the Mode \textlessem\textgreaterSelector\textless/em\textgreater a Pacer se activar&#225; a la puerta del marcador para abrir . \\
+Static & Al mover el selector de modo a Pacer se activar&#225; la puerta de pacte a abrir . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table033}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Indicador</em> de &#237;ndice de compresi&#243;n </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Indicador</em> de &#237;ndice de compresi&#243;n </td> </tr><tr> <th> Static </th>
+  <td> &#237;ndice de la tasa de compresi&#243;n </td> </tr>
+</table>
+ <br/><button onclick="showhide('034_latex')">Show/Hide LaTeX</button> <br/><pre id="034_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterIndicador\textless/em\textgreater de &#237;ndice de compresi&#243;n \\
+Adaptive & \textlessem\textgreaterIndicador\textless/em\textgreater de &#237;ndice de compresi&#243;n \\
+Static & &#237;ndice de la tasa de compresi&#243;n \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table034}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Control de documentos/ <em>registros</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Control de documentos </td> </tr><tr> <th> Static </th>
+  <td> Control de documentos / <em>registros</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('035_latex')">Show/Hide LaTeX</button> <br/><pre id="035_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Control de documentos/ \textlessem\textgreaterregistros\textless/em\textgreater \\
+Adaptive & Control de documentos \\
+Static & Control de documentos / \textlessem\textgreaterregistros\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table035}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Serie R <em>ALS</em> v&#237;deo de an&#225;lisis r&#225;pido </td> </tr><tr> <th> Adaptive </th>
+  <td> Serie R <em>ALS</em> Quick </td> </tr><tr> <th> Static </th>
+  <td> Revisi&#243;n de las series R </td> </tr>
+</table>
+ <br/><button onclick="showhide('036_latex')">Show/Hide LaTeX</button> <br/><pre id="036_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Serie R \textlessem\textgreaterALS\textless/em\textgreater v&#237;deo de an&#225;lisis r&#225;pido \\
+Adaptive & Serie R \textlessem\textgreaterALS\textless/em\textgreater Quick \\
+Static & Revisi&#243;n de las series R \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table036}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Mantener completo el PPI con <em>forma</em> de diamante proporciona una indicaci&#243;n <em>visual</em> de los resultados seg&#250;n las directrices actuales. </td> </tr><tr> <th> Adaptive </th>
+  <td> Mantener el producto PPI en <em>forma</em> de diamantes proporciona una indicaci&#243;n <em>visual</em> de los resultados a las directrices actuales . </td> </tr><tr> <th> Static </th>
+  <td> Mantener el producto PPI en <em>forma</em> de diamantes proporciona una indicaci&#243;n <em>visual</em> de los resultados a las directrices actuales . </td> </tr>
+</table>
+ <br/><button onclick="showhide('037_latex')">Show/Hide LaTeX</button> <br/><pre id="037_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Mantener completo el PPI con \textlessem\textgreaterforma\textless/em\textgreater de diamante proporciona una indicaci&#243;n \textlessem\textgreatervisual\textless/em\textgreater de los resultados seg&#250;n las directrices actuales. \\
+Adaptive & Mantener el producto PPI en \textlessem\textgreaterforma\textless/em\textgreater de diamantes proporciona una indicaci&#243;n \textlessem\textgreatervisual\textless/em\textgreater de los resultados a las directrices actuales . \\
+Static & Mantener el producto PPI en \textlessem\textgreaterforma\textless/em\textgreater de diamantes proporciona una indicaci&#243;n \textlessem\textgreatervisual\textless/em\textgreater de los resultados a las directrices actuales . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table037}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Control de <em>documentos</em> / <em>registros</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Control de <em>documentos</em> / <em>registros</em> </td> </tr><tr> <th> Static </th>
+  <td> Control de <em>documentos</em> / <em>registros</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('038_latex')">Show/Hide LaTeX</button> <br/><pre id="038_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Control de \textlessem\textgreaterdocumentos\textless/em\textgreater / \textlessem\textgreaterregistros\textless/em\textgreater \\
+Adaptive & Control de \textlessem\textgreaterdocumentos\textless/em\textgreater / \textlessem\textgreaterregistros\textless/em\textgreater \\
+Static & Control de \textlessem\textgreaterdocumentos\textless/em\textgreater / \textlessem\textgreaterregistros\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table038}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> En el <em>caso</em> de las mujeres, levante la mama <em>si</em> es necesario para posicionar el electrodo debajo. </td> </tr><tr> <th> Adaptive </th>
+  <td> En el <em>caso</em> de las mujeres , levante la mama <em>si</em> es necesario para posicionar el electrodo debajo . </td> </tr><tr> <th> Static </th>
+  <td> En el <em>caso</em> de las mujeres , las mujeres se elevan la mama <em>si</em> es necesario para que el electrodo est&#233; debajo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('039_latex')">Show/Hide LaTeX</button> <br/><pre id="039_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & En el \textlessem\textgreatercaso\textless/em\textgreater de las mujeres, levante la mama \textlessem\textgreatersi\textless/em\textgreater es necesario para posicionar el electrodo debajo. \\
+Adaptive & En el \textlessem\textgreatercaso\textless/em\textgreater de las mujeres , levante la mama \textlessem\textgreatersi\textless/em\textgreater es necesario para posicionar el electrodo debajo . \\
+Static & En el \textlessem\textgreatercaso\textless/em\textgreater de las mujeres , las mujeres se elevan la mama \textlessem\textgreatersi\textless/em\textgreater es necesario para que el electrodo est&#233; debajo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table039}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gire el <em>paciente</em> a un lado, y luego coloque el electrodo en la espalda del <em>paciente</em> a la izquierda de su columna y debajo de la esc&#225;pula. </td> </tr><tr> <th> Adaptive </th>
+  <td> Roll el <em>paciente</em> en su lado , y luego rompe el electrodo sobre la espalda del <em>paciente</em> a la izquierda de su columna y debajo de la esc&#225;pula . </td> </tr><tr> <th> Static </th>
+  <td> Roll al <em>paciente</em> a su lado , y luego rodar el electrodo hacia la espalda del <em>paciente</em> a la izquierda de su columna y debajo de la escaga . </td> </tr>
+</table>
+ <br/><button onclick="showhide('040_latex')">Show/Hide LaTeX</button> <br/><pre id="040_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gire el \textlessem\textgreaterpaciente\textless/em\textgreater a un lado, y luego coloque el electrodo en la espalda del \textlessem\textgreaterpaciente\textless/em\textgreater a la izquierda de su columna y debajo de la esc&#225;pula. \\
+Adaptive & Roll el \textlessem\textgreaterpaciente\textless/em\textgreater en su lado , y luego rompe el electrodo sobre la espalda del \textlessem\textgreaterpaciente\textless/em\textgreater a la izquierda de su columna y debajo de la esc&#225;pula . \\
+Static & Roll al \textlessem\textgreaterpaciente\textless/em\textgreater a su lado , y luego rodar el electrodo hacia la espalda del \textlessem\textgreaterpaciente\textless/em\textgreater a la izquierda de su columna y debajo de la escaga . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table040}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Validaci&#243;n</em> del <em>proceso</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Validaci&#243;n</em> del <em>proceso</em> </td> </tr><tr> <th> Static </th>
+  <td> <em>Validaci&#243;n</em> del <em>proceso</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('041_latex')">Show/Hide LaTeX</button> <br/><pre id="041_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterValidaci&#243;n\textless/em\textgreater del \textlessem\textgreaterproceso\textless/em\textgreater \\
+Adaptive & \textlessem\textgreaterValidaci&#243;n\textless/em\textgreater del \textlessem\textgreaterproceso\textless/em\textgreater \\
+Static & \textlessem\textgreaterValidaci&#243;n\textless/em\textgreater del \textlessem\textgreaterproceso\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table041}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Realice la <em>supervisi&#243;n</em> o la desfibrilaci&#243;n con el Mode <em>Selector</em> en la posici&#243;n ON. </td> </tr><tr> <th> Adaptive </th>
+  <td> Control o desfibrilaci&#243;n con el selector Mode en la posici&#243;n ON . </td> </tr><tr> <th> Static </th>
+  <td> Supervisar o desfibrilaci&#243;n con el selector de modo en posici&#243;n de ON . </td> </tr>
+</table>
+ <br/><button onclick="showhide('042_latex')">Show/Hide LaTeX</button> <br/><pre id="042_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Realice la \textlessem\textgreatersupervisi&#243;n\textless/em\textgreater o la desfibrilaci&#243;n con el Mode \textlessem\textgreaterSelector\textless/em\textgreater en la posici&#243;n ON. \\
+Adaptive & Control o desfibrilaci&#243;n con el selector Mode en la posici&#243;n ON . \\
+Static & Supervisar o desfibrilaci&#243;n con el selector de modo en posici&#243;n de ON . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table042}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Revisi&#243;n</em> de la gesti&#243;n </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n de la gesti&#243;n </td> </tr><tr> <th> Static </th>
+  <td> Gesti&#243;n de la gesti&#243;n </td> </tr>
+</table>
+ <br/><button onclick="showhide('043_latex')">Show/Hide LaTeX</button> <br/><pre id="043_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterRevisi&#243;n\textless/em\textgreater de la gesti&#243;n \\
+Adaptive & Gesti&#243;n de la gesti&#243;n \\
+Static & Gesti&#243;n de la gesti&#243;n \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table043}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de la Serie ZOLL R con la <em>onda</em> bif&#225;sica Rectilinear es de 120-150-200 julios para los pacientes adultos. </td> </tr><tr> <th> Adaptive </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por omisi&#243;n para la Serie ZOLL R con el Rectilinear biphasic waveform es de 120 20-150 200 julios para los pacientes adultos . </td> </tr><tr> <th> Static </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para la serie ZOLL R , con la forma bif&#225;sica del Rectilinear , es de 120 a 150-200 julios para pacientes adultos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('044_latex')">Show/Hide LaTeX</button> <br/><pre id="044_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de la Serie ZOLL R con la \textlessem\textgreateronda\textless/em\textgreater bif&#225;sica Rectilinear es de 120-150-200 julios para los pacientes adultos. \\
+Adaptive & El protocolo de energ&#237;a de desfibrilaci&#243;n por omisi&#243;n para la Serie ZOLL R con el Rectilinear biphasic waveform es de 120 20-150 200 julios para los pacientes adultos . \\
+Static & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para la serie ZOLL R , con la forma bif&#225;sica del Rectilinear , es de 120 a 150-200 julios para pacientes adultos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table044}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Control de los equipos de <em>supervisi&#243;n</em> y evaluaci&#243;n </td> </tr><tr> <th> Adaptive </th>
+  <td> Control de la medici&#243;n y la medici&#243;n </td> </tr><tr> <th> Static </th>
+  <td> Control de equipos de control y medici&#243;n </td> </tr>
+</table>
+ <br/><button onclick="showhide('045_latex')">Show/Hide LaTeX</button> <br/><pre id="045_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Control de los equipos de \textlessem\textgreatersupervisi&#243;n\textless/em\textgreater y evaluaci&#243;n \\
+Adaptive & Control de la medici&#243;n y la medici&#243;n \\
+Static & Control de equipos de control y medici&#243;n \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table045}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Cuando se conectan los electrodos pedi&#225;tricos, el desfibrilador de la serie R reducir&#225; autom&#225;ticamente el nivel de energ&#237;a a 50 julios, ajustar&#225; su algoritmo de an&#225;lisis AED a los par&#225;metros pedi&#225;tricos, mostrar&#225; el &#237;ndice de compresi&#243;n y la profundidad en el panel de mandos de CPR y filtrar&#225; el artefacto de compresi&#243;n de la <em>onda</em> ECG. </td> </tr><tr> <th> Adaptive </th>
+  <td> Cuando los electrodos pedi&#225;tricos est&#225;n conectados , el desfibrilador de la serie R reducir&#225; el nivel de energ&#237;a a 50 julios , ajustar&#225; su algoritmo de an&#225;lisis AED para los par&#225;metros pedi&#225;tricos , mostrar el &#237;ndice de compresi&#243;n y la profundidad en el panel de mandos de CPR y el artefacto de compresi&#243;n de filtro . </td> </tr><tr> <th> Static </th>
+  <td> Cuando los electrodos pedi&#225;tricos est&#225;n conectados , el desfibrilador R Series disminuir&#225; autom&#225;ticamente el nivel de energ&#237;a a 50 julios , ajustar&#225; el algoritmo de an&#225;lisis AED a los par&#225;metros pedi&#225;tricos , la frecuencia de las compresiones y la profundidad del tablero de RCP Dashboard , y el artefacto de compresi&#243;n de los filtros . </td> </tr>
+</table>
+ <br/><button onclick="showhide('046_latex')">Show/Hide LaTeX</button> <br/><pre id="046_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Cuando se conectan los electrodos pedi&#225;tricos, el desfibrilador de la serie R reducir&#225; autom&#225;ticamente el nivel de energ&#237;a a 50 julios, ajustar&#225; su algoritmo de an&#225;lisis AED a los par&#225;metros pedi&#225;tricos, mostrar&#225; el &#237;ndice de compresi&#243;n y la profundidad en el panel de mandos de CPR y filtrar&#225; el artefacto de compresi&#243;n de la \textlessem\textgreateronda\textless/em\textgreater ECG. \\
+Adaptive & Cuando los electrodos pedi&#225;tricos est&#225;n conectados , el desfibrilador de la serie R reducir&#225; el nivel de energ&#237;a a 50 julios , ajustar&#225; su algoritmo de an&#225;lisis AED para los par&#225;metros pedi&#225;tricos , mostrar el &#237;ndice de compresi&#243;n y la profundidad en el panel de mandos de CPR y el artefacto de compresi&#243;n de filtro . \\
+Static & Cuando los electrodos pedi&#225;tricos est&#225;n conectados , el desfibrilador R Series disminuir&#225; autom&#225;ticamente el nivel de energ&#237;a a 50 julios , ajustar&#225; el algoritmo de an&#225;lisis AED a los par&#225;metros pedi&#225;tricos , la frecuencia de las compresiones y la profundidad del tablero de RCP Dashboard , y el artefacto de compresi&#243;n de los filtros . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table046}
+\end{table}</pre><a name="bucket4"/><h3> Examples for Bucket 4 </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n de <em>clientes</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n de <em>clientes</em> </td> </tr><tr> <th> Static </th>
+  <td> Gesti&#243;n de Clientes </td> </tr>
+</table>
+ <br/><button onclick="showhide('047_latex')">Show/Hide LaTeX</button> <br/><pre id="047_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n de \textlessem\textgreaterclientes\textless/em\textgreater \\
+Adaptive & Gesti&#243;n de \textlessem\textgreaterclientes\textless/em\textgreater \\
+Static & Gesti&#243;n de Clientes \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table047}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La medici&#243;n de la profundidad de compresi&#243;n en la serie R <em>tambi&#233;n</em> se puede mostrar en cent&#237;metros. </td> </tr><tr> <th> Adaptive </th>
+  <td> La medici&#243;n de profundidad de compresi&#243;n de la serie R <em>tambi&#233;n</em> se puede mostrar en cent&#237;metros . </td> </tr><tr> <th> Static </th>
+  <td> La medici&#243;n de la profundidad de la profundidad de la compresi&#243;n de R se puede mostrar en cent&#237;metros . </td> </tr>
+</table>
+ <br/><button onclick="showhide('048_latex')">Show/Hide LaTeX</button> <br/><pre id="048_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La medici&#243;n de la profundidad de compresi&#243;n en la serie R \textlessem\textgreatertambi&#233;n\textless/em\textgreater se puede mostrar en cent&#237;metros. \\
+Adaptive & La medici&#243;n de profundidad de compresi&#243;n de la serie R \textlessem\textgreatertambi&#233;n\textless/em\textgreater se puede mostrar en cent&#237;metros . \\
+Static & La medici&#243;n de la profundidad de la profundidad de la compresi&#243;n de R se puede mostrar en cent&#237;metros . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table048}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Al situar el <em>Mode</em> Selector en Pacer se activar&#225; la apertura de la puerta de paso. </td> </tr><tr> <th> Adaptive </th>
+  <td> Moving the <em>Mode</em> Selector a Pacer se activar&#225; a la puerta del marcador para abrir . </td> </tr><tr> <th> Static </th>
+  <td> Al mover el selector de modo a Pacer se activar&#225; la puerta de pacte a abrir . </td> </tr>
+</table>
+ <br/><button onclick="showhide('049_latex')">Show/Hide LaTeX</button> <br/><pre id="049_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Al situar el \textlessem\textgreaterMode\textless/em\textgreater Selector en Pacer se activar&#225; la apertura de la puerta de paso. \\
+Adaptive & Moving the \textlessem\textgreaterMode\textless/em\textgreater Selector a Pacer se activar&#225; a la puerta del marcador para abrir . \\
+Static & Al mover el selector de modo a Pacer se activar&#225; la puerta de pacte a abrir . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table049}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n de <em>cambios</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n del cambio </td> </tr><tr> <th> Static </th>
+  <td> Control de <em>cambios</em> </td> </tr>
+</table>
+ <br/><button onclick="showhide('050_latex')">Show/Hide LaTeX</button> <br/><pre id="050_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n de \textlessem\textgreatercambios\textless/em\textgreater \\
+Adaptive & Gesti&#243;n del cambio \\
+Static & Control de \textlessem\textgreatercambios\textless/em\textgreater \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table050}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El sensor de CPR supervisa el &#237;ndice y la profundidad de las compresiones del t&#243;rax y env&#237;a esta informaci&#243;n a la serie <em>R.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> El sensor de RCP vigila la velocidad y profundidad de las compresiones del t&#243;rax y env&#237;a esta informaci&#243;n a la serie <em>R.</em> </td> </tr><tr> <th> Static </th>
+  <td> El sensor de RCP vigila la velocidad y la profundidad de las compresiones y env&#237;a esta informaci&#243;n a la serie R . </td> </tr>
+</table>
+ <br/><button onclick="showhide('051_latex')">Show/Hide LaTeX</button> <br/><pre id="051_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El sensor de CPR supervisa el &#237;ndice y la profundidad de las compresiones del t&#243;rax y env&#237;a esta informaci&#243;n a la serie \textlessem\textgreaterR.\textless/em\textgreater \\
+Adaptive & El sensor de RCP vigila la velocidad y profundidad de las compresiones del t&#243;rax y env&#237;a esta informaci&#243;n a la serie \textlessem\textgreaterR.\textless/em\textgreater \\
+Static & El sensor de RCP vigila la velocidad y la profundidad de las compresiones y env&#237;a esta informaci&#243;n a la serie R . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table051}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Esto <em>le</em> permite ver los ritmos subyacentes <em>sin</em> necesidad de interrumpir las compresiones; <em>sin</em> embargo, no est&#225; pensado para sustituir la evaluaci&#243;n y no funciona en el modo Pacing. </td> </tr><tr> <th> Adaptive </th>
+  <td> Esto <em>le</em> permite ver los ritmos de fondo <em>sin</em> necesidad de interrumpir las compresiones ; <em>sin</em> embargo , no est&#225; destinado a sustituir la evaluaci&#243;n y no funciona en el modo Pacing . </td> </tr><tr> <th> Static </th>
+  <td> Esto <em>le</em> permite ver los ritmos subyacentes <em>sin</em> la necesidad de interrumpir las compresiones ; <em>sin</em> embargo , no est&#225; destinado a sustituir la evaluaci&#243;n y no funciona en el modo Pacing . </td> </tr>
+</table>
+ <br/><button onclick="showhide('052_latex')">Show/Hide LaTeX</button> <br/><pre id="052_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Esto \textlessem\textgreaterle\textless/em\textgreater permite ver los ritmos subyacentes \textlessem\textgreatersin\textless/em\textgreater necesidad de interrumpir las compresiones; \textlessem\textgreatersin\textless/em\textgreater embargo, no est&#225; pensado para sustituir la evaluaci&#243;n y no funciona en el modo Pacing. \\
+Adaptive & Esto \textlessem\textgreaterle\textless/em\textgreater permite ver los ritmos de fondo \textlessem\textgreatersin\textless/em\textgreater necesidad de interrumpir las compresiones ; \textlessem\textgreatersin\textless/em\textgreater embargo , no est&#225; destinado a sustituir la evaluaci&#243;n y no funciona en el modo Pacing . \\
+Static & Esto \textlessem\textgreaterle\textless/em\textgreater permite ver los ritmos subyacentes \textlessem\textgreatersin\textless/em\textgreater la necesidad de interrumpir las compresiones ; \textlessem\textgreatersin\textless/em\textgreater embargo , no est&#225; destinado a sustituir la evaluaci&#243;n y no funciona en el modo Pacing . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table052}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> STERIS ha establecido los requisitos para <em>garantizar</em> que las situaciones de no conformidad identificadas por el SGC se documenten y eval&#250;en para evitar riesgos y que, adem&#225;s, se adopten las medidas adecuadas de contenci&#243;n y segregaci&#243;n, as&#237; como correcciones para devolver el proceso <em>/</em> producto a un estado de control y cumplimiento. </td> </tr><tr> <th> Adaptive </th>
+  <td> STERIS ha establecido los requisitos para <em>garantizar</em> que los eventos no conforme determinados por el sistema de gesti&#243;n de calidad ( SGC ) se documenten , eval&#250;en para el riesgo , y que se adopten medidas adecuadas de contenci&#243;n y segregaci&#243;n y correcciones para devolver el proceso <em>/</em> productos a un estado de control y cumplimiento . </td> </tr><tr> <th> Static </th>
+  <td> STERIS ha establecido los requisitos para <em>garantizar</em> que los eventos no conformes que identifique el QMS se documenten , se eval&#250;e para el riesgo y que se adopten medidas adecuadas de contenci&#243;n y segregaci&#243;n y correcciones para devolver el proceso <em>/</em> producto a un estado de control y cumplimiento . </td> </tr>
+</table>
+ <br/><button onclick="showhide('053_latex')">Show/Hide LaTeX</button> <br/><pre id="053_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & STERIS ha establecido los requisitos para \textlessem\textgreatergarantizar\textless/em\textgreater que las situaciones de no conformidad identificadas por el SGC se documenten y eval&#250;en para evitar riesgos y que, adem&#225;s, se adopten las medidas adecuadas de contenci&#243;n y segregaci&#243;n, as&#237; como correcciones para devolver el proceso \textlessem\textgreater/\textless/em\textgreater producto a un estado de control y cumplimiento. \\
+Adaptive & STERIS ha establecido los requisitos para \textlessem\textgreatergarantizar\textless/em\textgreater que los eventos no conforme determinados por el sistema de gesti&#243;n de calidad ( SGC ) se documenten , eval&#250;en para el riesgo , y que se adopten medidas adecuadas de contenci&#243;n y segregaci&#243;n y correcciones para devolver el proceso \textlessem\textgreater/\textless/em\textgreater productos a un estado de control y cumplimiento . \\
+Static & STERIS ha establecido los requisitos para \textlessem\textgreatergarantizar\textless/em\textgreater que los eventos no conformes que identifique el QMS se documenten , se eval&#250;e para el riesgo y que se adopten medidas adecuadas de contenci&#243;n y segregaci&#243;n y correcciones para devolver el proceso \textlessem\textgreater/\textless/em\textgreater producto a un estado de control y cumplimiento . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table053}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> STERIS ha establecido procedimientos para la <em>gesti&#243;n</em> de <em>clientes</em> y reclamaciones. </td> </tr><tr> <th> Adaptive </th>
+  <td> STERIS ha establecido procedimientos para la <em>gesti&#243;n</em> de <em>clientes</em> y reclamaciones . </td> </tr><tr> <th> Static </th>
+  <td> STERIS ha establecido procesos para la <em>gesti&#243;n</em> de los <em>clientes</em> y las quejas . </td> </tr>
+</table>
+ <br/><button onclick="showhide('054_latex')">Show/Hide LaTeX</button> <br/><pre id="054_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & STERIS ha establecido procedimientos para la \textlessem\textgreatergesti&#243;n\textless/em\textgreater de \textlessem\textgreaterclientes\textless/em\textgreater y reclamaciones. \\
+Adaptive & STERIS ha establecido procedimientos para la \textlessem\textgreatergesti&#243;n\textless/em\textgreater de \textlessem\textgreaterclientes\textless/em\textgreater y reclamaciones . \\
+Static & STERIS ha establecido procesos para la \textlessem\textgreatergesti&#243;n\textless/em\textgreater de los \textlessem\textgreaterclientes\textless/em\textgreater y las quejas . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table054}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Las</em> caracter&#237;sticas avanzadas de OneStep Resuscitation Electrodes <em>incluyen</em> autopruebas automatizadas, conectores CodeReady y alertas de expiraci&#243;n de electrodos. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Las</em> caracter&#237;sticas avanzadas de OneStep Resuscitation Electrodes <em>incluyen</em> las autopruebas automatizadas , los conectores del CodeReady y la alerta de expiraci&#243;n de electrodos . </td> </tr><tr> <th> Static </th>
+  <td> <em>Las</em> caracter&#237;sticas avanzadas de los electrodos de reanimaci&#243;n de OneStep <em>incluyen</em> las autopruebas automatizadas , los conectores de CodeReady y las descripciones de expiraci&#243;n de electrodos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('055_latex')">Show/Hide LaTeX</button> <br/><pre id="055_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterLas\textless/em\textgreater caracter&#237;sticas avanzadas de OneStep Resuscitation Electrodes \textlessem\textgreaterincluyen\textless/em\textgreater autopruebas automatizadas, conectores CodeReady y alertas de expiraci&#243;n de electrodos. \\
+Adaptive & \textlessem\textgreaterLas\textless/em\textgreater caracter&#237;sticas avanzadas de OneStep Resuscitation Electrodes \textlessem\textgreaterincluyen\textless/em\textgreater las autopruebas automatizadas , los conectores del CodeReady y la alerta de expiraci&#243;n de electrodos . \\
+Static & \textlessem\textgreaterLas\textless/em\textgreater caracter&#237;sticas avanzadas de los electrodos de reanimaci&#243;n de OneStep \textlessem\textgreaterincluyen\textless/em\textgreater las autopruebas automatizadas , los conectores de CodeReady y las descripciones de expiraci&#243;n de electrodos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table055}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Los</em> proveedores ALS pueden modificar la configuraci&#243;n de <em>energ&#237;a</em> manualmente presionando el bot&#243;n Energy Select hacia arriba o hacia abajo. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Los</em> proveedores ALS pueden modificar la configuraci&#243;n de <em>energ&#237;a</em> manualmente presionando el bot&#243;n &#171; Selecci&#243;n de la energ&#237;a &#187; en el bot&#243;n de arriba o abajo . </td> </tr><tr> <th> Static </th>
+  <td> <em>Los</em> proveedores ALS pueden cambiar la configuraci&#243;n de <em>energ&#237;a</em> pulsando manualmente el bot&#243;n &#171; Selecci&#243;n de energ&#237;a &#187; . </td> </tr>
+</table>
+ <br/><button onclick="showhide('056_latex')">Show/Hide LaTeX</button> <br/><pre id="056_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterLos\textless/em\textgreater proveedores ALS pueden modificar la configuraci&#243;n de \textlessem\textgreaterenerg&#237;a\textless/em\textgreater manualmente presionando el bot&#243;n Energy Select hacia arriba o hacia abajo. \\
+Adaptive & \textlessem\textgreaterLos\textless/em\textgreater proveedores ALS pueden modificar la configuraci&#243;n de \textlessem\textgreaterenerg&#237;a\textless/em\textgreater manualmente presionando el bot&#243;n &#171; Selecci&#243;n de la energ&#237;a &#187; en el bot&#243;n de arriba o abajo . \\
+Static & \textlessem\textgreaterLos\textless/em\textgreater proveedores ALS pueden cambiar la configuraci&#243;n de \textlessem\textgreaterenerg&#237;a\textless/em\textgreater pulsando manualmente el bot&#243;n &#171; Selecci&#243;n de energ&#237;a &#187; . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table056}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Con la serie R Plus en modo manual, el modo Pacer de Operation aparece como la opci&#243;n <em>Mode</em> Selector. </td> </tr><tr> <th> Adaptive </th>
+  <td> Con la serie R Plus en modo manual , el modo Pacer de la Operaci&#243;n aparece como opci&#243;n Selector del modo . </td> </tr><tr> <th> Static </th>
+  <td> Con la serie de R Series Plus en modo manual , el modo Pacer de la Operaci&#243;n aparece como opci&#243;n Selector de modo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('057_latex')">Show/Hide LaTeX</button> <br/><pre id="057_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Con la serie R Plus en modo manual, el modo Pacer de Operation aparece como la opci&#243;n \textlessem\textgreaterMode\textless/em\textgreater Selector. \\
+Adaptive & Con la serie R Plus en modo manual , el modo Pacer de la Operaci&#243;n aparece como opci&#243;n Selector del modo . \\
+Static & Con la serie de R Series Plus en modo manual , el modo Pacer de la Operaci&#243;n aparece como opci&#243;n Selector de modo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table057}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Esta informaci&#243;n puede provenir de diversas fuentes, entre otras, pero <em>sin</em> limitarse a estas, encuestas, visitas in situ y reclamaciones. </td> </tr><tr> <th> Adaptive </th>
+  <td> La informaci&#243;n puede provenir de diversas fuentes , entre otras , las encuestas , visitas in situ y reclamaciones . </td> </tr><tr> <th> Static </th>
+  <td> La informaci&#243;n puede provenir de diversas fuentes , entre ellas las de las encuestas , las visitas a lugares y las quejas . </td> </tr>
+</table>
+ <br/><button onclick="showhide('058_latex')">Show/Hide LaTeX</button> <br/><pre id="058_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Esta informaci&#243;n puede provenir de diversas fuentes, entre otras, pero \textlessem\textgreatersin\textless/em\textgreater limitarse a estas, encuestas, visitas in situ y reclamaciones. \\
+Adaptive & La informaci&#243;n puede provenir de diversas fuentes , entre otras , las encuestas , visitas in situ y reclamaciones . \\
+Static & La informaci&#243;n puede provenir de diversas fuentes , entre ellas las de las encuestas , las visitas a lugares y las quejas . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table058}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>En</em> el modo manual, la serie R Plus tiene las mismas caracter&#237;sticas y funciones que la serie R ALS. </td> </tr><tr> <th> Adaptive </th>
+  <td> Una vez en el modo manual , la serie de R Plus tiene todas las mismas caracter&#237;sticas y operaciones como la serie S. </td> </tr><tr> <th> Static </th>
+  <td> Una vez en modo manual , la serie de R Plus tiene todas las caracter&#237;sticas y operaciones de la serie de procesos de vuelo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('059_latex')">Show/Hide LaTeX</button> <br/><pre id="059_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterEn\textless/em\textgreater el modo manual, la serie R Plus tiene las mismas caracter&#237;sticas y funciones que la serie R ALS. \\
+Adaptive & Una vez en el modo manual , la serie de R Plus tiene todas las mismas caracter&#237;sticas y operaciones como la serie S. \\
+Static & Una vez en modo manual , la serie de R Plus tiene todas las caracter&#237;sticas y operaciones de la serie de procesos de vuelo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table059}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Para aplicar el electrodo delantero, sujete el electrodo triangular azul con la etiqueta &#171;2&#187; y retire el revestimiento levantando la pesta&#241;a roja en la base del <em>electrodo.</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Para aplicar el electrodo delantero , sujete el electrodo de azul triangular eleletiquetado &#171; 2 &#187; y pila de la l&#237;nea de l&#237;nea levantando la pesta&#241;a roja en la base del electrodo . </td> </tr><tr> <th> Static </th>
+  <td> Para aplicar el electrodo delantero , captar el electrodo azulado azul amarillo &#171; 2 &#187; y la pila de la camisa mediante elevaci&#243;n en la pesta&#241;a roja en la base del electrodo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('060_latex')">Show/Hide LaTeX</button> <br/><pre id="060_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Para aplicar el electrodo delantero, sujete el electrodo triangular azul con la etiqueta &#171;2&#187; y retire el revestimiento levantando la pesta&#241;a roja en la base del \textlessem\textgreaterelectrodo.\textless/em\textgreater \\
+Adaptive & Para aplicar el electrodo delantero , sujete el electrodo de azul triangular eleletiquetado &#171; 2 &#187; y pila de la l&#237;nea de l&#237;nea levantando la pesta&#241;a roja en la base del electrodo . \\
+Static & Para aplicar el electrodo delantero , captar el electrodo azulado azul amarillo &#171; 2 &#187; y la pila de la camisa mediante elevaci&#243;n en la pesta&#241;a roja en la base del electrodo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table060}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Sin embargo, el metr&#243;nomo <em>le</em> indicar&#225; si las compresiones bajan del nivel de las directrices. </td> </tr><tr> <th> Adaptive </th>
+  <td> Sin embargo , el metr&#243;nomo absolvido si las compresiones caen por debajo de las directrices . </td> </tr><tr> <th> Static </th>
+  <td> Sin embargo , el metr&#243;nomo se aburrir&#225; si las compresiones son inferiores a las directrices . </td> </tr>
+</table>
+ <br/><button onclick="showhide('061_latex')">Show/Hide LaTeX</button> <br/><pre id="061_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Sin embargo, el metr&#243;nomo \textlessem\textgreaterle\textless/em\textgreater indicar&#225; si las compresiones bajan del nivel de las directrices. \\
+Adaptive & Sin embargo , el metr&#243;nomo absolvido si las compresiones caen por debajo de las directrices . \\
+Static & Sin embargo , el metr&#243;nomo se aburrir&#225; si las compresiones son inferiores a las directrices . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table061}
+\end{table}</pre><a name="bucket5"/><h3> Examples for Bucket [5,10) </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>La</em> serie R promueve la facilidad de uso con el Sistema Operativo Uniforme. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>La</em> serie R promueve la facilidad de uso con el sistema operativo uniforme . </td> </tr><tr> <th> Static </th>
+  <td> El R Series promueve la facilidad de uso con el sistema operativo uniforme . </td> </tr>
+</table>
+ <br/><button onclick="showhide('062_latex')">Show/Hide LaTeX</button> <br/><pre id="062_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterLa\textless/em\textgreater serie R promueve la facilidad de uso con el Sistema Operativo Uniforme. \\
+Adaptive & \textlessem\textgreaterLa\textless/em\textgreater serie R promueve la facilidad de uso con el sistema operativo uniforme . \\
+Static & El R Series promueve la facilidad de uso con el sistema operativo uniforme . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table062}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Si el color comienza a disminuir, levante r&#225;pidamente las manos del <em>t&#243;rax</em> para una mejor recuperaci&#243;n. </td> </tr><tr> <th> Adaptive </th>
+  <td> Si el color comienza a disminuir , levantar&#225; r&#225;pidamente las manos del <em>t&#243;rax</em> para recuperarse mejor . </td> </tr><tr> <th> Static </th>
+  <td> Si el color comienza a disminuir , levantar&#225; r&#225;pidamente las manos del pecho para recuperarse mejor . </td> </tr>
+</table>
+ <br/><button onclick="showhide('063_latex')">Show/Hide LaTeX</button> <br/><pre id="063_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Si el color comienza a disminuir, levante r&#225;pidamente las manos del \textlessem\textgreatert&#243;rax\textless/em\textgreater para una mejor recuperaci&#243;n. \\
+Adaptive & Si el color comienza a disminuir , levantar&#225; r&#225;pidamente las manos del \textlessem\textgreatert&#243;rax\textless/em\textgreater para recuperarse mejor . \\
+Static & Si el color comienza a disminuir , levantar&#225; r&#225;pidamente las manos del pecho para recuperarse mejor . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table063}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Gesti&#243;n</em> de cambios </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>Gesti&#243;n</em> del cambio </td> </tr><tr> <th> Static </th>
+  <td> Control de cambios </td> </tr>
+</table>
+ <br/><button onclick="showhide('064_latex')">Show/Hide LaTeX</button> <br/><pre id="064_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterGesti&#243;n\textless/em\textgreater de cambios \\
+Adaptive & \textlessem\textgreaterGesti&#243;n\textless/em\textgreater del cambio \\
+Static & Control de cambios \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table064}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Los proveedores ALS pueden modificar la configuraci&#243;n de energ&#237;a manualmente presionando el bot&#243;n Energy Select hacia arriba <em>o</em> hacia abajo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Los proveedores ALS pueden modificar la configuraci&#243;n de energ&#237;a manualmente presionando el bot&#243;n &#171; Selecci&#243;n de la energ&#237;a &#187; en el bot&#243;n de arriba <em>o</em> abajo . </td> </tr><tr> <th> Static </th>
+  <td> Los proveedores ALS pueden cambiar la configuraci&#243;n de energ&#237;a pulsando manualmente el bot&#243;n &#171; Selecci&#243;n de energ&#237;a &#187; . </td> </tr>
+</table>
+ <br/><button onclick="showhide('065_latex')">Show/Hide LaTeX</button> <br/><pre id="065_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Los proveedores ALS pueden modificar la configuraci&#243;n de energ&#237;a manualmente presionando el bot&#243;n Energy Select hacia arriba \textlessem\textgreatero\textless/em\textgreater hacia abajo. \\
+Adaptive & Los proveedores ALS pueden modificar la configuraci&#243;n de energ&#237;a manualmente presionando el bot&#243;n &#171; Selecci&#243;n de la energ&#237;a &#187; en el bot&#243;n de arriba \textlessem\textgreatero\textless/em\textgreater abajo . \\
+Static & Los proveedores ALS pueden cambiar la configuraci&#243;n de energ&#237;a pulsando manualmente el bot&#243;n &#171; Selecci&#243;n de energ&#237;a &#187; . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table065}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Validaci&#243;n del programa inform&#225;tico para los <em>procedimientos</em> regulados </td> </tr><tr> <th> Adaptive </th>
+  <td> Validaci&#243;n del programa inform&#225;tico para los <em>procedimientos</em> regulados </td> </tr><tr> <th> Static </th>
+  <td> Validaci&#243;n de software para procesos regulados </td> </tr>
+</table>
+ <br/><button onclick="showhide('066_latex')">Show/Hide LaTeX</button> <br/><pre id="066_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Validaci&#243;n del programa inform&#225;tico para los \textlessem\textgreaterprocedimientos\textless/em\textgreater regulados \\
+Adaptive & Validaci&#243;n del programa inform&#225;tico para los \textlessem\textgreaterprocedimientos\textless/em\textgreater regulados \\
+Static & Validaci&#243;n de software para procesos regulados \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table066}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>STERIS</em> <em>ha</em> <em>establecido</em> un programa para garantizar que el SGC cumple con los <em>requisitos</em> establecidos del sistema de <em>calidad</em> y tambi&#233;n para determinar su eficacia mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones, funciones, fabricantes contratados y proveedores. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>STERIS</em> <em>ha</em> <em>establecido</em> un programa para garantizar que el sistema de gesti&#243;n de <em>calidad</em> ( SGC ) cumple con los <em>requisitos</em> del sistema de calidad establecidos y para determinar la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr><tr> <th> Static </th>
+  <td> <em>STERIS</em> <em>ha</em> <em>establecido</em> un programa para garantizar que el QMS se ajuste a los <em>requisitos</em> establecidos del sistema de <em>calidad</em> y determine la eficacia del sistema de calidad mediante auditor&#237;as programadas de las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr>
+</table>
+ <br/><button onclick="showhide('067_latex')">Show/Hide LaTeX</button> <br/><pre id="067_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterSTERIS\textless/em\textgreater \textlessem\textgreaterha\textless/em\textgreater \textlessem\textgreaterestablecido\textless/em\textgreater un programa para garantizar que el SGC cumple con los \textlessem\textgreaterrequisitos\textless/em\textgreater establecidos del sistema de \textlessem\textgreatercalidad\textless/em\textgreater y tambi&#233;n para determinar su eficacia mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones, funciones, fabricantes contratados y proveedores. \\
+Adaptive & \textlessem\textgreaterSTERIS\textless/em\textgreater \textlessem\textgreaterha\textless/em\textgreater \textlessem\textgreaterestablecido\textless/em\textgreater un programa para garantizar que el sistema de gesti&#243;n de \textlessem\textgreatercalidad\textless/em\textgreater ( SGC ) cumple con los \textlessem\textgreaterrequisitos\textless/em\textgreater del sistema de calidad establecidos y para determinar la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+Static & \textlessem\textgreaterSTERIS\textless/em\textgreater \textlessem\textgreaterha\textless/em\textgreater \textlessem\textgreaterestablecido\textless/em\textgreater un programa para garantizar que el QMS se ajuste a los \textlessem\textgreaterrequisitos\textless/em\textgreater establecidos del sistema de \textlessem\textgreatercalidad\textless/em\textgreater y determine la eficacia del sistema de calidad mediante auditor&#237;as programadas de las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table067}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Esto le permite ver los ritmos subyacentes sin necesidad de interrumpir las compresiones; sin embargo, <em>no</em> <em>est&#225;</em> pensado para sustituir la evaluaci&#243;n y <em>no</em> funciona en el <em>modo</em> Pacing. </td> </tr><tr> <th> Adaptive </th>
+  <td> Esto le permite ver los ritmos de fondo sin necesidad de interrumpir las compresiones ; sin embargo , <em>no</em> <em>est&#225;</em> destinado a sustituir la evaluaci&#243;n y <em>no</em> funciona en el <em>modo</em> Pacing . </td> </tr><tr> <th> Static </th>
+  <td> Esto le permite ver los ritmos subyacentes sin la necesidad de interrumpir las compresiones ; sin embargo , <em>no</em> <em>est&#225;</em> destinado a sustituir la evaluaci&#243;n y <em>no</em> funciona en el <em>modo</em> Pacing . </td> </tr>
+</table>
+ <br/><button onclick="showhide('068_latex')">Show/Hide LaTeX</button> <br/><pre id="068_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Esto le permite ver los ritmos subyacentes sin necesidad de interrumpir las compresiones; sin embargo, \textlessem\textgreaterno\textless/em\textgreater \textlessem\textgreaterest&#225;\textless/em\textgreater pensado para sustituir la evaluaci&#243;n y \textlessem\textgreaterno\textless/em\textgreater funciona en el \textlessem\textgreatermodo\textless/em\textgreater Pacing. \\
+Adaptive & Esto le permite ver los ritmos de fondo sin necesidad de interrumpir las compresiones ; sin embargo , \textlessem\textgreaterno\textless/em\textgreater \textlessem\textgreaterest&#225;\textless/em\textgreater destinado a sustituir la evaluaci&#243;n y \textlessem\textgreaterno\textless/em\textgreater funciona en el \textlessem\textgreatermodo\textless/em\textgreater Pacing . \\
+Static & Esto le permite ver los ritmos subyacentes sin la necesidad de interrumpir las compresiones ; sin embargo , \textlessem\textgreaterno\textless/em\textgreater \textlessem\textgreaterest&#225;\textless/em\textgreater destinado a sustituir la evaluaci&#243;n y \textlessem\textgreaterno\textless/em\textgreater funciona en el \textlessem\textgreatermodo\textless/em\textgreater Pacing . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table068}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>El</em> <em>desfibrilador</em> de la serie R le proporcionar&#225; tambi&#233;n un mensaje de audio; &#8220;incremente las compresiones&#8221; y un metr&#243;nomo para ayudarle a llegar a 105 <em>compresiones</em> <em>por</em> minuto. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>El</em> <em>desfibrilador</em> de la serie R proporcionar&#225; tambi&#233;n un mensaje de audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un metr&#243;nomo de la ayuda para ayudarle a llegar a 105 <em>compresiones</em> <em>por</em> minuto . </td> </tr><tr> <th> Static </th>
+  <td> <em>El</em> <em>desfibrilador</em> R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un metr&#243;nomo , para ayudarle a llegar a 105 <em>compresiones</em> <em>por</em> minuto . </td> </tr>
+</table>
+ <br/><button onclick="showhide('069_latex')">Show/Hide LaTeX</button> <br/><pre id="069_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterEl\textless/em\textgreater \textlessem\textgreaterdesfibrilador\textless/em\textgreater de la serie R le proporcionar&#225; tambi&#233;n un mensaje de audio; &#8220;incremente las compresiones&#8221; y un metr&#243;nomo para ayudarle a llegar a 105 \textlessem\textgreatercompresiones\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater minuto. \\
+Adaptive & \textlessem\textgreaterEl\textless/em\textgreater \textlessem\textgreaterdesfibrilador\textless/em\textgreater de la serie R proporcionar&#225; tambi&#233;n un mensaje de audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un metr&#243;nomo de la ayuda para ayudarle a llegar a 105 \textlessem\textgreatercompresiones\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater minuto . \\
+Static & \textlessem\textgreaterEl\textless/em\textgreater \textlessem\textgreaterdesfibrilador\textless/em\textgreater R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un metr&#243;nomo , para ayudarle a llegar a 105 \textlessem\textgreatercompresiones\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater minuto . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table069}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>La</em> medici&#243;n de la <em>profundidad</em> de <em>compresi&#243;n</em> en la serie R tambi&#233;n se <em>puede</em> mostrar en cent&#237;metros. </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>La</em> medici&#243;n de <em>profundidad</em> de <em>compresi&#243;n</em> de la serie R tambi&#233;n se <em>puede</em> mostrar en cent&#237;metros . </td> </tr><tr> <th> Static </th>
+  <td> <em>La</em> medici&#243;n de la <em>profundidad</em> de la profundidad de la <em>compresi&#243;n</em> de R se <em>puede</em> mostrar en cent&#237;metros . </td> </tr>
+</table>
+ <br/><button onclick="showhide('070_latex')">Show/Hide LaTeX</button> <br/><pre id="070_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterLa\textless/em\textgreater medici&#243;n de la \textlessem\textgreaterprofundidad\textless/em\textgreater de \textlessem\textgreatercompresi&#243;n\textless/em\textgreater en la serie R tambi&#233;n se \textlessem\textgreaterpuede\textless/em\textgreater mostrar en cent&#237;metros. \\
+Adaptive & \textlessem\textgreaterLa\textless/em\textgreater medici&#243;n de \textlessem\textgreaterprofundidad\textless/em\textgreater de \textlessem\textgreatercompresi&#243;n\textless/em\textgreater de la serie R tambi&#233;n se \textlessem\textgreaterpuede\textless/em\textgreater mostrar en cent&#237;metros . \\
+Static & \textlessem\textgreaterLa\textless/em\textgreater medici&#243;n de la \textlessem\textgreaterprofundidad\textless/em\textgreater de la profundidad de la \textlessem\textgreatercompresi&#243;n\textless/em\textgreater de R se \textlessem\textgreaterpuede\textless/em\textgreater mostrar en cent&#237;metros . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table070}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Se mostrar&#225; un temporizador de CPR una vez que comiencen las <em>compresiones</em> de CPR y realizar&#225; una cuenta atr&#225;s de 2 minutos para garantizar <em>compresiones</em> de alta <em>calidad</em> <em>por</em> parte de otro empleado. </td> </tr><tr> <th> Adaptive </th>
+  <td> Un temporizador de CPR se mostrar&#225; una <em>compresiones</em> de CPR y contar&#225; de 2 minutos para garantizar <em>compresiones</em> de alta <em>calidad</em> <em>por</em> parte de un funcionario . </td> </tr><tr> <th> Static </th>
+  <td> Un temporizador de RCP se muestra despu&#233;s de las <em>compresiones</em> RCP y se contar&#225; a partir de 2 minutos para ayudar a las <em>compresiones</em> de alta <em>calidad</em> <em>por</em> parte de un funcionario . </td> </tr>
+</table>
+ <br/><button onclick="showhide('071_latex')">Show/Hide LaTeX</button> <br/><pre id="071_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Se mostrar&#225; un temporizador de CPR una vez que comiencen las \textlessem\textgreatercompresiones\textless/em\textgreater de CPR y realizar&#225; una cuenta atr&#225;s de 2 minutos para garantizar \textlessem\textgreatercompresiones\textless/em\textgreater de alta \textlessem\textgreatercalidad\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater parte de otro empleado. \\
+Adaptive & Un temporizador de CPR se mostrar&#225; una \textlessem\textgreatercompresiones\textless/em\textgreater de CPR y contar&#225; de 2 minutos para garantizar \textlessem\textgreatercompresiones\textless/em\textgreater de alta \textlessem\textgreatercalidad\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater parte de un funcionario . \\
+Static & Un temporizador de RCP se muestra despu&#233;s de las \textlessem\textgreatercompresiones\textless/em\textgreater RCP y se contar&#225; a partir de 2 minutos para ayudar a las \textlessem\textgreatercompresiones\textless/em\textgreater de alta \textlessem\textgreatercalidad\textless/em\textgreater \textlessem\textgreaterpor\textless/em\textgreater parte de un funcionario . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table071}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Si tiene alguna pregunta adicional, consulte su Gu&#237;a de Usuario <em>Serie</em> R <em>o</em> visite www.zoll.com para m&#225;s informaci&#243;n. </td> </tr><tr> <th> Adaptive </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a de la serie R. </td> </tr><tr> <th> Static </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del R Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('072_latex')">Show/Hide LaTeX</button> <br/><pre id="072_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Si tiene alguna pregunta adicional, consulte su Gu&#237;a de Usuario \textlessem\textgreaterSerie\textless/em\textgreater R \textlessem\textgreatero\textless/em\textgreater visite www.zoll.com para m&#225;s informaci&#243;n. \\
+Adaptive & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a de la serie R. \\
+Static & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del R Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table072}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>La</em> funci&#243;n See-Thru CPR de la serie R filtra el artefacto de <em>compresi&#243;n</em> de la onda ECG. </td> </tr><tr> <th> Adaptive </th>
+  <td> The See-Thru CPR . </td> </tr><tr> <th> Static </th>
+  <td> The See-Thru RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('073_latex')">Show/Hide LaTeX</button> <br/><pre id="073_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterLa\textless/em\textgreater funci&#243;n See-Thru CPR de la serie R filtra el artefacto de \textlessem\textgreatercompresi&#243;n\textless/em\textgreater de la onda ECG. \\
+Adaptive & The See-Thru CPR . \\
+Static & The See-Thru RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table073}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Controles</em> ambientales </td> </tr><tr> <th> Adaptive </th>
+  <td> Control ambiental </td> </tr><tr> <th> Static </th>
+  <td> Control ambiental </td> </tr>
+</table>
+ <br/><button onclick="showhide('074_latex')">Show/Hide LaTeX</button> <br/><pre id="074_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterControles\textless/em\textgreater ambientales \\
+Adaptive & Control ambiental \\
+Static & Control ambiental \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table074}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Sumario:</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Sinopsis : </td> </tr><tr> <th> Static </th>
+  <td> Descripci&#243;n general : </td> </tr>
+</table>
+ <br/><button onclick="showhide('075_latex')">Show/Hide LaTeX</button> <br/><pre id="075_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterSumario:\textless/em\textgreater \\
+Adaptive & Sinopsis : \\
+Static & Descripci&#243;n general : \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table075}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>Gesti&#243;n</em> de las instalaciones y equipos </td> </tr><tr> <th> Adaptive </th>
+  <td> Instalaciones y equipos </td> </tr><tr> <th> Static </th>
+  <td> Instalaciones y equipos </td> </tr>
+</table>
+ <br/><button onclick="showhide('076_latex')">Show/Hide LaTeX</button> <br/><pre id="076_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterGesti&#243;n\textless/em\textgreater de las instalaciones y equipos \\
+Adaptive & Instalaciones y equipos \\
+Static & Instalaciones y equipos \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table076}
+\end{table}</pre><a name="bucket6"/><h3> Examples for Bucket [10,100) </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> <em>ESC</em> <em>#</em> 1 </td> </tr><tr> <th> Adaptive </th>
+  <td> <em>ESC</em> <em>#</em> # </td> </tr><tr> <th> Static </th>
+  <td> QSE n.&#186; 1 </td> </tr>
+</table>
+ <br/><button onclick="showhide('077_latex')">Show/Hide LaTeX</button> <br/><pre id="077_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & \textlessem\textgreaterESC\textless/em\textgreater \textlessem\textgreater#\textless/em\textgreater 1 \\
+Adaptive & \textlessem\textgreaterESC\textless/em\textgreater \textlessem\textgreater#\textless/em\textgreater # \\
+Static & QSE n.&#186; 1 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table077}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Procedimiento <em>del</em> <em>ESC</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> Procedimiento <em>del</em> <em>ESC</em> </td> </tr><tr> <th> Static </th>
+  <td> Procedimiento QSE </td> </tr>
+</table>
+ <br/><button onclick="showhide('078_latex')">Show/Hide LaTeX</button> <br/><pre id="078_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Procedimiento \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterESC\textless/em\textgreater \\
+Adaptive & Procedimiento \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterESC\textless/em\textgreater \\
+Static & Procedimiento QSE \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table078}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto <em>para</em> pacientes pedi&#225;tricos es de 50-70-85 julios. </td> </tr><tr> <th> Adaptive </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . </td> </tr><tr> <th> Static </th>
+  <td> El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado <em>para</em> los pacientes pedi&#225;tricos es de 50-70-85 julios . </td> </tr>
+</table>
+ <br/><button onclick="showhide('079_latex')">Show/Hide LaTeX</button> <br/><pre id="079_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto \textlessem\textgreaterpara\textless/em\textgreater pacientes pedi&#225;tricos es de 50-70-85 julios. \\
+Adaptive & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . \\
+Static & El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado \textlessem\textgreaterpara\textless/em\textgreater los pacientes pedi&#225;tricos es de 50-70-85 julios . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table079}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Registro Maestro de <em>los</em> Dispositivos </td> </tr><tr> <th> Adaptive </th>
+  <td> Registro del Amo de <em>los</em> Dispositivos </td> </tr><tr> <th> Static </th>
+  <td> Registro de registro de dispositivos </td> </tr>
+</table>
+ <br/><button onclick="showhide('080_latex')">Show/Hide LaTeX</button> <br/><pre id="080_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Registro Maestro de \textlessem\textgreaterlos\textless/em\textgreater Dispositivos \\
+Adaptive & Registro del Amo de \textlessem\textgreaterlos\textless/em\textgreater Dispositivos \\
+Static & Registro de registro de dispositivos \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table080}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Y <em>un</em> temporizador inactividad </td> </tr><tr> <th> Adaptive </th>
+  <td> Temporizador Idle </td> </tr><tr> <th> Static </th>
+  <td> Y <em>un</em> temporizador de reposo </td> </tr>
+</table>
+ <br/><button onclick="showhide('081_latex')">Show/Hide LaTeX</button> <br/><pre id="081_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Y \textlessem\textgreaterun\textless/em\textgreater temporizador inactividad \\
+Adaptive & Temporizador Idle \\
+Static & Y \textlessem\textgreaterun\textless/em\textgreater temporizador de reposo \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table081}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Este conector <em>se</em> utiliza <em>para</em> verificar <em>la</em> integridad de <em>los</em> <em>electrodos</em> <em>y</em> confirmar <em>su</em> estado cl&#237;nico durante <em>el</em> Ensayo de Preparaci&#243;n <em>del</em> C&#243;digo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Este conector <em>se</em> utiliza <em>para</em> verificar <em>la</em> integridad de <em>los</em> <em>electrodos</em> <em>y</em> confirmar <em>su</em> estado cl&#237;nico durante <em>el</em> ensayo de preparaci&#243;n <em>del</em> c&#243;digo . </td> </tr><tr> <th> Static </th>
+  <td> Este conector <em>se</em> utiliza <em>para</em> verificar <em>la</em> integridad de <em>los</em> <em>electrodos</em> <em>y</em> confirmar <em>su</em> disponibilidad cl&#237;nica durante <em>el</em> examen de la preparaci&#243;n <em>del</em> c&#243;digo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('082_latex')">Show/Hide LaTeX</button> <br/><pre id="082_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Este conector \textlessem\textgreaterse\textless/em\textgreater utiliza \textlessem\textgreaterpara\textless/em\textgreater verificar \textlessem\textgreaterla\textless/em\textgreater integridad de \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater \textlessem\textgreatery\textless/em\textgreater confirmar \textlessem\textgreatersu\textless/em\textgreater estado cl&#237;nico durante \textlessem\textgreaterel\textless/em\textgreater Ensayo de Preparaci&#243;n \textlessem\textgreaterdel\textless/em\textgreater C&#243;digo. \\
+Adaptive & Este conector \textlessem\textgreaterse\textless/em\textgreater utiliza \textlessem\textgreaterpara\textless/em\textgreater verificar \textlessem\textgreaterla\textless/em\textgreater integridad de \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater \textlessem\textgreatery\textless/em\textgreater confirmar \textlessem\textgreatersu\textless/em\textgreater estado cl&#237;nico durante \textlessem\textgreaterel\textless/em\textgreater ensayo de preparaci&#243;n \textlessem\textgreaterdel\textless/em\textgreater c&#243;digo . \\
+Static & Este conector \textlessem\textgreaterse\textless/em\textgreater utiliza \textlessem\textgreaterpara\textless/em\textgreater verificar \textlessem\textgreaterla\textless/em\textgreater integridad de \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater \textlessem\textgreatery\textless/em\textgreater confirmar \textlessem\textgreatersu\textless/em\textgreater disponibilidad cl&#237;nica durante \textlessem\textgreaterel\textless/em\textgreater examen de la preparaci&#243;n \textlessem\textgreaterdel\textless/em\textgreater c&#243;digo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table082}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Para abrir <em>los</em> <em>electrodos</em> OneStep, sujete <em>el</em> embalaje <em>del</em> <em>electrodo</em> por <em>el</em> tri&#225;ngulo amarillo <em>y</em> &#225;bralo firmemente, separando <em>las</em> dos partes. </td> </tr><tr> <th> Adaptive </th>
+  <td> Para abrir <em>los</em> <em>electrodos</em> OneStep , capte <em>el</em> envase <em>del</em> <em>electrodo</em> en <em>el</em> tri&#225;ngulo amarillo <em>y</em> pulgar firmemente , separando <em>las</em> dos partes . </td> </tr><tr> <th> Static </th>
+  <td> Para abrir <em>los</em> <em>electrodos</em> OneStep , captar <em>el</em> empaque <em>del</em> <em>electrodo</em> en <em>el</em> tri&#225;ngulo amarillo <em>y</em> abrirse firmemente , separando <em>las</em> dos partes . </td> </tr>
+</table>
+ <br/><button onclick="showhide('083_latex')">Show/Hide LaTeX</button> <br/><pre id="083_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Para abrir \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater OneStep, sujete \textlessem\textgreaterel\textless/em\textgreater embalaje \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterelectrodo\textless/em\textgreater por \textlessem\textgreaterel\textless/em\textgreater tri&#225;ngulo amarillo \textlessem\textgreatery\textless/em\textgreater &#225;bralo firmemente, separando \textlessem\textgreaterlas\textless/em\textgreater dos partes. \\
+Adaptive & Para abrir \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater OneStep , capte \textlessem\textgreaterel\textless/em\textgreater envase \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterelectrodo\textless/em\textgreater en \textlessem\textgreaterel\textless/em\textgreater tri&#225;ngulo amarillo \textlessem\textgreatery\textless/em\textgreater pulgar firmemente , separando \textlessem\textgreaterlas\textless/em\textgreater dos partes . \\
+Static & Para abrir \textlessem\textgreaterlos\textless/em\textgreater \textlessem\textgreaterelectrodos\textless/em\textgreater OneStep , captar \textlessem\textgreaterel\textless/em\textgreater empaque \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterelectrodo\textless/em\textgreater en \textlessem\textgreaterel\textless/em\textgreater tri&#225;ngulo amarillo \textlessem\textgreatery\textless/em\textgreater abrirse firmemente , separando \textlessem\textgreaterlas\textless/em\textgreater dos partes . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table083}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Cuando <em>las</em> compresiones <em>se</em> han interrumpido durante <em>un</em> per&#237;odo de tiempo prolongado, <em>se</em> muestra <em>el</em> tiempo de inactividad <em>en</em> minutos <em>y</em> segundos. </td> </tr><tr> <th> Adaptive </th>
+  <td> Cuando <em>las</em> compresiones <em>se</em> han interrumpido durante <em>un</em> per&#237;odo de tiempo prolongado , <em>se</em> muestra <em>el</em> tiempo de inactividad <em>en</em> minutos <em>y</em> segundos . </td> </tr><tr> <th> Static </th>
+  <td> Cuando <em>se</em> han interrumpido <em>las</em> compresiones durante <em>un</em> per&#237;odo de tiempo prolongado , <em>se</em> muestra <em>el</em> tiempo de inactividad <em>en</em> minutos <em>y</em> segundos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('084_latex')">Show/Hide LaTeX</button> <br/><pre id="084_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Cuando \textlessem\textgreaterlas\textless/em\textgreater compresiones \textlessem\textgreaterse\textless/em\textgreater han interrumpido durante \textlessem\textgreaterun\textless/em\textgreater per&#237;odo de tiempo prolongado, \textlessem\textgreaterse\textless/em\textgreater muestra \textlessem\textgreaterel\textless/em\textgreater tiempo de inactividad \textlessem\textgreateren\textless/em\textgreater minutos \textlessem\textgreatery\textless/em\textgreater segundos. \\
+Adaptive & Cuando \textlessem\textgreaterlas\textless/em\textgreater compresiones \textlessem\textgreaterse\textless/em\textgreater han interrumpido durante \textlessem\textgreaterun\textless/em\textgreater per&#237;odo de tiempo prolongado , \textlessem\textgreaterse\textless/em\textgreater muestra \textlessem\textgreaterel\textless/em\textgreater tiempo de inactividad \textlessem\textgreateren\textless/em\textgreater minutos \textlessem\textgreatery\textless/em\textgreater segundos . \\
+Static & Cuando \textlessem\textgreaterse\textless/em\textgreater han interrumpido \textlessem\textgreaterlas\textless/em\textgreater compresiones durante \textlessem\textgreaterun\textless/em\textgreater per&#237;odo de tiempo prolongado , \textlessem\textgreaterse\textless/em\textgreater muestra \textlessem\textgreaterel\textless/em\textgreater tiempo de inactividad \textlessem\textgreateren\textless/em\textgreater minutos \textlessem\textgreatery\textless/em\textgreater segundos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table084}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Con <em>la</em> <em>serie</em> <em>R</em> Plus <em>en</em> modo manual, <em>el</em> modo Pacer de Operation aparece como <em>la</em> opci&#243;n Mode Selector. </td> </tr><tr> <th> Adaptive </th>
+  <td> Con <em>la</em> <em>serie</em> <em>R</em> Plus <em>en</em> modo manual , <em>el</em> modo Pacer de <em>la</em> Operaci&#243;n aparece como opci&#243;n Selector del modo . </td> </tr><tr> <th> Static </th>
+  <td> Con <em>la</em> <em>serie</em> de <em>R</em> Series Plus <em>en</em> modo manual , <em>el</em> modo Pacer de <em>la</em> Operaci&#243;n aparece como opci&#243;n Selector de modo . </td> </tr>
+</table>
+ <br/><button onclick="showhide('085_latex')">Show/Hide LaTeX</button> <br/><pre id="085_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Con \textlessem\textgreaterla\textless/em\textgreater \textlessem\textgreaterserie\textless/em\textgreater \textlessem\textgreaterR\textless/em\textgreater Plus \textlessem\textgreateren\textless/em\textgreater modo manual, \textlessem\textgreaterel\textless/em\textgreater modo Pacer de Operation aparece como \textlessem\textgreaterla\textless/em\textgreater opci&#243;n Mode Selector. \\
+Adaptive & Con \textlessem\textgreaterla\textless/em\textgreater \textlessem\textgreaterserie\textless/em\textgreater \textlessem\textgreaterR\textless/em\textgreater Plus \textlessem\textgreateren\textless/em\textgreater modo manual , \textlessem\textgreaterel\textless/em\textgreater modo Pacer de \textlessem\textgreaterla\textless/em\textgreater Operaci&#243;n aparece como opci&#243;n Selector del modo . \\
+Static & Con \textlessem\textgreaterla\textless/em\textgreater \textlessem\textgreaterserie\textless/em\textgreater de \textlessem\textgreaterR\textless/em\textgreater Series Plus \textlessem\textgreateren\textless/em\textgreater modo manual , \textlessem\textgreaterel\textless/em\textgreater modo Pacer de \textlessem\textgreaterla\textless/em\textgreater Operaci&#243;n aparece como opci&#243;n Selector de modo . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table085}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El indicador de rendimiento de perfusi&#243;n, PPI, incluye <em>la</em> profundidad de compresi&#243;n, <em>el</em> &#237;ndice <em>y</em> <em>los</em> tiempos de interrupci&#243;n <em>en</em> <em>un</em> indicador visual. </td> </tr><tr> <th> Adaptive </th>
+  <td> El indicador de rendimiento de perfusi&#243;n , PPI , integra <em>la</em> profundidad de compresi&#243;n , <em>el</em> &#237;ndice <em>y</em> <em>los</em> tiempos de interrupci&#243;n <em>en</em> <em>un</em> indicador visual . </td> </tr><tr> <th> Static </th>
+  <td> El indicador de resultados de <em>la</em> perfusi&#243;n , PPI , integra la profundidad de las compresiones , <em>el</em> tipo <em>y</em> <em>los</em> tiempos de interrupci&#243;n <em>en</em> <em>un</em> indicador visual . </td> </tr>
+</table>
+ <br/><button onclick="showhide('086_latex')">Show/Hide LaTeX</button> <br/><pre id="086_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El indicador de rendimiento de perfusi&#243;n, PPI, incluye \textlessem\textgreaterla\textless/em\textgreater profundidad de compresi&#243;n, \textlessem\textgreaterel\textless/em\textgreater &#237;ndice \textlessem\textgreatery\textless/em\textgreater \textlessem\textgreaterlos\textless/em\textgreater tiempos de interrupci&#243;n \textlessem\textgreateren\textless/em\textgreater \textlessem\textgreaterun\textless/em\textgreater indicador visual. \\
+Adaptive & El indicador de rendimiento de perfusi&#243;n , PPI , integra \textlessem\textgreaterla\textless/em\textgreater profundidad de compresi&#243;n , \textlessem\textgreaterel\textless/em\textgreater &#237;ndice \textlessem\textgreatery\textless/em\textgreater \textlessem\textgreaterlos\textless/em\textgreater tiempos de interrupci&#243;n \textlessem\textgreateren\textless/em\textgreater \textlessem\textgreaterun\textless/em\textgreater indicador visual . \\
+Static & El indicador de resultados de \textlessem\textgreaterla\textless/em\textgreater perfusi&#243;n , PPI , integra la profundidad de las compresiones , \textlessem\textgreaterel\textless/em\textgreater tipo \textlessem\textgreatery\textless/em\textgreater \textlessem\textgreaterlos\textless/em\textgreater tiempos de interrupci&#243;n \textlessem\textgreateren\textless/em\textgreater \textlessem\textgreaterun\textless/em\textgreater indicador visual . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table086}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> N&#250;mero <em>del</em> <em>ESC</em> </td> </tr><tr> <th> Adaptive </th>
+  <td> N&#250;mero de QSE </td> </tr><tr> <th> Static </th>
+  <td> N&#250;mero QSE </td> </tr>
+</table>
+ <br/><button onclick="showhide('087_latex')">Show/Hide LaTeX</button> <br/><pre id="087_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & N&#250;mero \textlessem\textgreaterdel\textless/em\textgreater \textlessem\textgreaterESC\textless/em\textgreater \\
+Adaptive & N&#250;mero de QSE \\
+Static & N&#250;mero QSE \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table087}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n <em>del</em> dise&#241;o de productos </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n de los productos </td> </tr><tr> <th> Static </th>
+  <td> Dise&#241;o de productos </td> </tr>
+</table>
+ <br/><button onclick="showhide('088_latex')">Show/Hide LaTeX</button> <br/><pre id="088_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n \textlessem\textgreaterdel\textless/em\textgreater dise&#241;o de productos \\
+Adaptive & Gesti&#243;n de los productos \\
+Static & Dise&#241;o de productos \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table088}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La funci&#243;n See-Thru <em>CPR</em> de <em>la</em> <em>serie</em> <em>R</em> filtra <em>el</em> artefacto de compresi&#243;n de <em>la</em> onda ECG. </td> </tr><tr> <th> Adaptive </th>
+  <td> The See-Thru <em>CPR</em> . </td> </tr><tr> <th> Static </th>
+  <td> The See-Thru RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('089_latex')">Show/Hide LaTeX</button> <br/><pre id="089_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La funci&#243;n See-Thru \textlessem\textgreaterCPR\textless/em\textgreater de \textlessem\textgreaterla\textless/em\textgreater \textlessem\textgreaterserie\textless/em\textgreater \textlessem\textgreaterR\textless/em\textgreater filtra \textlessem\textgreaterel\textless/em\textgreater artefacto de compresi&#243;n de \textlessem\textgreaterla\textless/em\textgreater onda ECG. \\
+Adaptive & The See-Thru \textlessem\textgreaterCPR\textless/em\textgreater . \\
+Static & The See-Thru RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table089}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Si tiene alguna pregunta adicional, consulte <em>su</em> Gu&#237;a de Usuario Serie <em>R</em> o visite www.zoll.com <em>para</em> m&#225;s informaci&#243;n. </td> </tr><tr> <th> Adaptive </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a de la serie R. </td> </tr><tr> <th> Static </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del <em>R</em> Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('090_latex')">Show/Hide LaTeX</button> <br/><pre id="090_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Si tiene alguna pregunta adicional, consulte \textlessem\textgreatersu\textless/em\textgreater Gu&#237;a de Usuario Serie \textlessem\textgreaterR\textless/em\textgreater o visite www.zoll.com \textlessem\textgreaterpara\textless/em\textgreater m&#225;s informaci&#243;n. \\
+Adaptive & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a de la serie R. \\
+Static & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del \textlessem\textgreaterR\textless/em\textgreater Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table090}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Tenga <em>en</em> cuenta <em>que</em> <em>el</em> cable OneStep est&#225; unido <em>a</em> <em>los</em> electrodos; estire <em>del</em> cable desde <em>el</em> embalaje <em>para</em> separarlo. </td> </tr><tr> <th> Adaptive </th>
+  <td> Notice <em>el</em> cable OneStep . </td> </tr><tr> <th> Static </th>
+  <td> La notificaci&#243;n <em>del</em> cable OneStep se adjunta <em>a</em> <em>los</em> electrodos . </td> </tr>
+</table>
+ <br/><button onclick="showhide('091_latex')">Show/Hide LaTeX</button> <br/><pre id="091_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Tenga \textlessem\textgreateren\textless/em\textgreater cuenta \textlessem\textgreaterque\textless/em\textgreater \textlessem\textgreaterel\textless/em\textgreater cable OneStep est&#225; unido \textlessem\textgreatera\textless/em\textgreater \textlessem\textgreaterlos\textless/em\textgreater electrodos; estire \textlessem\textgreaterdel\textless/em\textgreater cable desde \textlessem\textgreaterel\textless/em\textgreater embalaje \textlessem\textgreaterpara\textless/em\textgreater separarlo. \\
+Adaptive & Notice \textlessem\textgreaterel\textless/em\textgreater cable OneStep . \\
+Static & La notificaci&#243;n \textlessem\textgreaterdel\textless/em\textgreater cable OneStep se adjunta \textlessem\textgreatera\textless/em\textgreater \textlessem\textgreaterlos\textless/em\textgreater electrodos . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table091}
+\end{table}</pre><a name="bucket7"/><h3> Examples for Bucket [100,1000) </h3><h4> Examples where some systems were good, some were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Al situar el Mode Selector en Pacer se activar&#225; la apertura <em>de</em> la puerta <em>de</em> paso. </td> </tr><tr> <th> Adaptive </th>
+  <td> Moving the Mode Selector a Pacer se activar&#225; a la puerta del marcador para abrir . </td> </tr><tr> <th> Static </th>
+  <td> Al mover el selector <em>de</em> modo a Pacer se activar&#225; la puerta <em>de</em> pacte a abrir . </td> </tr>
+</table>
+ <br/><button onclick="showhide('092_latex')">Show/Hide LaTeX</button> <br/><pre id="092_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Al situar el Mode Selector en Pacer se activar&#225; la apertura \textlessem\textgreaterde\textless/em\textgreater la puerta \textlessem\textgreaterde\textless/em\textgreater paso. \\
+Adaptive & Moving the Mode Selector a Pacer se activar&#225; a la puerta del marcador para abrir . \\
+Static & Al mover el selector \textlessem\textgreaterde\textless/em\textgreater modo a Pacer se activar&#225; la puerta \textlessem\textgreaterde\textless/em\textgreater pacte a abrir . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table092}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El desfibrilador <em>de</em> la serie R le proporcionar&#225; tambi&#233;n un mensaje <em>de</em> audio; &#8220;incremente las compresiones&#8221; y un metr&#243;nomo para ayudarle a llegar a 105 compresiones por minuto. </td> </tr><tr> <th> Adaptive </th>
+  <td> El desfibrilador <em>de</em> la serie R proporcionar&#225; tambi&#233;n un mensaje <em>de</em> audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un metr&#243;nomo de la ayuda para ayudarle a llegar a 105 compresiones por minuto . </td> </tr><tr> <th> Static </th>
+  <td> El desfibrilador R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un metr&#243;nomo , para ayudarle a llegar a 105 compresiones por minuto . </td> </tr>
+</table>
+ <br/><button onclick="showhide('093_latex')">Show/Hide LaTeX</button> <br/><pre id="093_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El desfibrilador \textlessem\textgreaterde\textless/em\textgreater la serie R le proporcionar&#225; tambi&#233;n un mensaje \textlessem\textgreaterde\textless/em\textgreater audio; &#8220;incremente las compresiones&#8221; y un metr&#243;nomo para ayudarle a llegar a 105 compresiones por minuto. \\
+Adaptive & El desfibrilador \textlessem\textgreaterde\textless/em\textgreater la serie R proporcionar&#225; tambi&#233;n un mensaje \textlessem\textgreaterde\textless/em\textgreater audio ; &#8220; empujar el puerto m&#225;s duro &#8221; y un metr&#243;nomo de la ayuda para ayudarle a llegar a 105 compresiones por minuto . \\
+Static & El desfibrilador R Series tambi&#233;n proporcionar&#225; un mensaje ac&#250;stico ; &#8220; empuje m&#225;s dif&#237;cil &#8221; y un metr&#243;nomo , para ayudarle a llegar a 105 compresiones por minuto . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table093}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Si tiene alguna pregunta adicional, consulte su Gu&#237;a <em>de</em> Usuario Serie R o visite www.zoll.com para m&#225;s informaci&#243;n. </td> </tr><tr> <th> Adaptive </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a <em>de</em> la serie R. </td> </tr><tr> <th> Static </th>
+  <td> Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del R Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('094_latex')">Show/Hide LaTeX</button> <br/><pre id="094_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Si tiene alguna pregunta adicional, consulte su Gu&#237;a \textlessem\textgreaterde\textless/em\textgreater Usuario Serie R o visite www.zoll.com para m&#225;s informaci&#243;n. \\
+Adaptive & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a \textlessem\textgreaterde\textless/em\textgreater la serie R. \\
+Static & Si tiene alguna pregunta adicional , cons&#250;ltese la Gu&#237;a del operador del R Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table094}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Sin embargo, el metr&#243;nomo le indicar&#225; si las compresiones bajan del nivel <em>de</em> las directrices. </td> </tr><tr> <th> Adaptive </th>
+  <td> Sin embargo , el metr&#243;nomo absolvido si las compresiones caen por debajo <em>de</em> las directrices . </td> </tr><tr> <th> Static </th>
+  <td> Sin embargo , el metr&#243;nomo se aburrir&#225; si las compresiones son inferiores a las directrices . </td> </tr>
+</table>
+ <br/><button onclick="showhide('095_latex')">Show/Hide LaTeX</button> <br/><pre id="095_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Sin embargo, el metr&#243;nomo le indicar&#225; si las compresiones bajan del nivel \textlessem\textgreaterde\textless/em\textgreater las directrices. \\
+Adaptive & Sin embargo , el metr&#243;nomo absolvido si las compresiones caen por debajo \textlessem\textgreaterde\textless/em\textgreater las directrices . \\
+Static & Sin embargo , el metr&#243;nomo se aburrir&#225; si las compresiones son inferiores a las directrices . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table095}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gire el selector <em>de</em> modo a DEFIB </td> </tr><tr> <th> Adaptive </th>
+  <td> Gire el selector <em>de</em> modo a DEFIB </td> </tr><tr> <th> Static </th>
+  <td> Turn el selector del modo para DEFIB </td> </tr>
+</table>
+ <br/><button onclick="showhide('096_latex')">Show/Hide LaTeX</button> <br/><pre id="096_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gire el selector \textlessem\textgreaterde\textless/em\textgreater modo a DEFIB \\
+Adaptive & Gire el selector \textlessem\textgreaterde\textless/em\textgreater modo a DEFIB \\
+Static & Turn el selector del modo para DEFIB \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table096}
+\end{table}</pre><h4> Examples where all systems were good </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Se mostrar&#225; un temporizador <em>de</em> CPR una vez que comiencen las compresiones <em>de</em> CPR y realizar&#225; una cuenta atr&#225;s <em>de</em> 2 minutos para garantizar compresiones <em>de</em> alta calidad por parte <em>de</em> otro empleado. </td> </tr><tr> <th> Adaptive </th>
+  <td> Un temporizador <em>de</em> CPR se mostrar&#225; una compresiones <em>de</em> CPR y contar&#225; <em>de</em> 2 minutos para garantizar compresiones <em>de</em> alta calidad por parte <em>de</em> un funcionario . </td> </tr><tr> <th> Static </th>
+  <td> Un temporizador <em>de</em> RCP se muestra despu&#233;s <em>de</em> las compresiones RCP y se contar&#225; a partir <em>de</em> 2 minutos para ayudar a las compresiones <em>de</em> alta calidad por parte <em>de</em> un funcionario . </td> </tr>
+</table>
+ <br/><button onclick="showhide('097_latex')">Show/Hide LaTeX</button> <br/><pre id="097_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Se mostrar&#225; un temporizador \textlessem\textgreaterde\textless/em\textgreater CPR una vez que comiencen las compresiones \textlessem\textgreaterde\textless/em\textgreater CPR y realizar&#225; una cuenta atr&#225;s \textlessem\textgreaterde\textless/em\textgreater 2 minutos para garantizar compresiones \textlessem\textgreaterde\textless/em\textgreater alta calidad por parte \textlessem\textgreaterde\textless/em\textgreater otro empleado. \\
+Adaptive & Un temporizador \textlessem\textgreaterde\textless/em\textgreater CPR se mostrar&#225; una compresiones \textlessem\textgreaterde\textless/em\textgreater CPR y contar&#225; \textlessem\textgreaterde\textless/em\textgreater 2 minutos para garantizar compresiones \textlessem\textgreaterde\textless/em\textgreater alta calidad por parte \textlessem\textgreaterde\textless/em\textgreater un funcionario . \\
+Static & Un temporizador \textlessem\textgreaterde\textless/em\textgreater RCP se muestra despu&#233;s \textlessem\textgreaterde\textless/em\textgreater las compresiones RCP y se contar&#225; a partir \textlessem\textgreaterde\textless/em\textgreater 2 minutos para ayudar a las compresiones \textlessem\textgreaterde\textless/em\textgreater alta calidad por parte \textlessem\textgreaterde\textless/em\textgreater un funcionario . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table097}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> El indicador <em>de</em> rendimiento <em>de</em> perfusi&#243;n, PPI, incluye la profundidad <em>de</em> compresi&#243;n, el &#237;ndice y los tiempos <em>de</em> interrupci&#243;n en un indicador visual. </td> </tr><tr> <th> Adaptive </th>
+  <td> El indicador <em>de</em> rendimiento <em>de</em> perfusi&#243;n , PPI , integra la profundidad <em>de</em> compresi&#243;n , el &#237;ndice y los tiempos <em>de</em> interrupci&#243;n en un indicador visual . </td> </tr><tr> <th> Static </th>
+  <td> El indicador <em>de</em> resultados <em>de</em> la perfusi&#243;n , PPI , integra la profundidad <em>de</em> las compresiones , el tipo y los tiempos <em>de</em> interrupci&#243;n en un indicador visual . </td> </tr>
+</table>
+ <br/><button onclick="showhide('098_latex')">Show/Hide LaTeX</button> <br/><pre id="098_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & El indicador \textlessem\textgreaterde\textless/em\textgreater rendimiento \textlessem\textgreaterde\textless/em\textgreater perfusi&#243;n, PPI, incluye la profundidad \textlessem\textgreaterde\textless/em\textgreater compresi&#243;n, el &#237;ndice y los tiempos \textlessem\textgreaterde\textless/em\textgreater interrupci&#243;n en un indicador visual. \\
+Adaptive & El indicador \textlessem\textgreaterde\textless/em\textgreater rendimiento \textlessem\textgreaterde\textless/em\textgreater perfusi&#243;n , PPI , integra la profundidad \textlessem\textgreaterde\textless/em\textgreater compresi&#243;n , el &#237;ndice y los tiempos \textlessem\textgreaterde\textless/em\textgreater interrupci&#243;n en un indicador visual . \\
+Static & El indicador \textlessem\textgreaterde\textless/em\textgreater resultados \textlessem\textgreaterde\textless/em\textgreater la perfusi&#243;n , PPI , integra la profundidad \textlessem\textgreaterde\textless/em\textgreater las compresiones , el tipo y los tiempos \textlessem\textgreaterde\textless/em\textgreater interrupci&#243;n en un indicador visual . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table098}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Para los pacientes pedi&#225;tricos <em>de</em> menos <em>de</em> ocho a&#241;os <em>de</em> edad y con un peso inferior a 55 libras (o 25kg), los electrodos OneStep Pediatric CPR pueden utilizarse para incrementar las capacidades pedi&#225;tricas <em>de</em> la serie R. </td> </tr><tr> <th> Adaptive </th>
+  <td> Para los pacientes pedi&#225;tricos menos <em>de</em> ocho a&#241;os <em>de</em> edad y menos <em>de</em> 55 libras ( o 25kg ) , los electrodos <em>de</em> CPR . </td> </tr><tr> <th> Static </th>
+  <td> Para los pacientes pedi&#225;tricos menos <em>de</em> ocho a&#241;os <em>de</em> edad y menos <em>de</em> 55 libras ( o 25kg ) , pueden utilizarse los electrodos <em>de</em> RCP por RCP Pedi&#225;trico de RCP para maximizar las capacidades pedi&#225;tricas del R Series . </td> </tr>
+</table>
+ <br/><button onclick="showhide('099_latex')">Show/Hide LaTeX</button> <br/><pre id="099_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Para los pacientes pedi&#225;tricos \textlessem\textgreaterde\textless/em\textgreater menos \textlessem\textgreaterde\textless/em\textgreater ocho a&#241;os \textlessem\textgreaterde\textless/em\textgreater edad y con un peso inferior a 55 libras (o 25kg), los electrodos OneStep Pediatric CPR pueden utilizarse para incrementar las capacidades pedi&#225;tricas \textlessem\textgreaterde\textless/em\textgreater la serie R. \\
+Adaptive & Para los pacientes pedi&#225;tricos menos \textlessem\textgreaterde\textless/em\textgreater ocho a&#241;os \textlessem\textgreaterde\textless/em\textgreater edad y menos \textlessem\textgreaterde\textless/em\textgreater 55 libras ( o 25kg ) , los electrodos \textlessem\textgreaterde\textless/em\textgreater CPR . \\
+Static & Para los pacientes pedi&#225;tricos menos \textlessem\textgreaterde\textless/em\textgreater ocho a&#241;os \textlessem\textgreaterde\textless/em\textgreater edad y menos \textlessem\textgreaterde\textless/em\textgreater 55 libras ( o 25kg ) , pueden utilizarse los electrodos \textlessem\textgreaterde\textless/em\textgreater RCP por RCP Pedi&#225;trico de RCP para maximizar las capacidades pedi&#225;tricas del R Series . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table099}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> STERIS ha establecido un programa para garantizar que el SGC cumple con los requisitos establecidos del sistema <em>de</em> calidad y tambi&#233;n para determinar su eficacia mediante la realizaci&#243;n <em>de</em> auditor&#237;as planificadas <em>de</em> las instalaciones, funciones, fabricantes contratados y proveedores. </td> </tr><tr> <th> Adaptive </th>
+  <td> STERIS ha establecido un programa para garantizar que el sistema <em>de</em> gesti&#243;n <em>de</em> calidad ( SGC ) cumple con los requisitos del sistema <em>de</em> calidad establecidos y para determinar la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr><tr> <th> Static </th>
+  <td> STERIS ha establecido un programa para garantizar que el QMS se ajuste a los requisitos establecidos del sistema <em>de</em> calidad y determine la eficacia del sistema <em>de</em> calidad mediante auditor&#237;as programadas <em>de</em> las instalaciones , funciones , fabricantes de contratos y proveedores . </td> </tr>
+</table>
+ <br/><button onclick="showhide('100_latex')">Show/Hide LaTeX</button> <br/><pre id="100_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & STERIS ha establecido un programa para garantizar que el SGC cumple con los requisitos establecidos del sistema \textlessem\textgreaterde\textless/em\textgreater calidad y tambi&#233;n para determinar su eficacia mediante la realizaci&#243;n \textlessem\textgreaterde\textless/em\textgreater auditor&#237;as planificadas \textlessem\textgreaterde\textless/em\textgreater las instalaciones, funciones, fabricantes contratados y proveedores. \\
+Adaptive & STERIS ha establecido un programa para garantizar que el sistema \textlessem\textgreaterde\textless/em\textgreater gesti&#243;n \textlessem\textgreaterde\textless/em\textgreater calidad ( SGC ) cumple con los requisitos del sistema \textlessem\textgreaterde\textless/em\textgreater calidad establecidos y para determinar la eficacia del sistema de calidad mediante la realizaci&#243;n de auditor&#237;as planificadas de las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+Static & STERIS ha establecido un programa para garantizar que el QMS se ajuste a los requisitos establecidos del sistema \textlessem\textgreaterde\textless/em\textgreater calidad y determine la eficacia del sistema \textlessem\textgreaterde\textless/em\textgreater calidad mediante auditor&#237;as programadas \textlessem\textgreaterde\textless/em\textgreater las instalaciones , funciones , fabricantes de contratos y proveedores . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table100}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Los electrodos pedi&#225;tricos <em>de</em> CPR no permiten las notificaciones <em>de</em> voz real CPR o cualquier indicaci&#243;n visual <em>de</em> CPR ineficaz. </td> </tr><tr> <th> Adaptive </th>
+  <td> Los electrodos <em>de</em> CPR con CPR no permiten la voz <em>de</em> la CPR que induzca o cualquier indicaci&#243;n visual <em>de</em> CPR . </td> </tr><tr> <th> Static </th>
+  <td> Los electrodos <em>de</em> RCP Pediatric no permiten que la voz <em>de</em> RCP RCP se mueva o cualquier indicaci&#243;n visual <em>de</em> RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('101_latex')">Show/Hide LaTeX</button> <br/><pre id="101_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Los electrodos pedi&#225;tricos \textlessem\textgreaterde\textless/em\textgreater CPR no permiten las notificaciones \textlessem\textgreaterde\textless/em\textgreater voz real CPR o cualquier indicaci&#243;n visual \textlessem\textgreaterde\textless/em\textgreater CPR ineficaz. \\
+Adaptive & Los electrodos \textlessem\textgreaterde\textless/em\textgreater CPR con CPR no permiten la voz \textlessem\textgreaterde\textless/em\textgreater la CPR que induzca o cualquier indicaci&#243;n visual \textlessem\textgreaterde\textless/em\textgreater CPR . \\
+Static & Los electrodos \textlessem\textgreaterde\textless/em\textgreater RCP Pediatric no permiten que la voz \textlessem\textgreaterde\textless/em\textgreater RCP RCP se mueva o cualquier indicaci&#243;n visual \textlessem\textgreaterde\textless/em\textgreater RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table101}
+\end{table}</pre><h4> Examples where all systems were bad </h4><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La funci&#243;n See-Thru CPR <em>de</em> la serie R filtra el artefacto <em>de</em> compresi&#243;n <em>de</em> la onda ECG. </td> </tr><tr> <th> Adaptive </th>
+  <td> The See-Thru CPR . </td> </tr><tr> <th> Static </th>
+  <td> The See-Thru RCP . </td> </tr>
+</table>
+ <br/><button onclick="showhide('102_latex')">Show/Hide LaTeX</button> <br/><pre id="102_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La funci&#243;n See-Thru CPR \textlessem\textgreaterde\textless/em\textgreater la serie R filtra el artefacto \textlessem\textgreaterde\textless/em\textgreater compresi&#243;n \textlessem\textgreaterde\textless/em\textgreater la onda ECG. \\
+Adaptive & The See-Thru CPR . \\
+Static & The See-Thru RCP . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table102}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n <em>de</em> cambios </td> </tr><tr> <th> Adaptive </th>
+  <td> Gesti&#243;n del cambio </td> </tr><tr> <th> Static </th>
+  <td> Gesti&#243;n del cambio </td> </tr>
+</table>
+ <br/><button onclick="showhide('103_latex')">Show/Hide LaTeX</button> <br/><pre id="103_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n \textlessem\textgreaterde\textless/em\textgreater cambios \\
+Adaptive & Gesti&#243;n del cambio \\
+Static & Gesti&#243;n del cambio \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table103}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Temporizador <em>de</em> CPR </td> </tr><tr> <th> Adaptive </th>
+  <td> CPR </td> </tr><tr> <th> Static </th>
+  <td> RCP </td> </tr>
+</table>
+ <br/><button onclick="showhide('104_latex')">Show/Hide LaTeX</button> <br/><pre id="104_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Temporizador \textlessem\textgreaterde\textless/em\textgreater CPR \\
+Adaptive & CPR \\
+Static & RCP \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table104}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple <em>de</em> 3 pasos. </td> </tr><tr> <th> Adaptive </th>
+  <td> La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td> </tr><tr> <th> Static </th>
+  <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td> </tr>
+</table>
+ <br/><button onclick="showhide('105_latex')">Show/Hide LaTeX</button> <br/><pre id="105_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple \textlessem\textgreaterde\textless/em\textgreater 3 pasos. \\
+Adaptive & La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . \\
+Static & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table105}
+\end{table}</pre><table border="1">
+<tr> <th>  </th>
+  <th> Output </th> </tr><tr> <th> Ref </th>
+  <td> Gesti&#243;n <em>de</em> las instalaciones y equipos </td> </tr><tr> <th> Adaptive </th>
+  <td> Instalaciones y equipos </td> </tr><tr> <th> Static </th>
+  <td> Instalaciones y equipos </td> </tr>
+</table>
+ <br/><button onclick="showhide('106_latex')">Show/Hide LaTeX</button> <br/><pre id="106_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||c}
+ & Output \\ \hline \hline
+Ref & Gesti&#243;n \textlessem\textgreaterde\textless/em\textgreater las instalaciones y equipos \\
+Adaptive & Instalaciones y equipos \\
+Static & Instalaciones y equipos \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table106}
+\end{table}</pre><a name="bucket8"/><h3> Examples for Bucket >=1000 </h3> 
+</body>
+</html>
