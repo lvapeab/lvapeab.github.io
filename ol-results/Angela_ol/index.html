@@ -20,21 +20,15 @@ function showhide(elem) {
 <table border="1">
 <caption> BLEU </caption><tr> <th>  </th>
   <th> Adaptive </th>
-  <th> Static </th>
-  <th> Win? </th> </tr><tr> <th> BLEU </th>
+  <th> Static </th> </tr><tr> <th> BLEU </th>
   <td> 47.5629 </td>
-  <td> 32.5445 </td>
-  <td> s1>s2 </td> </tr><tr> <th>  </th>
-  <td> [41.7799,53.1355] </td>
-  <td> [27.6552,36.6679] </td>
-  <td> p=0.0000 </td> </tr>
+  <td> 32.5445 </td> </tr>
 </table>
  <br/><button onclick="showhide('001_latex')">Show/Hide LaTeX</button> <br/><pre id="001_latex" style="display:none">\begin{table}[t]
   \centering
-  \begin{tabular}{c||ccc}
- & Adaptive & Static & Win? \\ \hline \hline
-BLEU & 47.5629 & 32.5445 & s1\textgreaters2 \\
- & {[}41.7799,53.1355{]} & {[}27.6552,36.6679{]} & p=0.0000 \\
+  \begin{tabular}{c||cc}
+ & Adaptive & Static \\ \hline \hline
+BLEU & 47.5629 & 32.5445 \\
   \end{tabular}
   \caption{Caption}
   \label{tab:table001}
@@ -44,61 +38,106 @@ BLEU & 47.5629 & 32.5445 & s1\textgreaters2 \\
   \caption{Score Comparison}
   \label{fig:001-score-bleu}
 \end{figure}</pre>
-<h2>Word Accuracies</h2>
 <table border="1">
-<caption> word fmeas by frequency bucket </caption><tr> <th> frequency </th>
+<caption> length ratio </caption><tr> <th>  </th>
   <th> Adaptive </th>
-  <th> Static </th>
-  <th> Examples </th> </tr><tr> <th> <1 </th>
-  <td> 0.0000 </td>
-  <td> 0.0000 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket0">Examples</a> </td> </tr><tr> <th> 1 </th>
-  <td> 0.6255 </td>
-  <td> 0.5838 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket1">Examples</a> </td> </tr><tr> <th> 2 </th>
-  <td> 0.7900 </td>
-  <td> 0.7051 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket2">Examples</a> </td> </tr><tr> <th> 3 </th>
-  <td> 0.7447 </td>
-  <td> 0.6593 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket3">Examples</a> </td> </tr><tr> <th> 4 </th>
-  <td> 0.7857 </td>
-  <td> 0.7771 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket4">Examples</a> </td> </tr><tr> <th> [5,10) </th>
-  <td> 0.8716 </td>
-  <td> 0.7619 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket5">Examples</a> </td> </tr><tr> <th> [10,100) </th>
-  <td> 0.8087 </td>
-  <td> 0.7104 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket6">Examples</a> </td> </tr><tr> <th> [100,1000) </th>
-  <td> 0.8471 </td>
-  <td> 0.7631 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket7">Examples</a> </td> </tr><tr> <th> >=1000 </th>
-  <td> 0.0000 </td>
-  <td> 0.0000 </td>
-  <td> <a href="002-wordacc-frequency.html#bucket8">Examples</a> </td> </tr>
+  <th> Static </th> </tr><tr> <th> length ratio </th>
+  <td> 1.0305 (ref=1803, out=1858) </td>
+  <td> 1.0460 (ref=1803, out=1886) </td> </tr>
 </table>
- <br/><button onclick="showhide('107_latex')">Show/Hide LaTeX</button> <br/><pre id="107_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('002_latex')">Show/Hide LaTeX</button> <br/><pre id="002_latex" style="display:none">\begin{table}[t]
   \centering
-  \begin{tabular}{c||ccc}
-frequency & Adaptive & Static \\ \hline \hline
-\textless1 & 0.0000 & 0.0000 \\
-1 & 0.6255 & 0.5838 \\
-2 & 0.7900 & 0.7051 \\
-3 & 0.7447 & 0.6593 \\
-4 & 0.7857 & 0.7771 \\
-{[}5,10) & 0.8716 & 0.7619 \\
-{[}10,100) & 0.8087 & 0.7104 \\
-{[}100,1000) & 0.8471 & 0.7631 \\
-\textgreater=1000 & 0.0000 & 0.0000 \\
+  \begin{tabular}{c||cc}
+ & Adaptive & Static \\ \hline \hline
+length ratio & 1.0305 (ref=1803, out=1858) & 1.0460 (ref=1803, out=1886) \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table107}
-\end{table}</pre><img src="002-wordacc-frequency-fmeas.png" alt="Word Accuracy Analysis"> <br/><button onclick="showhide('002-wordacc-frequency-fmeas_latex')">Show/Hide LaTeX</button> <br/><pre id="002-wordacc-frequency-fmeas_latex" style="display:none">\begin{figure}[h]
+  \label{tab:table002}
+\end{table}</pre><img src="002-score-lengthrat.png" alt="Score Comparison"> <br/><button onclick="showhide('002-score-lengthrat_latex')">Show/Hide LaTeX</button> <br/><pre id="002-score-lengthrat_latex" style="display:none">\begin{figure}[h]
   \centering
-  \includegraphics{002-wordacc-frequency-fmeas.pdf}
+  \includegraphics{002-score-lengthrat.pdf}
+  \caption{Score Comparison}
+  \label{fig:002-score-lengthrat}
+\end{figure}</pre>
+<h2>Word Accuracies</h2>
+<table border="1">
+<caption> word fmeas by labels bucket </caption><tr> <th> labels </th>
+  <th> Adaptive </th>
+  <th> Static </th>
+  <th> Examples </th> </tr><tr> <th> ADJ </th>
+  <td> 0.7059 </td>
+  <td> 0.6332 </td>
+  <td> <a href="003-wordacc-labels.html#bucket0">Examples</a> </td> </tr><tr> <th> ADP </th>
+  <td> 0.7947 </td>
+  <td> 0.7209 </td>
+  <td> <a href="003-wordacc-labels.html#bucket1">Examples</a> </td> </tr><tr> <th> ADV </th>
+  <td> 0.7119 </td>
+  <td> 0.6429 </td>
+  <td> <a href="003-wordacc-labels.html#bucket2">Examples</a> </td> </tr><tr> <th> AUX </th>
+  <td> 0.8713 </td>
+  <td> 0.7500 </td>
+  <td> <a href="003-wordacc-labels.html#bucket3">Examples</a> </td> </tr><tr> <th> CONJ </th>
+  <td> 0.9421 </td>
+  <td> 0.9587 </td>
+  <td> <a href="003-wordacc-labels.html#bucket4">Examples</a> </td> </tr><tr> <th> DET </th>
+  <td> 0.8166 </td>
+  <td> 0.7632 </td>
+  <td> <a href="003-wordacc-labels.html#bucket5">Examples</a> </td> </tr><tr> <th> INTJ </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="003-wordacc-labels.html#bucket6">Examples</a> </td> </tr><tr> <th> NOUN </th>
+  <td> 0.7393 </td>
+  <td> 0.6494 </td>
+  <td> <a href="003-wordacc-labels.html#bucket7">Examples</a> </td> </tr><tr> <th> NUM </th>
+  <td> 0.5397 </td>
+  <td> 0.4839 </td>
+  <td> <a href="003-wordacc-labels.html#bucket8">Examples</a> </td> </tr><tr> <th> PRON </th>
+  <td> 0.7273 </td>
+  <td> 0.5714 </td>
+  <td> <a href="003-wordacc-labels.html#bucket9">Examples</a> </td> </tr><tr> <th> PROPN </th>
+  <td> 0.4354 </td>
+  <td> 0.2793 </td>
+  <td> <a href="003-wordacc-labels.html#bucket10">Examples</a> </td> </tr><tr> <th> PUNCT </th>
+  <td> 0.2258 </td>
+  <td> 0.0619 </td>
+  <td> <a href="003-wordacc-labels.html#bucket11">Examples</a> </td> </tr><tr> <th> SCONJ </th>
+  <td> 0.8136 </td>
+  <td> 0.7458 </td>
+  <td> <a href="003-wordacc-labels.html#bucket12">Examples</a> </td> </tr><tr> <th> VERB </th>
+  <td> 0.6640 </td>
+  <td> 0.4960 </td>
+  <td> <a href="003-wordacc-labels.html#bucket13">Examples</a> </td> </tr><tr> <th> other </th>
+  <td> 0.0000 </td>
+  <td> 0.0000 </td>
+  <td> <a href="003-wordacc-labels.html#bucket14">Examples</a> </td> </tr>
+</table>
+ <br/><button onclick="showhide('192_latex')">Show/Hide LaTeX</button> <br/><pre id="192_latex" style="display:none">\begin{table}[t]
+  \centering
+  \begin{tabular}{c||ccc}
+labels & Adaptive & Static \\ \hline \hline
+ADJ & 0.7059 & 0.6332 \\
+ADP & 0.7947 & 0.7209 \\
+ADV & 0.7119 & 0.6429 \\
+AUX & 0.8713 & 0.7500 \\
+CONJ & 0.9421 & 0.9587 \\
+DET & 0.8166 & 0.7632 \\
+INTJ & 0.0000 & 0.0000 \\
+NOUN & 0.7393 & 0.6494 \\
+NUM & 0.5397 & 0.4839 \\
+PRON & 0.7273 & 0.5714 \\
+PROPN & 0.4354 & 0.2793 \\
+PUNCT & 0.2258 & 0.0619 \\
+SCONJ & 0.8136 & 0.7458 \\
+VERB & 0.6640 & 0.4960 \\
+other & 0.0000 & 0.0000 \\
+  \end{tabular}
+  \caption{Caption}
+  \label{tab:table192}
+\end{table}</pre><img src="003-wordacc-labels-fmeas.png" alt="Word Accuracy Analysis"> <br/><button onclick="showhide('003-wordacc-labels-fmeas_latex')">Show/Hide LaTeX</button> <br/><pre id="003-wordacc-labels-fmeas_latex" style="display:none">\begin{figure}[h]
+  \centering
+  \includegraphics{003-wordacc-labels-fmeas.pdf}
   \caption{Word Accuracy Analysis}
-  \label{fig:002-wordacc-frequency-fmeas}
+  \label{fig:003-wordacc-labels-fmeas}
 \end{figure}</pre>
 <h2>Sentence Buckets</h2>
 <table border="1">
@@ -120,7 +159,7 @@ frequency & Adaptive & Static \\ \hline \hline
   <td> 0.0000 </td>
   <td> 0.0000 </td> </tr>
 </table>
- <br/><button onclick="showhide('108_latex')">Show/Hide LaTeX</button> <br/><pre id="108_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('193_latex')">Show/Hide LaTeX</button> <br/><pre id="193_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
 length & Adaptive & Static \\ \hline \hline
@@ -133,12 +172,12 @@ length & Adaptive & Static \\ \hline \hline
 \textgreater=60 & 0.0000 & 0.0000 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table108}
-\end{table}</pre><img src="003-sent-length-bleu.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('003-sent-length-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="003-sent-length-bleu_latex" style="display:none">\begin{figure}[h]
+  \label{tab:table193}
+\end{table}</pre><img src="004-sent-length-bleu.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('004-sent-length-bleu_latex')">Show/Hide LaTeX</button> <br/><pre id="004-sent-length-bleu_latex" style="display:none">\begin{figure}[h]
   \centering
-  \includegraphics{003-sent-length-bleu.pdf}
+  \includegraphics{004-sent-length-bleu.pdf}
   \caption{Sentence Bucket Analysis}
-  \label{fig:003-sent-length-bleu}
+  \label{fig:004-sent-length-bleu}
 \end{figure}</pre>
 <table border="1">
 <caption> bucket type: len(output)-len(reference), statistic type: count </caption><tr> <th> lengthdiff </th>
@@ -179,7 +218,7 @@ length & Adaptive & Static \\ \hline \hline
   <td> 0 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('109_latex')">Show/Hide LaTeX</button> <br/><pre id="109_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('194_latex')">Show/Hide LaTeX</button> <br/><pre id="194_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
 lengthdiff & Adaptive & Static \\ \hline \hline
@@ -202,12 +241,12 @@ lengthdiff & Adaptive & Static \\ \hline \hline
 \textgreater=21 & 0 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table109}
-\end{table}</pre><img src="004-sent-lengthdiff-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('004-sent-lengthdiff-count_latex')">Show/Hide LaTeX</button> <br/><pre id="004-sent-lengthdiff-count_latex" style="display:none">\begin{figure}[h]
+  \label{tab:table194}
+\end{table}</pre><img src="005-sent-lengthdiff-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('005-sent-lengthdiff-count_latex')">Show/Hide LaTeX</button> <br/><pre id="005-sent-lengthdiff-count_latex" style="display:none">\begin{figure}[h]
   \centering
-  \includegraphics{004-sent-lengthdiff-count.pdf}
+  \includegraphics{005-sent-lengthdiff-count.pdf}
   \caption{Sentence Bucket Analysis}
-  \label{fig:004-sent-lengthdiff-count}
+  \label{fig:005-sent-lengthdiff-count}
 \end{figure}</pre>
 <table border="1">
 <caption> bucket type: sentence-level BLEU, statistic type: count </caption><tr> <th> sentbleu </th>
@@ -234,7 +273,7 @@ lengthdiff & Adaptive & Static \\ \hline \hline
   <td> 8 </td>
   <td> 4 </td> </tr>
 </table>
- <br/><button onclick="showhide('110_latex')">Show/Hide LaTeX</button> <br/><pre id="110_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('195_latex')">Show/Hide LaTeX</button> <br/><pre id="195_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
 sentbleu & Adaptive & Static \\ \hline \hline
@@ -250,446 +289,448 @@ sentbleu & Adaptive & Static \\ \hline \hline
 \textgreater=90.0 & 8 & 4 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table110}
-\end{table}</pre><img src="005-sent-sentbleu-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('005-sent-sentbleu-count_latex')">Show/Hide LaTeX</button> <br/><pre id="005-sent-sentbleu-count_latex" style="display:none">\begin{figure}[h]
+  \label{tab:table195}
+\end{table}</pre><img src="006-sent-sentbleu-count.png" alt="Sentence Bucket Analysis"> <br/><button onclick="showhide('006-sent-sentbleu-count_latex')">Show/Hide LaTeX</button> <br/><pre id="006-sent-sentbleu-count_latex" style="display:none">\begin{figure}[h]
   \centering
-  \includegraphics{005-sent-sentbleu-count.pdf}
+  \includegraphics{006-sent-sentbleu-count.pdf}
   \caption{Sentence Bucket Analysis}
-  \label{fig:005-sent-sentbleu-count}
+  \label{fig:006-sent-sentbleu-count}
 \end{figure}</pre>
 <h2>Characteristic N-grams</h2>
-<p> min_ngram_length=1, max_ngram_length=4 </p><p> report_length=50, alpha=1.0, compare_type=match </p><table border="1">
+<p> min_ngram_length=1, max_ngram_length=4 </p><p> report_length=50, alpha=1.0, compare_type=match </p><p>     ref_labels=ol/pos/Angela_OL.es, out0_labels=ol/pos/Angela, out1_labels=ol/pos/T1, </p><table border="1">
 <caption> 50 n-grams where Adaptive>Static in match </caption><tr> <th> n-gram </th>
   <th> match </th>
   <th> Adaptive </th>
-  <th> Static </th> </tr><tr> <th> CPR </th>
-  <td> 0.9375 </td>
-  <td> 14 </td>
-  <td> 0 </td> </tr><tr> <th> serie R </th>
+  <th> Static </th> </tr><tr> <th> PUNCT NUM </th>
   <td> 0.9167 </td>
   <td> 10 </td>
-  <td> 0 </td> </tr><tr> <th> de CPR </th>
-  <td> 0.9000 </td>
-  <td> 8 </td>
-  <td> 0 </td> </tr><tr> <th> la serie R </th>
-  <td> 0.9000 </td>
-  <td> 8 </td>
-  <td> 0 </td> </tr><tr> <th> t&#243;rax </th>
-  <td> 0.8571 </td>
-  <td> 5 </td>
-  <td> 0 </td> </tr><tr> <th> mandos </th>
-  <td> 0.8571 </td>
-  <td> 5 </td>
-  <td> 0 </td> </tr><tr> <th> # </th>
-  <td> 0.8571 </td>
-  <td> 17 </td>
-  <td> 2 </td> </tr><tr> <th> desfibrilador de </th>
-  <td> 0.8333 </td>
-  <td> 4 </td>
-  <td> 0 </td> </tr><tr> <th> desfibrilador de la </th>
-  <td> 0.8333 </td>
-  <td> 4 </td>
-  <td> 0 </td> </tr><tr> <th> mandos de </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> panel de mandos de </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> el desfibrilador de la </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> panel de </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> de la serie </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> desfibrilador de la serie </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> el desfibrilador de </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> R. </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> el &#237;ndice </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> de mandos </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> Serie </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> de mandos de </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> ESC </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> panel de mandos </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> de la serie R </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> del t&#243;rax </th>
-  <td> 0.8000 </td>
-  <td> 3 </td>
-  <td> 0 </td> </tr><tr> <th> serie </th>
-  <td> 0.7619 </td>
+  <td> 0 </td> </tr><tr> <th> ADP DET NOUN PROPN </th>
+  <td> 0.8889 </td>
+  <td> 7 </td>
+  <td> 0 </td> </tr><tr> <th> DET NOUN PROPN </th>
+  <td> 0.8889 </td>
   <td> 15 </td>
-  <td> 4 </td> </tr><tr> <th> verificaci&#243;n </th>
+  <td> 1 </td> </tr><tr> <th> NOUN ADP PROPN </th>
+  <td> 0.8333 </td>
+  <td> 9 </td>
+  <td> 1 </td> </tr><tr> <th> DET NOUN PROPN PROPN </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> ADP PROPN </th>
+  <td> 0.8333 </td>
+  <td> 14 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN PROPN PROPN </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> VERB ADP NOUN </th>
+  <td> 0.8333 </td>
+  <td> 4 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN PROPN </th>
+  <td> 0.8261 </td>
+  <td> 18 </td>
+  <td> 3 </td> </tr><tr> <th> PROPN PROPN </th>
+  <td> 0.8182 </td>
+  <td> 17 </td>
+  <td> 3 </td> </tr><tr> <th> PROPN ADV </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> ADP NOUN ADP PROPN </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN CONJ DET NOUN </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN PROPN PROPN </th>
+  <td> 0.8000 </td>
+  <td> 3 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN PROPN ADP </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> del ESC </th>
+  <td> 0 </td> </tr><tr> <th> VERB ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> en el panel de </th>
+  <td> 0 </td> </tr><tr> <th> PROPN VERB DET NOUN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> serie R Plus </th>
+  <td> 0 </td> </tr><tr> <th> PROPN VERB DET </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> R ALS </th>
+  <td> 0 </td> </tr><tr> <th> DET NOUN PROPN VERB </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> Serie R </th>
+  <td> 0 </td> </tr><tr> <th> ADP NOUN ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> R tambi&#233;n </th>
+  <td> 0 </td> </tr><tr> <th> NOUN ADP PROPN CONJ </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> del programa </th>
+  <td> 0 </td> </tr><tr> <th> ADP PROPN CONJ </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> la Serie </th>
+  <td> 0 </td> </tr><tr> <th> NOUN ADP NOUN ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> SGC </th>
+  <td> 0 </td> </tr><tr> <th> VERB ADV DET </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> compresiones del t&#243;rax </th>
+  <td> 0 </td> </tr><tr> <th> PROPN CONJ PROPN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> embalaje del </th>
+  <td> 0 </td> </tr><tr> <th> PROPN VERB </th>
+  <td> 0.7500 </td>
+  <td> 5 </td>
+  <td> 1 </td> </tr><tr> <th> PUNCT </th>
+  <td> 0.7500 </td>
+  <td> 20 </td>
+  <td> 6 </td> </tr><tr> <th> NOUN PROPN ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> compresiones del </th>
+  <td> 0 </td> </tr><tr> <th> ADJ ADP PROPN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> de CPR y </th>
+  <td> 0 </td> </tr><tr> <th> PROPN PROPN AUX </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> Mode </th>
+  <td> 0 </td> </tr><tr> <th> DET PROPN PROPN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> compresiones de CPR </th>
+  <td> 0 </td> </tr><tr> <th> NOUN ADJ ADP PROPN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> de verificaci&#243;n </th>
+  <td> 0 </td> </tr><tr> <th> DET NOUN PROPN ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> la serie R. </th>
+  <td> 0 </td> </tr><tr> <th> AUX VERB ADP NOUN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> La serie </th>
+  <td> 0 </td> </tr><tr> <th> NOUN PROPN VERB </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> el panel de mandos </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> CPR y </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> La serie R </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> &#237;ndice y </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> serie R. </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN ADV </th>
+  <td> 0.7143 </td>
+  <td> 4 </td>
+  <td> 1 </td> </tr><tr> <th> ADP NOUN ADJ ADP </th>
+  <td> 0.7143 </td>
+  <td> 4 </td>
+  <td> 1 </td> </tr><tr> <th> PROPN CONJ </th>
+  <td> 0.7000 </td>
+  <td> 6 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN PROPN PROPN ADP </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN PROPN PROPN CONJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN ADV ADP NOUN </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> DET PROPN PROPN PROPN </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> DET NOUN ADV </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADV VERB DET </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN PROPN AUX ADJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> AUX VERB ADP </th>
+  <td> 0.6667 </td>
+  <td> 5 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN PROPN AUX VERB </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> VERB NOUN ADP VERB </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADV PRON AUX </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN ADV AUX </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('111_latex')">Show/Hide LaTeX</button> <br/><pre id="111_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('196_latex')">Show/Hide LaTeX</button> <br/><pre id="196_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||ccc}
 n-gram & match & Adaptive & Static \\ \hline \hline
-CPR & 0.9375 & 14 & 0 \\
-serie R & 0.9167 & 10 & 0 \\
-de CPR & 0.9000 & 8 & 0 \\
-la serie R & 0.9000 & 8 & 0 \\
-t&#243;rax & 0.8571 & 5 & 0 \\
-mandos & 0.8571 & 5 & 0 \\
-# & 0.8571 & 17 & 2 \\
-desfibrilador de & 0.8333 & 4 & 0 \\
-desfibrilador de la & 0.8333 & 4 & 0 \\
-mandos de & 0.8000 & 3 & 0 \\
-panel de mandos de & 0.8000 & 3 & 0 \\
-el desfibrilador de la & 0.8000 & 3 & 0 \\
-panel de & 0.8000 & 3 & 0 \\
-de la serie & 0.8000 & 3 & 0 \\
-desfibrilador de la serie & 0.8000 & 3 & 0 \\
-el desfibrilador de & 0.8000 & 3 & 0 \\
-R. & 0.8000 & 3 & 0 \\
-el &#237;ndice & 0.8000 & 3 & 0 \\
-de mandos & 0.8000 & 3 & 0 \\
-Serie & 0.8000 & 3 & 0 \\
-de mandos de & 0.8000 & 3 & 0 \\
-ESC & 0.8000 & 3 & 0 \\
-panel de mandos & 0.8000 & 3 & 0 \\
-de la serie R & 0.8000 & 3 & 0 \\
-del t&#243;rax & 0.8000 & 3 & 0 \\
-serie & 0.7619 & 15 & 4 \\
-verificaci&#243;n & 0.7500 & 2 & 0 \\
-del ESC & 0.7500 & 2 & 0 \\
-en el panel de & 0.7500 & 2 & 0 \\
-serie R Plus & 0.7500 & 2 & 0 \\
-R ALS & 0.7500 & 2 & 0 \\
-Serie R & 0.7500 & 2 & 0 \\
-R tambi&#233;n & 0.7500 & 2 & 0 \\
-del programa & 0.7500 & 2 & 0 \\
-la Serie & 0.7500 & 2 & 0 \\
-SGC & 0.7500 & 2 & 0 \\
-compresiones del t&#243;rax & 0.7500 & 2 & 0 \\
-embalaje del & 0.7500 & 2 & 0 \\
-compresiones del & 0.7500 & 2 & 0 \\
-de CPR y & 0.7500 & 2 & 0 \\
-Mode & 0.7500 & 2 & 0 \\
-compresiones de CPR & 0.7500 & 2 & 0 \\
-de verificaci&#243;n & 0.7500 & 2 & 0 \\
-la serie R. & 0.7500 & 2 & 0 \\
-La serie & 0.7500 & 2 & 0 \\
-el panel de mandos & 0.7500 & 2 & 0 \\
-CPR y & 0.7500 & 2 & 0 \\
-La serie R & 0.7500 & 2 & 0 \\
-&#237;ndice y & 0.7500 & 2 & 0 \\
-serie R. & 0.7500 & 2 & 0 \\
+PUNCT NUM & 0.9167 & 10 & 0 \\
+ADP DET NOUN PROPN & 0.8889 & 7 & 0 \\
+DET NOUN PROPN & 0.8889 & 15 & 1 \\
+NOUN ADP PROPN & 0.8333 & 9 & 1 \\
+DET NOUN PROPN PROPN & 0.8333 & 4 & 0 \\
+ADP PROPN & 0.8333 & 14 & 2 \\
+NOUN PROPN PROPN & 0.8333 & 4 & 0 \\
+VERB ADP NOUN & 0.8333 & 4 & 0 \\
+NOUN PROPN & 0.8261 & 18 & 3 \\
+PROPN PROPN & 0.8182 & 17 & 3 \\
+PROPN ADV & 0.8000 & 3 & 0 \\
+ADP NOUN ADP PROPN & 0.8000 & 3 & 0 \\
+NOUN CONJ DET NOUN & 0.8000 & 3 & 0 \\
+PROPN PROPN PROPN & 0.8000 & 3 & 0 \\
+PROPN PROPN ADP & 0.7500 & 2 & 0 \\
+VERB ADV & 0.7500 & 2 & 0 \\
+PROPN VERB DET NOUN & 0.7500 & 2 & 0 \\
+PROPN VERB DET & 0.7500 & 2 & 0 \\
+DET NOUN PROPN VERB & 0.7500 & 2 & 0 \\
+ADP NOUN ADV & 0.7500 & 2 & 0 \\
+NOUN ADP PROPN CONJ & 0.7500 & 2 & 0 \\
+ADP PROPN CONJ & 0.7500 & 2 & 0 \\
+NOUN ADP NOUN ADV & 0.7500 & 2 & 0 \\
+VERB ADV DET & 0.7500 & 2 & 0 \\
+PROPN CONJ PROPN & 0.7500 & 2 & 0 \\
+PROPN VERB & 0.7500 & 5 & 1 \\
+PUNCT & 0.7500 & 20 & 6 \\
+NOUN PROPN ADV & 0.7500 & 2 & 0 \\
+ADJ ADP PROPN & 0.7500 & 2 & 0 \\
+PROPN PROPN AUX & 0.7500 & 2 & 0 \\
+DET PROPN PROPN & 0.7500 & 2 & 0 \\
+NOUN ADJ ADP PROPN & 0.7500 & 2 & 0 \\
+DET NOUN PROPN ADV & 0.7500 & 2 & 0 \\
+AUX VERB ADP NOUN & 0.7500 & 2 & 0 \\
+NOUN PROPN VERB & 0.7500 & 2 & 0 \\
+NOUN ADV & 0.7143 & 4 & 1 \\
+ADP NOUN ADJ ADP & 0.7143 & 4 & 1 \\
+PROPN CONJ & 0.7000 & 6 & 2 \\
+NOUN PROPN PROPN ADP & 0.6667 & 1 & 0 \\
+NOUN PROPN PROPN CONJ & 0.6667 & 1 & 0 \\
+NOUN ADV ADP NOUN & 0.6667 & 1 & 0 \\
+DET PROPN PROPN PROPN & 0.6667 & 1 & 0 \\
+DET NOUN ADV & 0.6667 & 1 & 0 \\
+ADV VERB DET & 0.6667 & 1 & 0 \\
+PROPN PROPN AUX ADJ & 0.6667 & 1 & 0 \\
+AUX VERB ADP & 0.6667 & 5 & 2 \\
+NOUN PROPN AUX VERB & 0.6667 & 1 & 0 \\
+VERB NOUN ADP VERB & 0.6667 & 1 & 0 \\
+ADV PRON AUX & 0.6667 & 1 & 0 \\
+PROPN ADV AUX & 0.6667 & 1 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table111}
+  \label{tab:table196}
 \end{table}</pre><table border="1">
 <caption> 50 n-grams where Static>Adaptive in match </caption><tr> <th> n-gram </th>
   <th> match </th>
   <th> Adaptive </th>
-  <th> Static </th> </tr><tr> <th> a los </th>
-  <td> 0.2500 </td>
-  <td> 0 </td>
-  <td> 2 </td> </tr><tr> <th> capacidades pedi&#225;tricas </th>
+  <th> Static </th> </tr><tr> <th> NOUN ADV ADJ PRON </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> establecidos del </th>
+  <td> 1 </td> </tr><tr> <th> NOUN PUNCT NOUN ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> le proporciona una </th>
+  <td> 1 </td> </tr><tr> <th> ADJ ADP VERB ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> documentos y registros </th>
+  <td> 1 </td> </tr><tr> <th> NOUN PROPN ADP DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> requisitos establecidos del sistema </th>
+  <td> 1 </td> </tr><tr> <th> ADV ADJ PRON </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> grandes se </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> Pacer se activar&#225; la </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> conectar los electrodos al </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> desfibrilaci&#243;n con electrodos sin </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> Controles de compras </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> los requisitos establecidos del </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> electrodos al cable </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> los ritmos subyacentes </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> y registros </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> entre los pezones del </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de los clientes </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> autom&#225;ticamente </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> entre los pezones </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> una conexi&#243;n </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> / producto </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> registros </th>
+  <td> 1 </td> </tr><tr> <th> PRON VERB DET </th>
   <td> 0.3333 </td>
   <td> 1 </td>
-  <td> 3 </td> </tr><tr> <th> establecidos del sistema de </th>
+  <td> 3 </td> </tr><tr> <th> PUNCT NOUN ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> medici&#243;n de la profundidad </th>
+  <td> 1 </td> </tr><tr> <th> ADJ CONJ PROPN </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> el final del cable </th>
+  <td> 1 </td> </tr><tr> <th> AUX ADP NUM </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de la profundidad de </th>
+  <td> 1 </td> </tr><tr> <th> VERB PRON VERB DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> bif&#225;sica </th>
+  <td> 1 </td> </tr><tr> <th> AUX AUX ADP VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de color amarillo en </th>
+  <td> 1 </td> </tr><tr> <th> ADJ ADJ ADP VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> medici&#243;n de la </th>
+  <td> 1 </td> </tr><tr> <th> ADP NOUN PROPN ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> e instalaci&#243;n </th>
+  <td> 1 </td> </tr><tr> <th> DET NOUN PUNCT NOUN </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> 50-70-85 </th>
+  <td> 1 </td> </tr><tr> <th> PUNCT NOUN ADP DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> producto a un </th>
+  <td> 1 </td> </tr><tr> <th> NOUN PROPN ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> AED a los par&#225;metros </th>
+  <td> 1 </td> </tr><tr> <th> ADJ AUX ADP NUM </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> los pezones del </th>
+  <td> 1 </td> </tr><tr> <th> DET NOUN AUX VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> el tiempo suficiente </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> distribuci&#243;n e </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> pezones del </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> Controles de servicios </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> pueden utilizarse </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> requisitos establecidos </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> entre el estern&#243;n y </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> los pezones </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> 1 </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de la profundidad </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> al cable </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> piezas m&#225;s grandes se </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ver los ritmos subyacentes </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de an&#225;lisis AED a </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> de productos </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> / producto a un </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr>
+  <td> 1 </td> </tr><tr> <th> PRON VERB DET NOUN </th>
+  <td> 0.4000 </td>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> ADJ PRON </th>
+  <td> 0.4000 </td>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> PUNCT NOUN </th>
+  <td> 0.4000 </td>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN PUNCT NOUN </th>
+  <td> 0.4000 </td>
+  <td> 1 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN CONJ NOUN </th>
+  <td> 0.4286 </td>
+  <td> 2 </td>
+  <td> 3 </td> </tr><tr> <th> CONJ DET NOUN </th>
+  <td> 0.4444 </td>
+  <td> 7 </td>
+  <td> 9 </td> </tr><tr> <th> DET NOUN ADJ ADP </th>
+  <td> 0.4444 </td>
+  <td> 7 </td>
+  <td> 9 </td> </tr><tr> <th> ADP NUM </th>
+  <td> 0.4545 </td>
+  <td> 4 </td>
+  <td> 5 </td> </tr><tr> <th> CONJ NOUN </th>
+  <td> 0.4545 </td>
+  <td> 4 </td>
+  <td> 5 </td> </tr><tr> <th> CONJ DET </th>
+  <td> 0.4583 </td>
+  <td> 10 </td>
+  <td> 12 </td> </tr><tr> <th> ADJ CONJ </th>
+  <td> 0.4667 </td>
+  <td> 6 </td>
+  <td> 7 </td> </tr><tr> <th> CONJ </th>
+  <td> 0.4915 </td>
+  <td> 57 </td>
+  <td> 59 </td> </tr><tr> <th> ADV ADJ </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> VERB SCONJ </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> ADJ PRON AUX </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> ADP VERB ADP </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> NUM NOUN </th>
+  <td> 0.5000 </td>
+  <td> 5 </td>
+  <td> 5 </td> </tr><tr> <th> ADP NOUN ADJ AUX </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> ADV DET NOUN </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> VERB ADP VERB DET </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> ADP NOUN ADP NUM </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN ADJ ADP NOUN </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> ADP NOUN AUX DET </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN PRON VERB ADP </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> DET NOUN ADJ CONJ </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> ADV AUX NOUN </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN CONJ ADV VERB </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> SCONJ DET NOUN AUX </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> DET NOUN PUNCT </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN VERB ADP </th>
+  <td> 0.5000 </td>
+  <td> 1 </td>
+  <td> 1 </td> </tr><tr> <th> ADP AUX SCONJ DET </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr><tr> <th> NOUN AUX VERB </th>
+  <td> 0.5000 </td>
+  <td> 2 </td>
+  <td> 2 </td> </tr>
 </table>
- <br/><button onclick="showhide('112_latex')">Show/Hide LaTeX</button> <br/><pre id="112_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('197_latex')">Show/Hide LaTeX</button> <br/><pre id="197_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||ccc}
 n-gram & match & Adaptive & Static \\ \hline \hline
-a los & 0.2500 & 0 & 2 \\
-capacidades pedi&#225;tricas & 0.3333 & 0 & 1 \\
-establecidos del & 0.3333 & 0 & 1 \\
-le proporciona una & 0.3333 & 0 & 1 \\
-documentos y registros & 0.3333 & 0 & 1 \\
-requisitos establecidos del sistema & 0.3333 & 0 & 1 \\
-grandes se & 0.3333 & 0 & 1 \\
-Pacer se activar&#225; la & 0.3333 & 0 & 1 \\
-conectar los electrodos al & 0.3333 & 0 & 1 \\
-desfibrilaci&#243;n con electrodos sin & 0.3333 & 0 & 1 \\
-Controles de compras & 0.3333 & 0 & 1 \\
-los requisitos establecidos del & 0.3333 & 0 & 1 \\
-electrodos al cable & 0.3333 & 0 & 1 \\
-los ritmos subyacentes & 0.3333 & 0 & 1 \\
-y registros & 0.3333 & 0 & 1 \\
-entre los pezones del & 0.3333 & 0 & 1 \\
-de los clientes & 0.3333 & 0 & 1 \\
-autom&#225;ticamente & 0.3333 & 0 & 1 \\
-entre los pezones & 0.3333 & 0 & 1 \\
-una conexi&#243;n & 0.3333 & 0 & 1 \\
-/ producto & 0.3333 & 0 & 1 \\
-registros & 0.3333 & 1 & 3 \\
-establecidos del sistema de & 0.3333 & 0 & 1 \\
-medici&#243;n de la profundidad & 0.3333 & 0 & 1 \\
-el final del cable & 0.3333 & 0 & 1 \\
-de la profundidad de & 0.3333 & 0 & 1 \\
-bif&#225;sica & 0.3333 & 0 & 1 \\
-de color amarillo en & 0.3333 & 0 & 1 \\
-medici&#243;n de la & 0.3333 & 0 & 1 \\
-e instalaci&#243;n & 0.3333 & 0 & 1 \\
-50-70-85 & 0.3333 & 0 & 1 \\
-producto a un & 0.3333 & 0 & 1 \\
-AED a los par&#225;metros & 0.3333 & 0 & 1 \\
-los pezones del & 0.3333 & 0 & 1 \\
-el tiempo suficiente & 0.3333 & 0 & 1 \\
-distribuci&#243;n e & 0.3333 & 0 & 1 \\
-pezones del & 0.3333 & 0 & 1 \\
-Controles de servicios & 0.3333 & 0 & 1 \\
-pueden utilizarse & 0.3333 & 0 & 1 \\
-requisitos establecidos & 0.3333 & 0 & 1 \\
-entre el estern&#243;n y & 0.3333 & 0 & 1 \\
-los pezones & 0.3333 & 0 & 1 \\
-1 & 0.3333 & 0 & 1 \\
-de la profundidad & 0.3333 & 0 & 1 \\
-al cable & 0.3333 & 0 & 1 \\
-piezas m&#225;s grandes se & 0.3333 & 0 & 1 \\
-ver los ritmos subyacentes & 0.3333 & 0 & 1 \\
-de an&#225;lisis AED a & 0.3333 & 0 & 1 \\
-de productos & 0.3333 & 0 & 1 \\
-/ producto a un & 0.3333 & 0 & 1 \\
+NOUN ADV ADJ PRON & 0.3333 & 0 & 1 \\
+NOUN PUNCT NOUN ADP & 0.3333 & 0 & 1 \\
+ADJ ADP VERB ADP & 0.3333 & 0 & 1 \\
+NOUN PROPN ADP DET & 0.3333 & 0 & 1 \\
+ADV ADJ PRON & 0.3333 & 0 & 1 \\
+PRON VERB DET & 0.3333 & 1 & 3 \\
+PUNCT NOUN ADP & 0.3333 & 0 & 1 \\
+ADJ CONJ PROPN & 0.3333 & 0 & 1 \\
+AUX ADP NUM & 0.3333 & 0 & 1 \\
+VERB PRON VERB DET & 0.3333 & 0 & 1 \\
+AUX AUX ADP VERB & 0.3333 & 0 & 1 \\
+ADJ ADJ ADP VERB & 0.3333 & 0 & 1 \\
+ADP NOUN PROPN ADP & 0.3333 & 0 & 1 \\
+DET NOUN PUNCT NOUN & 0.3333 & 0 & 1 \\
+PUNCT NOUN ADP DET & 0.3333 & 0 & 1 \\
+NOUN PROPN ADP & 0.3333 & 0 & 1 \\
+ADJ AUX ADP NUM & 0.3333 & 0 & 1 \\
+DET NOUN AUX VERB & 0.3333 & 0 & 1 \\
+PRON VERB DET NOUN & 0.4000 & 1 & 2 \\
+ADJ PRON & 0.4000 & 1 & 2 \\
+PUNCT NOUN & 0.4000 & 1 & 2 \\
+NOUN PUNCT NOUN & 0.4000 & 1 & 2 \\
+NOUN CONJ NOUN & 0.4286 & 2 & 3 \\
+CONJ DET NOUN & 0.4444 & 7 & 9 \\
+DET NOUN ADJ ADP & 0.4444 & 7 & 9 \\
+ADP NUM & 0.4545 & 4 & 5 \\
+CONJ NOUN & 0.4545 & 4 & 5 \\
+CONJ DET & 0.4583 & 10 & 12 \\
+ADJ CONJ & 0.4667 & 6 & 7 \\
+CONJ & 0.4915 & 57 & 59 \\
+ADV ADJ & 0.5000 & 1 & 1 \\
+VERB SCONJ & 0.5000 & 2 & 2 \\
+ADJ PRON AUX & 0.5000 & 1 & 1 \\
+ADP VERB ADP & 0.5000 & 2 & 2 \\
+NUM NOUN & 0.5000 & 5 & 5 \\
+ADP NOUN ADJ AUX & 0.5000 & 1 & 1 \\
+ADV DET NOUN & 0.5000 & 2 & 2 \\
+VERB ADP VERB DET & 0.5000 & 1 & 1 \\
+ADP NOUN ADP NUM & 0.5000 & 1 & 1 \\
+NOUN ADJ ADP NOUN & 0.5000 & 2 & 2 \\
+ADP NOUN AUX DET & 0.5000 & 1 & 1 \\
+NOUN PRON VERB ADP & 0.5000 & 1 & 1 \\
+DET NOUN ADJ CONJ & 0.5000 & 2 & 2 \\
+ADV AUX NOUN & 0.5000 & 1 & 1 \\
+NOUN CONJ ADV VERB & 0.5000 & 1 & 1 \\
+SCONJ DET NOUN AUX & 0.5000 & 1 & 1 \\
+DET NOUN PUNCT & 0.5000 & 1 & 1 \\
+NOUN VERB ADP & 0.5000 & 1 & 1 \\
+ADP AUX SCONJ DET & 0.5000 & 2 & 2 \\
+NOUN AUX VERB & 0.5000 & 2 & 2 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table112}
+  \label{tab:table197}
 \end{table}</pre>
 <h2>Sentence Examples</h2>
 <h4> 10 sentences where Adaptive>Static at sentence-level BLEU </h4><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Software Validation for Regulated Processes </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados </td>
@@ -697,20 +738,23 @@ de productos & 0.3333 & 0 & 1 \\
   <td> Validaci&#243;n de software para procesos regulados </td>
   <td> 18.8226 </td> </tr>
 </table>
- <br/><button onclick="showhide('113_latex')">Show/Hide LaTeX</button> <br/><pre id="113_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('198_latex')">Show/Hide LaTeX</button> <br/><pre id="198_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Software Validation for Regulated Processes &  \\
 Ref & Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados &  \\
 Adaptive & Validaci&#243;n del programa inform&#225;tico para los procedimientos regulados & 100.0000 \\
 Static & Validaci&#243;n de software para procesos regulados & 18.8226 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table113}
+  \label{tab:table198}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Turn the mode selector to DEFIB </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Gire el selector de modo a DEFIB </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Gire el selector de modo a DEFIB </td>
@@ -718,20 +762,23 @@ Static & Validaci&#243;n de software para procesos regulados & 18.8226 \\
   <td> Turn el selector del modo para DEFIB </td>
   <td> 27.7762 </td> </tr>
 </table>
- <br/><button onclick="showhide('114_latex')">Show/Hide LaTeX</button> <br/><pre id="114_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('199_latex')">Show/Hide LaTeX</button> <br/><pre id="199_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Turn the mode selector to DEFIB &  \\
 Ref & Gire el selector de modo a DEFIB &  \\
 Adaptive & Gire el selector de modo a DEFIB & 100.0000 \\
 Static & Turn el selector del modo para DEFIB & 27.7762 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table114}
+  \label{tab:table199}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Show the R Series ALS </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Mostrar la serie R ALS </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Mostrar la serie R ALS </td>
@@ -739,20 +786,23 @@ Static & Turn el selector del modo para DEFIB & 27.7762 \\
   <td> Mostrar el R Series ALS </td>
   <td> 32.4668 </td> </tr>
 </table>
- <br/><button onclick="showhide('115_latex')">Show/Hide LaTeX</button> <br/><pre id="115_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('200_latex')">Show/Hide LaTeX</button> <br/><pre id="200_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Show the R Series ALS &  \\
 Ref & Mostrar la serie R ALS &  \\
 Adaptive & Mostrar la serie R ALS & 100.0000 \\
 Static & Mostrar el R Series ALS & 32.4668 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table115}
+  \label{tab:table200}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Compression rate indicator </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Indicador de &#237;ndice de compresi&#243;n </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Indicador de &#237;ndice de compresi&#243;n </td>
@@ -760,20 +810,23 @@ Static & Mostrar el R Series ALS & 32.4668 \\
   <td> &#237;ndice de la tasa de compresi&#243;n </td>
   <td> 36.5555 </td> </tr>
 </table>
- <br/><button onclick="showhide('116_latex')">Show/Hide LaTeX</button> <br/><pre id="116_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('201_latex')">Show/Hide LaTeX</button> <br/><pre id="201_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Compression rate indicator &  \\
 Ref & Indicador de &#237;ndice de compresi&#243;n &  \\
 Adaptive & Indicador de &#237;ndice de compresi&#243;n & 100.0000 \\
 Static & &#237;ndice de la tasa de compresi&#243;n & 36.5555 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table116}
+  \label{tab:table201}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE # 2 </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> ESC # 2 </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> QSE # 2 </td>
@@ -781,20 +834,23 @@ Static & &#237;ndice de la tasa de compresi&#243;n & 36.5555 \\
   <td> QSE n.&#186; 1 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('117_latex')">Show/Hide LaTeX</button> <br/><pre id="117_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('202_latex')">Show/Hide LaTeX</button> <br/><pre id="202_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE # 2 &  \\
 Ref & ESC # 2 &  \\
 Adaptive & QSE # 2 & 59.4604 \\
 Static & QSE n.&#186; 1 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table117}
+  \label{tab:table202}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE # 4 </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> ESC # 4 </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> QSE # 4 </td>
@@ -802,20 +858,23 @@ Static & QSE n.&#186; 1 & 0 \\
   <td> QSE n.&#186; 3 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('118_latex')">Show/Hide LaTeX</button> <br/><pre id="118_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('203_latex')">Show/Hide LaTeX</button> <br/><pre id="203_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE # 4 &  \\
 Ref & ESC # 4 &  \\
 Adaptive & QSE # 4 & 59.4604 \\
 Static & QSE n.&#186; 3 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table118}
+  \label{tab:table203}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE # 6 </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> ESC # 6 </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> QSE # 6 </td>
@@ -823,20 +882,23 @@ Static & QSE n.&#186; 3 & 0 \\
   <td> QSE n.&#186; 5 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('119_latex')">Show/Hide LaTeX</button> <br/><pre id="119_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('204_latex')">Show/Hide LaTeX</button> <br/><pre id="204_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE # 6 &  \\
 Ref & ESC # 6 &  \\
 Adaptive & QSE # 6 & 59.4604 \\
 Static & QSE n.&#186; 5 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table119}
+  \label{tab:table204}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE # 8 </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> ESC # 8 </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> QSE # 8 </td>
@@ -844,20 +906,23 @@ Static & QSE n.&#186; 5 & 0 \\
   <td> QSE n.&#186; 7 </td>
   <td> 0 </td> </tr>
 </table>
- <br/><button onclick="showhide('120_latex')">Show/Hide LaTeX</button> <br/><pre id="120_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('205_latex')">Show/Hide LaTeX</button> <br/><pre id="205_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE # 8 &  \\
 Ref & ESC # 8 &  \\
 Adaptive & QSE # 8 & 59.4604 \\
 Static & QSE n.&#186; 7 & 0 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table120}
+  \label{tab:table205}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE Procedure# </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Procedimiento del ESC </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Procedimiento del ESC </td>
@@ -865,20 +930,23 @@ Static & QSE n.&#186; 7 & 0 \\
   <td> Procedimiento QSE </td>
   <td> 32.5880 </td> </tr>
 </table>
- <br/><button onclick="showhide('121_latex')">Show/Hide LaTeX</button> <br/><pre id="121_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('206_latex')">Show/Hide LaTeX</button> <br/><pre id="206_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE Procedure# &  \\
 Ref & Procedimiento del ESC &  \\
 Adaptive & Procedimiento del ESC & 84.0896 \\
 Static & Procedimiento QSE & 32.5880 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table121}
+  \label{tab:table206}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> The self test connector only works when the electrode packaging is unopened and attached to the R Series. </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> El conector de autoverificaci&#243;n solo funciona cuando el embalaje del electrodo no est&#225; abierto y unido a la Serie R. </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> El conector de autoverificaci&#243;n funciona s&#243;lo cuando el embalaje del electrodo no est&#225; abierto y unido a la serie R. </td>
@@ -886,20 +954,23 @@ Static & Procedimiento QSE & 32.5880 \\
   <td> El conector de autoprueba funciona s&#243;lo cuando el envoltorio del electrodo est&#225; abierto y conecta a la R Series . </td>
   <td> 21.9921 </td> </tr>
 </table>
- <br/><button onclick="showhide('122_latex')">Show/Hide LaTeX</button> <br/><pre id="122_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('207_latex')">Show/Hide LaTeX</button> <br/><pre id="207_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & The self test connector only works when the electrode packaging is unopened and attached to the R Series. &  \\
 Ref & El conector de autoverificaci&#243;n solo funciona cuando el embalaje del electrodo no est&#225; abierto y unido a la Serie R. &  \\
 Adaptive & El conector de autoverificaci&#243;n funciona s&#243;lo cuando el embalaje del electrodo no est&#225; abierto y unido a la serie R. & 72.9838 \\
 Static & El conector de autoprueba funciona s&#243;lo cuando el envoltorio del electrodo est&#225; abierto y conecta a la R Series . & 21.9921 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table122}
+  \label{tab:table207}
 \end{table}</pre><h4> 10 sentences where Static>Adaptive at sentence-level BLEU </h4><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> The default defibrillation energy protocol for pediatric patients is 50-70-85 joules. </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para pacientes pedi&#225;tricos es de 50-70-85 julios. </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . </td>
@@ -907,20 +978,23 @@ Static & El conector de autoprueba funciona s&#243;lo cuando el envoltorio del e
   <td> El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado para los pacientes pedi&#225;tricos es de 50-70-85 julios . </td>
   <td> 57.4909 </td> </tr>
 </table>
- <br/><button onclick="showhide('123_latex')">Show/Hide LaTeX</button> <br/><pre id="123_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('208_latex')">Show/Hide LaTeX</button> <br/><pre id="208_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & The default defibrillation energy protocol for pediatric patients is 50-70-85 joules. &  \\
 Ref & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto para pacientes pedi&#225;tricos es de 50-70-85 julios. &  \\
 Adaptive & El protocolo de energ&#237;a de desfibrilaci&#243;n por defecto de energ&#237;a de los pacientes pedi&#225;tricos es de 50 a 85 julios . & 47.5952 \\
 Static & El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado para los pacientes pedi&#225;tricos es de 50-70-85 julios . & 57.4909 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table123}
+  \label{tab:table208}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> To connect the electrodes to the OneStep cable, slide the end of the cable into the electrode connector. </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Para conectar los electrodos al cable OneStep, introduzca el final del cable en el conector del electrodo. </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Para conectar los electrodos hacia el cable OneStep , deslice el fin del cable en el conector electrodo . </td>
@@ -928,20 +1002,23 @@ Static & El protocolo de energ&#237;a de desfibrilaci&#243;n predeterminado para
   <td> Para conectar los electrodos al cable OneStep , deslice el final del cable al conector electrodo . </td>
   <td> 47.6310 </td> </tr>
 </table>
- <br/><button onclick="showhide('124_latex')">Show/Hide LaTeX</button> <br/><pre id="124_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('209_latex')">Show/Hide LaTeX</button> <br/><pre id="209_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & To connect the electrodes to the OneStep cable, slide the end of the cable into the electrode connector. &  \\
 Ref & Para conectar los electrodos al cable OneStep, introduzca el final del cable en el conector del electrodo. &  \\
 Adaptive & Para conectar los electrodos hacia el cable OneStep , deslice el fin del cable en el conector electrodo . & 37.5184 \\
 Static & Para conectar los electrodos al cable OneStep , deslice el final del cable al conector electrodo . & 47.6310 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table124}
+  \label{tab:table209}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Handling, Storage, Distribution and Installation </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Tratamiento, almacenamiento, distribuci&#243;n e instalaci&#243;n </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Tratamiento , almacenamiento , distribuci&#243;n y instalaci&#243;n </td>
@@ -949,20 +1026,23 @@ Static & Para conectar los electrodos al cable OneStep , deslice el final del ca
   <td> Manejo , almacenamiento , distribuci&#243;n e instalaci&#243;n </td>
   <td> 34.5721 </td> </tr>
 </table>
- <br/><button onclick="showhide('125_latex')">Show/Hide LaTeX</button> <br/><pre id="125_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('210_latex')">Show/Hide LaTeX</button> <br/><pre id="210_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Handling, Storage, Distribution and Installation &  \\
 Ref & Tratamiento, almacenamiento, distribuci&#243;n e instalaci&#243;n &  \\
 Adaptive & Tratamiento , almacenamiento , distribuci&#243;n y instalaci&#243;n & 20.5567 \\
 Static & Manejo , almacenamiento , distribuci&#243;n e instalaci&#243;n & 34.5721 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table125}
+  \label{tab:table210}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Change Management </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Gesti&#243;n de cambios </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Gesti&#243;n del cambio </td>
@@ -970,20 +1050,23 @@ Static & Manejo , almacenamiento , distribuci&#243;n e instalaci&#243;n & 34.572
   <td> Control de cambios </td>
   <td> 59.4604 </td> </tr>
 </table>
- <br/><button onclick="showhide('126_latex')">Show/Hide LaTeX</button> <br/><pre id="126_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('211_latex')">Show/Hide LaTeX</button> <br/><pre id="211_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Change Management &  \\
 Ref & Gesti&#243;n de cambios &  \\
 Adaptive & Gesti&#243;n del cambio & 45.1801 \\
 Static & Control de cambios & 59.4604 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table126}
+  \label{tab:table211}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Defibrillation with hands-free electrodes is a simple 1-2-3 operation. </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple de 3 pasos. </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td>
@@ -991,20 +1074,23 @@ Static & Control de cambios & 59.4604 \\
   <td> La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . </td>
   <td> 75.8334 </td> </tr>
 </table>
- <br/><button onclick="showhide('127_latex')">Show/Hide LaTeX</button> <br/><pre id="127_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('212_latex')">Show/Hide LaTeX</button> <br/><pre id="212_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Defibrillation with hands-free electrodes is a simple 1-2-3 operation. &  \\
 Ref & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple de 3 pasos. &  \\
 Adaptive & La Defibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . & 61.2018 \\
 Static & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n simple 1-2-3 . & 75.8334 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table127}
+  \label{tab:table212}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> QSE Procedure Name </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Nombre del procedimiento del ESC </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Procedimiento del ESC </td>
@@ -1012,20 +1098,23 @@ Static & La desfibrilaci&#243;n con electrodos sin manos es una operaci&#243;n s
   <td> Nombre del procedimiento de QSE </td>
   <td> 50.8133 </td> </tr>
 </table>
- <br/><button onclick="showhide('128_latex')">Show/Hide LaTeX</button> <br/><pre id="128_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('213_latex')">Show/Hide LaTeX</button> <br/><pre id="213_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & QSE Procedure Name &  \\
 Ref & Nombre del procedimiento del ESC &  \\
 Adaptive & Procedimiento del ESC & 30.5280 \\
 Static & Nombre del procedimiento de QSE & 50.8133 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table128}
+  \label{tab:table213}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Document and Record Controls </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Controles de documentos y registros </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Controles de documentos y registro </td>
@@ -1033,20 +1122,23 @@ Static & Nombre del procedimiento de QSE & 50.8133 \\
   <td> Controles de documentos y registros </td>
   <td> 100.0000 </td> </tr>
 </table>
- <br/><button onclick="showhide('129_latex')">Show/Hide LaTeX</button> <br/><pre id="129_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('214_latex')">Show/Hide LaTeX</button> <br/><pre id="214_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Document and Record Controls &  \\
 Ref & Controles de documentos y registros &  \\
 Adaptive & Controles de documentos y registro & 75.9836 \\
 Static & Controles de documentos y registros & 100.0000 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table129}
+  \label{tab:table214}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Purchasing Controls </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Controles de compras </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Controles de compra </td>
@@ -1054,20 +1146,23 @@ Static & Controles de documentos y registros & 100.0000 \\
   <td> Controles de compras </td>
   <td> 84.0896 </td> </tr>
 </table>
- <br/><button onclick="showhide('130_latex')">Show/Hide LaTeX</button> <br/><pre id="130_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('215_latex')">Show/Hide LaTeX</button> <br/><pre id="215_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Purchasing Controls &  \\
 Ref & Controles de compras &  \\
 Adaptive & Controles de compra & 59.4604 \\
 Static & Controles de compras & 84.0896 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table130}
+  \label{tab:table215}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> Service Controls </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Controles de servicios </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Controles de los servicios </td>
@@ -1075,20 +1170,23 @@ Static & Controles de compras & 84.0896 \\
   <td> Controles de servicios </td>
   <td> 84.0896 </td> </tr>
 </table>
- <br/><button onclick="showhide('131_latex')">Show/Hide LaTeX</button> <br/><pre id="131_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('216_latex')">Show/Hide LaTeX</button> <br/><pre id="216_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & Service Controls &  \\
 Ref & Controles de servicios &  \\
 Adaptive & Controles de los servicios & 50.8133 \\
 Static & Controles de servicios & 84.0896 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table131}
+  \label{tab:table216}
 \end{table}</pre><table border="1">
 <tr> <th>  </th>
   <th> Output </th>
-  <th> sentbleu </th> </tr><tr> <th> Ref </th>
+  <th> sentbleu </th> </tr><tr> <th> Src </th>
+  <td> And an Idle timer </td>
+  <td>  </td> </tr><tr> <th> Ref </th>
   <td> Y un temporizador inactividad </td>
   <td>  </td> </tr><tr> <th> Adaptive </th>
   <td> Temporizador Idle </td>
@@ -1096,16 +1194,17 @@ Static & Controles de servicios & 84.0896 \\
   <td> Y un temporizador de reposo </td>
   <td> 50.8133 </td> </tr>
 </table>
- <br/><button onclick="showhide('132_latex')">Show/Hide LaTeX</button> <br/><pre id="132_latex" style="display:none">\begin{table}[t]
+ <br/><button onclick="showhide('217_latex')">Show/Hide LaTeX</button> <br/><pre id="217_latex" style="display:none">\begin{table}[t]
   \centering
   \begin{tabular}{c||cc}
  & Output & sentbleu \\ \hline \hline
+Src & And an Idle timer &  \\
 Ref & Y un temporizador inactividad &  \\
 Adaptive & Temporizador Idle & 0 \\
 Static & Y un temporizador de reposo & 50.8133 \\
   \end{tabular}
   \caption{Caption}
-  \label{tab:table132}
+  \label{tab:table217}
 \end{table}</pre> 
 </body>
 </html>
