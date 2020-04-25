@@ -301,19 +301,19 @@ sentbleu & Adaptive & Static \\ \hline \hline
 <caption> 50 n-grams where Adaptive>Static in match </caption><tr> <th> n-gram </th>
   <th> match </th>
   <th> Adaptive </th>
-  <th> Static </th> </tr><tr> <th> ADJ DET </th>
-  <td> 0.8571 </td>
-  <td> 5 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ DET NOUN </th>
-  <td> 0.8571 </td>
-  <td> 5 </td>
-  <td> 0 </td> </tr><tr> <th> VERB ADJ </th>
+  <th> Static </th> </tr><tr> <th> ADJ DET NOUN </th>
   <td> 0.8571 </td>
   <td> 5 </td>
   <td> 0 </td> </tr><tr> <th> VERB ADJ DET </th>
   <td> 0.8571 </td>
   <td> 5 </td>
   <td> 0 </td> </tr><tr> <th> VERB ADJ DET NOUN </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> VERB ADJ </th>
+  <td> 0.8571 </td>
+  <td> 5 </td>
+  <td> 0 </td> </tr><tr> <th> ADJ DET </th>
   <td> 0.8571 </td>
   <td> 5 </td>
   <td> 0 </td> </tr><tr> <th> ADJ DET NOUN ADP </th>
@@ -328,13 +328,7 @@ sentbleu & Adaptive & Static \\ \hline \hline
   <td> 1 </td> </tr><tr> <th> NOUN ADP NOUN ADJ </th>
   <td> 0.7647 </td>
   <td> 12 </td>
-  <td> 3 </td> </tr><tr> <th> PROPN DET NOUN </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> PROPN VERB DET </th>
-  <td> 0.7500 </td>
-  <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> ADP NOUN ADJ CONJ </th>
+  <td> 3 </td> </tr><tr> <th> ADP NOUN ADJ CONJ </th>
   <td> 0.7500 </td>
   <td> 5 </td>
   <td> 1 </td> </tr><tr> <th> ADP PROPN AUX </th>
@@ -343,16 +337,22 @@ sentbleu & Adaptive & Static \\ \hline \hline
   <td> 0 </td> </tr><tr> <th> PROPN DET </th>
   <td> 0.7500 </td>
   <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN ADP PROPN AUX </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN DET NOUN </th>
+  <td> 0.7500 </td>
+  <td> 2 </td>
   <td> 0 </td> </tr><tr> <th> NOUN ADP NOUN ADV </th>
   <td> 0.7500 </td>
   <td> 2 </td>
   <td> 0 </td> </tr><tr> <th> PROPN PROPN VERB DET </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> ADP DET PROPN </th>
+  <td> 0 </td> </tr><tr> <th> PROPN VERB DET </th>
   <td> 0.7500 </td>
   <td> 2 </td>
-  <td> 0 </td> </tr><tr> <th> NOUN ADP PROPN AUX </th>
+  <td> 0 </td> </tr><tr> <th> ADP DET PROPN </th>
   <td> 0.7500 </td>
   <td> 2 </td>
   <td> 0 </td> </tr><tr> <th> DET PROPN </th>
@@ -382,73 +382,73 @@ sentbleu & Adaptive & Static \\ \hline \hline
   <td> 6 </td> </tr><tr> <th> NOUN ADP NOUN ADP </th>
   <td> 0.6786 </td>
   <td> 18 </td>
-  <td> 8 </td> </tr><tr> <th> ADJ PRON VERB ADP </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> NUM NOUN VERB </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADP VERB ADP </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ NOUN CONJ </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADP PROPN PROPN VERB </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> PROPN ADP NOUN </th>
-  <td> 0.6667 </td>
-  <td> 3 </td>
-  <td> 1 </td> </tr><tr> <th> PROPN PROPN VERB </th>
-  <td> 0.6667 </td>
-  <td> 3 </td>
-  <td> 1 </td> </tr><tr> <th> ADP PROPN PROPN AUX </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> PROPN DET NOUN PROPN </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ PROPN </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADV CONJ </th>
+  <td> 8 </td> </tr><tr> <th> ADJ NOUN CONJ </th>
   <td> 0.6667 </td>
   <td> 1 </td>
   <td> 0 </td> </tr><tr> <th> DET PROPN ADJ ADV </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ NUM </th>
+  <td> 0 </td> </tr><tr> <th> ADP NOUN ADV SCONJ </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ CONJ PRON </th>
+  <td> 0 </td> </tr><tr> <th> PROPN VERB DET NOUN </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> AUX ADJ ADP ADP </th>
+  <td> 0 </td> </tr><tr> <th> ADP NOUN ADJ ADP </th>
+  <td> 0.6667 </td>
+  <td> 5 </td>
+  <td> 2 </td> </tr><tr> <th> ADP NOUN PROPN CONJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> DET NUM NOUN </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADJ CONJ AUX VERB </th>
   <td> 0.6667 </td>
   <td> 1 </td>
   <td> 0 </td> </tr><tr> <th> NUM NOUN VERB DET </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADJ PROPN PROPN AUX </th>
+  <td> 0 </td> </tr><tr> <th> SCONJ DET PROPN ADJ </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> VERB PRON </th>
+  <td> 0 </td> </tr><tr> <th> ADJ PROPN </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> ADP PROPN ADP </th>
+  <td> 0 </td> </tr><tr> <th> ADJ ADP VERB DET </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> PROPN VERB DET ADJ </th>
+  <td> 0 </td> </tr><tr> <th> ADJ ADJ ADP NOUN </th>
   <td> 0.6667 </td>
   <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> DET NOUN ADJ PROPN </th>
-  <td> 0.6667 </td>
-  <td> 1 </td>
-  <td> 0 </td> </tr><tr> <th> NOUN PROPN ADP </th>
+  <td> 0 </td> </tr><tr> <th> PROPN ADP DET NOUN </th>
   <td> 0.6667 </td>
   <td> 5 </td>
-  <td> 2 </td> </tr><tr> <th> PROPN ADP NOUN CONJ </th>
+  <td> 2 </td> </tr><tr> <th> NOUN ADP SCONJ DET </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADV ADP VERB ADP </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> PROPN ADP NOUN CONJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> NOUN ADJ NUM </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> AUX VERB DET </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADJ ADP NOUN CONJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> VERB ADP NUM </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> CONJ DET ADJ </th>
+  <td> 0.6667 </td>
+  <td> 1 </td>
+  <td> 0 </td> </tr><tr> <th> ADP DET NOUN VERB </th>
   <td> 0.6667 </td>
   <td> 1 </td>
   <td> 0 </td> </tr>
@@ -457,24 +457,24 @@ sentbleu & Adaptive & Static \\ \hline \hline
   \centering
   \begin{tabular}{c||ccc}
 n-gram & match & Adaptive & Static \\ \hline \hline
-ADJ DET & 0.8571 & 5 & 0 \\
 ADJ DET NOUN & 0.8571 & 5 & 0 \\
-VERB ADJ & 0.8571 & 5 & 0 \\
 VERB ADJ DET & 0.8571 & 5 & 0 \\
 VERB ADJ DET NOUN & 0.8571 & 5 & 0 \\
+VERB ADJ & 0.8571 & 5 & 0 \\
+ADJ DET & 0.8571 & 5 & 0 \\
 ADJ DET NOUN ADP & 0.8333 & 4 & 0 \\
 DET NOUN PROPN ADP & 0.8000 & 3 & 0 \\
 VERB DET NOUN PROPN & 0.7778 & 6 & 1 \\
 NOUN ADP NOUN ADJ & 0.7647 & 12 & 3 \\
-PROPN DET NOUN & 0.7500 & 2 & 0 \\
-PROPN VERB DET & 0.7500 & 2 & 0 \\
 ADP NOUN ADJ CONJ & 0.7500 & 5 & 1 \\
 ADP PROPN AUX & 0.7500 & 2 & 0 \\
 PROPN DET & 0.7500 & 2 & 0 \\
+NOUN ADP PROPN AUX & 0.7500 & 2 & 0 \\
+PROPN DET NOUN & 0.7500 & 2 & 0 \\
 NOUN ADP NOUN ADV & 0.7500 & 2 & 0 \\
 PROPN PROPN VERB DET & 0.7500 & 2 & 0 \\
+PROPN VERB DET & 0.7500 & 2 & 0 \\
 ADP DET PROPN & 0.7500 & 2 & 0 \\
-NOUN ADP PROPN AUX & 0.7500 & 2 & 0 \\
 DET PROPN & 0.7273 & 7 & 2 \\
 NOUN ADJ CONJ & 0.7273 & 7 & 2 \\
 PROPN AUX & 0.7143 & 4 & 1 \\
@@ -484,29 +484,29 @@ NOUN ADP PROPN & 0.6875 & 10 & 4 \\
 PROPN ADP & 0.6842 & 12 & 5 \\
 ADP NOUN ADJ & 0.6818 & 14 & 6 \\
 NOUN ADP NOUN ADP & 0.6786 & 18 & 8 \\
-ADJ PRON VERB ADP & 0.6667 & 1 & 0 \\
-NUM NOUN VERB & 0.6667 & 1 & 0 \\
-ADP VERB ADP & 0.6667 & 1 & 0 \\
 ADJ NOUN CONJ & 0.6667 & 1 & 0 \\
-ADP PROPN PROPN VERB & 0.6667 & 1 & 0 \\
-PROPN ADP NOUN & 0.6667 & 3 & 1 \\
-PROPN PROPN VERB & 0.6667 & 3 & 1 \\
-ADP PROPN PROPN AUX & 0.6667 & 1 & 0 \\
-PROPN DET NOUN PROPN & 0.6667 & 1 & 0 \\
-ADJ PROPN & 0.6667 & 1 & 0 \\
-ADV CONJ & 0.6667 & 1 & 0 \\
 DET PROPN ADJ ADV & 0.6667 & 1 & 0 \\
-ADJ NUM & 0.6667 & 1 & 0 \\
-ADJ CONJ PRON & 0.6667 & 1 & 0 \\
-AUX ADJ ADP ADP & 0.6667 & 1 & 0 \\
+ADP NOUN ADV SCONJ & 0.6667 & 1 & 0 \\
+PROPN VERB DET NOUN & 0.6667 & 1 & 0 \\
+ADP NOUN ADJ ADP & 0.6667 & 5 & 2 \\
+ADP NOUN PROPN CONJ & 0.6667 & 1 & 0 \\
+DET NUM NOUN & 0.6667 & 1 & 0 \\
+ADJ CONJ AUX VERB & 0.6667 & 1 & 0 \\
 NUM NOUN VERB DET & 0.6667 & 1 & 0 \\
-ADJ PROPN PROPN AUX & 0.6667 & 1 & 0 \\
-VERB PRON & 0.6667 & 1 & 0 \\
-ADP PROPN ADP & 0.6667 & 1 & 0 \\
-PROPN VERB DET ADJ & 0.6667 & 1 & 0 \\
-DET NOUN ADJ PROPN & 0.6667 & 1 & 0 \\
-NOUN PROPN ADP & 0.6667 & 5 & 2 \\
+SCONJ DET PROPN ADJ & 0.6667 & 1 & 0 \\
+ADJ PROPN & 0.6667 & 1 & 0 \\
+ADJ ADP VERB DET & 0.6667 & 1 & 0 \\
+ADJ ADJ ADP NOUN & 0.6667 & 1 & 0 \\
+PROPN ADP DET NOUN & 0.6667 & 5 & 2 \\
+NOUN ADP SCONJ DET & 0.6667 & 1 & 0 \\
+ADV ADP VERB ADP & 0.6667 & 1 & 0 \\
 PROPN ADP NOUN CONJ & 0.6667 & 1 & 0 \\
+NOUN ADJ NUM & 0.6667 & 1 & 0 \\
+AUX VERB DET & 0.6667 & 1 & 0 \\
+ADJ ADP NOUN CONJ & 0.6667 & 1 & 0 \\
+VERB ADP NUM & 0.6667 & 1 & 0 \\
+CONJ DET ADJ & 0.6667 & 1 & 0 \\
+ADP DET NOUN VERB & 0.6667 & 1 & 0 \\
   \end{tabular}
   \caption{Caption}
   \label{tab:table191}
@@ -526,46 +526,106 @@ PROPN ADP NOUN CONJ & 0.6667 & 1 & 0 \\
   <td> 2 </td> </tr><tr> <th> ADV AUX </th>
   <td> 0.2857 </td>
   <td> 1 </td>
-  <td> 4 </td> </tr><tr> <th> VERB ADV SCONJ PRON </th>
+  <td> 4 </td> </tr><tr> <th> VERB NOUN </th>
+  <td> 0.3333 </td>
+  <td> 1 </td>
+  <td> 3 </td> </tr><tr> <th> ADP PRON ADP DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADJ ADP PRON </th>
+  <td> 1 </td> </tr><tr> <th> ADV DET NOUN SCONJ </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PRON ADP </th>
+  <td> 1 </td> </tr><tr> <th> VERB ADV SCONJ PRON </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> AUX VERB NOUN CONJ </th>
+  <td> 1 </td> </tr><tr> <th> NOUN SCONJ AUX AUX </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PRON ADP DET </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN CONJ VERB NUM </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> AUX VERB ADP NOUN </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PROPN ADV VERB </th>
+  <td> 1 </td> </tr><tr> <th> DET NOUN SCONJ DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> DET NOUN SCONJ </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADV AUX ADJ CONJ </th>
+  <td> 1 </td> </tr><tr> <th> CONJ ADP NOUN </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PROPN VERB NOUN ADP </th>
+  <td> 1 </td> </tr><tr> <th> DET NOUN ADJ PRON </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADP PRON ADP DET </th>
+  <td> 1 </td> </tr><tr> <th> NOUN CONJ VERB NUM </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADP PROPN ADV VERB </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> SCONJ AUX AUX DET </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN CONJ ADP </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> PRON ADP </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> DET DET NOUN AUX </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADV VERB SCONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> AUX VERB NOUN CONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> AUX VERB NOUN </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> VERB NOUN CONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN ADV ADP VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> VERB ADP NOUN ADV </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADP PROPN ADV VERB </th>
+  <td> 1 </td> </tr><tr> <th> PRON ADP DET </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> AUX ADJ CONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> PROPN VERB NOUN </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADP SCONJ PRON </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> AUX VERB ADP NOUN </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADP NOUN SCONJ AUX </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> DET PRON VERB ADP </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> SCONJ DET NOUN CONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN ADJ PRON VERB </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> NOUN SCONJ AUX </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADV AUX VERB ADP </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> VERB ADP NOUN SCONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> ADJ ADP PRON ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> ADP PRON </th>
@@ -574,94 +634,34 @@ PROPN ADP NOUN CONJ & 0.6667 & 1 & 0 \\
   <td> 1 </td> </tr><tr> <th> ADV SCONJ PRON VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> CONJ ADP NOUN </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN CONJ ADV DET </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN ADV ADP VERB </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN SCONJ AUX AUX </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> DET DET NOUN AUX </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN CONJ ADP </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> DET NOUN ADJ PRON </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> VERB ADP NOUN SCONJ </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> VERB NOUN </th>
-  <td> 0.3333 </td>
-  <td> 1 </td>
-  <td> 3 </td> </tr><tr> <th> ADJ ADP PRON ADP </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADV VERB SCONJ DET </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> ADP PRON ADP </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> SCONJ DET NOUN CONJ </th>
+  <td> 1 </td> </tr><tr> <th> ADV AUX ADJ CONJ </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> NOUN CONJ ADP DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> DET PRON VERB ADP </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PROPN PROPN VERB NOUN </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> PROPN VERB NOUN </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADV DET NOUN SCONJ </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> SCONJ AUX AUX DET </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADP SCONJ PRON </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> AUX ADJ CONJ </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADV VERB SCONJ </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> AUX VERB NOUN </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADP NOUN SCONJ AUX </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> CONJ ADP DET </th>
-  <td> 0.3333 </td>
-  <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> VERB NOUN CONJ VERB </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> DET NOUN SCONJ DET </th>
+  <td> 1 </td> </tr><tr> <th> ADV VERB SCONJ DET </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> NOUN ADJ PRON VERB </th>
+  <td> 1 </td> </tr><tr> <th> ADJ ADP PRON </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr><tr> <th> ADV AUX ADJ </th>
   <td> 0.3333 </td>
   <td> 0 </td>
-  <td> 1 </td> </tr><tr> <th> ADV AUX VERB NOUN </th>
+  <td> 1 </td> </tr><tr> <th> DET PRON VERB </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> PROPN ADV VERB SCONJ </th>
+  <td> 0.3333 </td>
+  <td> 0 </td>
+  <td> 1 </td> </tr><tr> <th> SCONJ AUX AUX </th>
   <td> 0.3333 </td>
   <td> 0 </td>
   <td> 1 </td> </tr>
@@ -674,52 +674,52 @@ ADP NOUN CONJ DET & 0.2000 & 0 & 3 \\
 VERB ADP NOUN & 0.2500 & 0 & 2 \\
 ADV AUX VERB & 0.2500 & 0 & 2 \\
 ADV AUX & 0.2857 & 1 & 4 \\
-VERB ADV SCONJ PRON & 0.3333 & 0 & 1 \\
-ADJ ADP PRON & 0.3333 & 0 & 1 \\
-PRON ADP & 0.3333 & 0 & 1 \\
-AUX VERB NOUN CONJ & 0.3333 & 0 & 1 \\
-PRON ADP DET & 0.3333 & 0 & 1 \\
-NOUN CONJ VERB NUM & 0.3333 & 0 & 1 \\
-AUX VERB ADP NOUN & 0.3333 & 0 & 1 \\
-PROPN ADV VERB & 0.3333 & 0 & 1 \\
-DET NOUN SCONJ & 0.3333 & 0 & 1 \\
-ADV AUX ADJ CONJ & 0.3333 & 0 & 1 \\
-PROPN VERB NOUN ADP & 0.3333 & 0 & 1 \\
+VERB NOUN & 0.3333 & 1 & 3 \\
 ADP PRON ADP DET & 0.3333 & 0 & 1 \\
-VERB ADP NOUN ADV & 0.3333 & 0 & 1 \\
+ADV DET NOUN SCONJ & 0.3333 & 0 & 1 \\
+VERB ADV SCONJ PRON & 0.3333 & 0 & 1 \\
+NOUN SCONJ AUX AUX & 0.3333 & 0 & 1 \\
+DET NOUN SCONJ DET & 0.3333 & 0 & 1 \\
+DET NOUN SCONJ & 0.3333 & 0 & 1 \\
+CONJ ADP NOUN & 0.3333 & 0 & 1 \\
+DET NOUN ADJ PRON & 0.3333 & 0 & 1 \\
+NOUN CONJ VERB NUM & 0.3333 & 0 & 1 \\
 ADP PROPN ADV VERB & 0.3333 & 0 & 1 \\
+SCONJ AUX AUX DET & 0.3333 & 0 & 1 \\
+NOUN CONJ ADP & 0.3333 & 0 & 1 \\
+PRON ADP & 0.3333 & 0 & 1 \\
+DET DET NOUN AUX & 0.3333 & 0 & 1 \\
+ADV VERB SCONJ & 0.3333 & 0 & 1 \\
+AUX VERB NOUN CONJ & 0.3333 & 0 & 1 \\
+AUX VERB NOUN & 0.3333 & 0 & 1 \\
+VERB NOUN CONJ & 0.3333 & 0 & 1 \\
+NOUN ADV ADP VERB & 0.3333 & 0 & 1 \\
+VERB ADP NOUN ADV & 0.3333 & 0 & 1 \\
+PRON ADP DET & 0.3333 & 0 & 1 \\
+AUX ADJ CONJ & 0.3333 & 0 & 1 \\
+PROPN VERB NOUN & 0.3333 & 0 & 1 \\
+ADP SCONJ PRON & 0.3333 & 0 & 1 \\
+AUX VERB ADP NOUN & 0.3333 & 0 & 1 \\
+ADP NOUN SCONJ AUX & 0.3333 & 0 & 1 \\
+DET PRON VERB ADP & 0.3333 & 0 & 1 \\
+SCONJ DET NOUN CONJ & 0.3333 & 0 & 1 \\
+NOUN ADJ PRON VERB & 0.3333 & 0 & 1 \\
+NOUN SCONJ AUX & 0.3333 & 0 & 1 \\
+ADV AUX VERB ADP & 0.3333 & 0 & 1 \\
+VERB ADP NOUN SCONJ & 0.3333 & 0 & 1 \\
+ADJ ADP PRON ADP & 0.3333 & 0 & 1 \\
 ADP PRON & 0.3333 & 0 & 1 \\
 ADV SCONJ PRON VERB & 0.3333 & 0 & 1 \\
-CONJ ADP NOUN & 0.3333 & 0 & 1 \\
-NOUN CONJ ADV DET & 0.3333 & 0 & 1 \\
-NOUN ADV ADP VERB & 0.3333 & 0 & 1 \\
-NOUN SCONJ AUX AUX & 0.3333 & 0 & 1 \\
-DET DET NOUN AUX & 0.3333 & 0 & 1 \\
-NOUN CONJ ADP & 0.3333 & 0 & 1 \\
-DET NOUN ADJ PRON & 0.3333 & 0 & 1 \\
-VERB ADP NOUN SCONJ & 0.3333 & 0 & 1 \\
-VERB NOUN & 0.3333 & 1 & 3 \\
-ADJ ADP PRON ADP & 0.3333 & 0 & 1 \\
-ADV VERB SCONJ DET & 0.3333 & 0 & 1 \\
 ADP PRON ADP & 0.3333 & 0 & 1 \\
-SCONJ DET NOUN CONJ & 0.3333 & 0 & 1 \\
+ADV AUX ADJ CONJ & 0.3333 & 0 & 1 \\
 NOUN CONJ ADP DET & 0.3333 & 0 & 1 \\
-DET PRON VERB ADP & 0.3333 & 0 & 1 \\
-PROPN PROPN VERB NOUN & 0.3333 & 0 & 1 \\
-PROPN VERB NOUN & 0.3333 & 0 & 1 \\
-ADV DET NOUN SCONJ & 0.3333 & 0 & 1 \\
-SCONJ AUX AUX DET & 0.3333 & 0 & 1 \\
-ADP SCONJ PRON & 0.3333 & 0 & 1 \\
-AUX ADJ CONJ & 0.3333 & 0 & 1 \\
-ADV VERB SCONJ & 0.3333 & 0 & 1 \\
-AUX VERB NOUN & 0.3333 & 0 & 1 \\
-ADP NOUN SCONJ AUX & 0.3333 & 0 & 1 \\
-CONJ ADP DET & 0.3333 & 0 & 1 \\
 VERB NOUN CONJ VERB & 0.3333 & 0 & 1 \\
-DET NOUN SCONJ DET & 0.3333 & 0 & 1 \\
-NOUN ADJ PRON VERB & 0.3333 & 0 & 1 \\
+ADV VERB SCONJ DET & 0.3333 & 0 & 1 \\
+ADJ ADP PRON & 0.3333 & 0 & 1 \\
 ADV AUX ADJ & 0.3333 & 0 & 1 \\
-ADV AUX VERB NOUN & 0.3333 & 0 & 1 \\
+DET PRON VERB & 0.3333 & 0 & 1 \\
+PROPN ADV VERB SCONJ & 0.3333 & 0 & 1 \\
+SCONJ AUX AUX & 0.3333 & 0 & 1 \\
   \end{tabular}
   \caption{Caption}
   \label{tab:table192}
